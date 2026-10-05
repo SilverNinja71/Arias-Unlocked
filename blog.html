@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>The Green Room - Arias Unlocked</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Times+New+Roman:wght@400;700&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#645f42",
+                        "on-tertiary-fixed-variant": "#484645",
+                        "secondary-container": "#e8e0bb",
+                        "surface": "#fff9ea",
+                        "on-secondary": "#ffffff",
+                        "surface-container-low": "#fff4c2",
+                        "primary": "#000000",
+                        "tertiary-fixed": "#e6e2df",
+                        "on-surface-variant": "#444748",
+                        "surface-variant": "#f4e483",
+                        "surface-bright": "#fff9ea",
+                        "surface-tint": "#5f5e5e",
+                        "outline": "#747878",
+                        "surface-container-high": "#fae988",
+                        "on-tertiary-fixed": "#1c1b1a",
+                        "primary-fixed": "#e5e2e1",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed-dim": "#cec7a4",
+                        "on-primary-fixed-variant": "#474746",
+                        "tertiary-container": "#1c1b1a",
+                        "secondary-fixed": "#ebe3be",
+                        "on-error": "#ffffff",
+                        "primary-container": "#1c1b1b",
+                        "inverse-on-surface": "#fff2ad",
+                        "on-primary-container": "#858383",
+                        "surface-dim": "#ecdb7b",
+                        "on-background": "#201c00",
+                        "error": "#ba1a1a",
+                        "on-tertiary": "#ffffff",
+                        "outline-variant": "#c4c7c7",
+                        "on-primary-fixed": "#1c1b1b",
+                        "background": "#fdfbd4",
+                        "on-secondary-fixed": "#1f1c05",
+                        "on-surface": "#201c00",
+                        "on-secondary-fixed-variant": "#4b472c",
+                        "surface-container": "#ffef96",
+                        "on-secondary-container": "#686346",
+                        "surface-container-highest": "#f4e483",
+                        "inverse-primary": "#c8c6c5",
+                        "on-primary": "#ffffff",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "inverse-surface": "#383100",
+                        "on-tertiary-container": "#868382",
+                        "error-container": "#ffdad6",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#cac6c4",
+                        "tertiary": "#000000"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1200px",
+                        "base": "8px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Montserrat", "sans-serif"],
+                        "body-lg": ["Montserrat", "sans-serif"],
+                        "label-md": ["Montserrat", "sans-serif"],
+                        "display-lg": ["Times New Roman", "serif"],
+                        "headline-lg": ["Times New Roman", "serif"],
+                        "display-lg-mobile": ["Times New Roman", "serif"],
+                        "label-sm": ["Montserrat", "sans-serif"],
+                        "headline-md": ["Times New Roman", "serif"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "500" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 1;
+  }
+</style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md" style="background-color: rgb(253, 249, 228);">
+
+<!-- TopNavBar -->
+<header class="w-full top-0 sticky bg-background text-primary z-50 backdrop-blur-md bg-opacity-95" style="background-color: rgb(253, 249, 228);">
+  <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto border-b border-primary/10">
+    <!-- Brand Logo -->
+    <a class="font-display-lg text-headline-md text-primary tracking-tight flex items-center gap-2" href="index.html">
+      <img alt="Arias Unlocked Logo" class="h-9 w-9 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdKVTjZIq1S0DBO4UoJSfbwTglYCiIRWt_6-hmiYbOZRRLPJ9zTsnTkorQAzRoBk0w16OB4ZO-wtqnq5EKo-eQBvKcQ3z2rqcNGrrdD_BI6FFgFha1W0RUBW8VIjdqydhmmLtHhIxcDCByxMvLXsEScmqyGH7eyK18vEykEmq1JcDhlwNz8Hf3czH8Rlmh31x-lFcURrIw6g1S6dJVdhm0RMwWK0Z5CoidP7YPUHhbSOEt8b6I7Yyc8tbRpueumI7Zl3WH7uUGTtoDWA">
+      <span>Arias Unlocked</span>
+    </a>
+    
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex gap-10 items-center">
+      <a class="text-on-surface-variant font-label-md hover:text-primary transition-colors duration-200 uppercase tracking-widest text-sm" href="songs.html">Songs</a>
+      <a class="text-primary font-bold border-b-2 border-primary pb-1 uppercase tracking-widest text-sm" href="blog.html">Blog</a>
+      <a class="text-on-surface-variant font-label-md hover:text-primary transition-colors duration-200 uppercase tracking-widest text-sm" href="about.html">About Me</a>
+    </nav>
+    
+    <!-- Trailing Action (Desktop) -->
+    <button id="join-btn" class="hidden md:inline-flex items-center justify-center bg-primary text-white font-label-md rounded-full px-8 py-3 hover:bg-neutral-800 transition-colors uppercase tracking-widest text-xs">
+      Join Now
+    </button>
+    
+    <!-- Mobile Menu Button -->
+    <button id="mobile-menu-btn" class="md:hidden text-primary p-2">
+      <span class="material-symbols-outlined text-headline-md">menu</span>
+    </button>
+  </div>
+
+  <!-- Mobile Dropdown -->
+  <div id="mobile-menu" class="hidden md:hidden px-6 pb-6 pt-2 bg-background border-b border-primary/10 flex flex-col gap-3">
+    <a class="text-primary font-semibold py-2 border-b border-primary/10" href="songs.html">Songs</a>
+    <a class="text-primary font-bold py-2 border-b border-primary/10" href="blog.html">Blog</a>
+    <a class="text-primary font-semibold py-2 border-b border-primary/10" href="about.html">About Me</a>
+    <button class="join-trigger w-full bg-primary text-white py-3 rounded-full font-label-md uppercase tracking-wider text-xs mt-2">
+      Join Now
+    </button>
+  </div>
+</header>
+
+<!-- Main Content Canvas -->
+<main class="flex-grow max-w-container-max mx-auto w-full px-margin-mobile md:px-margin-desktop py-16 flex flex-col gap-16">
+  <!-- Page Header & Search/Filter -->
+  <header class="flex flex-col gap-10 max-w-4xl w-full">
+    <div class="flex flex-col gap-4">
+      <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary tracking-tight">The Green Room</h1>
+      <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+        Reflections on classical repertoire, modern interpretation, and the spaces between notes.
+      </p>
+    </div>
+    
+    <!-- Search and Filter Bar -->
+    <div class="flex flex-col gap-6 w-full mt-4">
+      <div class="relative max-w-xl mx-auto w-full">
+        <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant/50">search</span>
+        <input id="blog-search-input" class="w-full bg-white border border-primary/10 rounded-full py-4 pl-12 pr-10 font-body-md text-on-surface focus:outline-none focus:border-primary/30 focus:ring-1 focus:ring-primary/30 shadow-sm transition-all text-sm" placeholder="Search essays, repertoire, insights..." type="text">
+        <button id="blog-search-clear" class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-black hidden">
+          <span class="material-symbols-outlined text-sm">close</span>
+        </button>
+      </div>
+      
+      <div class="flex flex-wrap justify-center gap-3" id="blog-filters">
+        <button class="blog-filter-btn px-5 py-2 rounded-full bg-primary text-white font-label-sm text-label-sm tracking-widest uppercase transition-colors" data-filter="All">All</button>
+        <button class="blog-filter-btn px-5 py-2 rounded-full bg-white border border-primary/10 text-on-surface-variant hover:border-primary/30 hover:text-primary font-label-sm text-label-sm tracking-widest uppercase transition-all shadow-sm" data-filter="Vocalization">Vocalization</button>
+        <button class="blog-filter-btn px-5 py-2 rounded-full bg-white border border-primary/10 text-on-surface-variant hover:border-primary/30 hover:text-primary font-label-sm text-label-sm tracking-widest uppercase transition-all shadow-sm" data-filter="Interpretation">Interpretation</button>
+        <button class="blog-filter-btn px-5 py-2 rounded-full bg-white border border-primary/10 text-on-surface-variant hover:border-primary/30 hover:text-primary font-label-sm text-label-sm tracking-widest uppercase transition-all shadow-sm" data-filter="Repertoire">Repertoire</button>
+        <button class="blog-filter-btn px-5 py-2 rounded-full bg-white border border-primary/10 text-on-surface-variant hover:border-primary/30 hover:text-primary font-label-sm text-label-sm tracking-widest uppercase transition-all shadow-sm" data-filter="Technique">Technique</button>
+        <button class="blog-filter-btn px-5 py-2 rounded-full bg-white border border-primary/10 text-on-surface-variant hover:border-primary/30 hover:text-primary font-label-sm text-label-sm tracking-widest uppercase transition-all shadow-sm" data-filter="Tips">Tips</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Featured Post (Hero Style) -->
+  <article class="blog-post-card w-full bg-white rounded-2xl border border-primary/10 overflow-hidden flex flex-col md:flex-row shadow-sm hover:shadow-md transition-shadow duration-300 group cursor-pointer"
+           data-category="Interpretation"
+           data-title="Finding the Silence in Turandot"
+           data-date="Oct 12, 2024"
+           data-readtime="7 min read"
+           data-snippet="Beyond the bombast of Nessun Dorma lies a subtle architecture of silence. Exploring how rests and pauses build the true tension in Puccini's final masterpiece, and why modern performers often rush the quiet moments."
+           data-content="Giacomo Puccini's final unfinished masterpiece, *Turandot*, is universally renowned for its monumental vocal demands and the thundering triumph of 'Nessun Dorma'. Yet when we reduce this opera to high Cs and blazing brass, we miss the heart of Puccini's musical architecture: the profound power of silence.
+
+In Act I, as Prince Calaf prepares to strike the ceremonial gong, the orchestration thins into suspended pedal tones. The silence before each riddle is where the psychological stakes live. For young classical singers and conductors, learning not to rush these fermatas and grand pauses is the single most transformative artistic choice you can make. 
+
+True musical tension is not created by sound alone—it is sculpted by the silence that surrounds it.">
+    <div class="md:w-3/5 h-64 md:h-[500px] bg-surface-container-high relative overflow-hidden">
+      <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Opera stage viewed from the wings" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8iqBEEJoJKWCTSQWa0XSHEHzURpoxmh0PMZHc7i3xjGMu4oxCnV_7iDklPGFsHFamsazaKgCQT8h81gXg4opBpVORa2WitCjQzN1Rn1ixwVMkk8HfkFF7v1KqiLblj1Dv2ve-QSOECgdRtPe8UmAHRWSdaozekWIkuIQOnkTb-3879CbOkkGQQWiKsRS6_8etI103C-VKJtLkYmGxcFGaUzSNWWGlZLyuPpHbHh5CMTCrvfXB9HZW">
+    </div>
+    <div class="md:w-2/5 p-8 md:p-12 flex flex-col justify-center gap-6">
+      <div class="flex gap-2 flex-wrap">
+        <span class="bg-surface text-on-surface-variant font-label-sm text-[10px] px-3 py-1 rounded-sm uppercase tracking-widest">Interpretation</span>
+      </div>
+      <h2 class="font-headline-lg text-[40px] leading-[48px] text-primary tracking-tight group-hover:text-primary/80 transition-colors">Finding the Silence in Turandot</h2>
+      <p class="font-body-md text-body-lg text-on-surface-variant/80">
+        Beyond the bombast of Nessun Dorma lies a subtle architecture of silence. Exploring how rests and pauses build the true tension in Puccini's final masterpiece, and why modern performers often rush the quiet moments.
+      </p>
+      <div class="flex items-center gap-4 mt-4">
+        <span class="font-label-sm text-xs text-on-surface-variant/60 tracking-widest uppercase">Oct 12, 2024</span>
+        <div class="w-1 h-1 rounded-full bg-primary/20"></div>
+        <span class="font-label-sm text-xs text-on-surface-variant/60 tracking-widest uppercase">7 min read</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- Grid Layout for Subsequent Posts -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="blog-grid">
+    <!-- Post 1 -->
+    <article class="blog-post-card bg-white rounded-2xl border border-primary/10 overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-shadow duration-300 group cursor-pointer"
+             data-category="Technique"
+             data-title="The Modern Bow: Agility vs Weight"
+             data-date="Oct 05, 2024"
+             data-readtime="5 min read"
+             data-snippet="A technical deep dive into shifting paradigms in string playing over the last decade and how it affects resonance."
+             data-content="In string playing and vocal accompaniment alike, the delicate balance between bow speed and contact point determines clarity versus warmth. Modern string players are rediscovering historical bowings that prioritize buoyant articulative releases over relentless pressure. By easing tension at the frog and allowing acoustic resonance to bloom, the instrument sings with a vocal purity that blends seamlessly with opera soloists.">
+      <div class="h-56 w-full bg-surface-container-high relative overflow-hidden">
+        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Cello bridge and strings" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC625CHb6gPl76ko62q28PzlCKOBHHMxaH9F-OkqKsfYRn31IfNiPv7ZB_zXTljDyKzruj8OXj6xcknnEheVq2e6h38UDpz7PTz89Bw0smM69yiQnCnVk_MYEH2_uTL4Zzb_aNAPYqFPawy7wvDAp8_F9fnJd1OYOLXF8pk2XIrjh3riyE2dSQihifOpvGNYLKtjUR8Pt3KLON7AB5dKCBXVPx7EBcromg7eLNbmFbtjbrNf1FjZ9lX">
+      </div>
+      <div class="p-8 flex flex-col flex-grow gap-5">
+        <span class="bg-surface text-on-surface-variant font-label-sm text-[10px] px-3 py-1 rounded-sm uppercase tracking-widest w-fit">Technique</span>
+        <h3 class="font-headline-md text-headline-md text-primary tracking-tight leading-snug group-hover:text-primary/80 transition-colors">The Modern Bow: Agility vs Weight</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant/80 line-clamp-3">
+          A technical deep dive into shifting paradigms in string playing over the last decade and how it affects resonance.
+        </p>
+        <div class="mt-auto pt-4 flex items-center justify-between">
+          <span class="font-label-sm text-xs text-on-surface-variant/60 tracking-widest uppercase">Oct 05, 2024</span>
+          <span class="font-label-sm text-xs text-primary font-semibold flex items-center gap-1">Read <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Post 2 -->
+    <article class="blog-post-card bg-white rounded-2xl border border-primary/10 overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-shadow duration-300 group cursor-pointer"
+             data-category="Tips"
+             data-title="Stop Wearing Tuxedos"
+             data-date="Sep 28, 2024"
+             data-readtime="4 min read"
+             data-snippet="How formal concert attire creates an unnecessary barrier between the orchestra and the modern audience, and what we should wear instead."
+             data-content="Why are young concertgoers intimidated by classical halls? Often, it starts before a single note is played. The Victorian penguin suit creates an unspoken psychological distance between audience and performer. Contemporary concert halls in Berlin, London, and Tokyo are experimenting with modern monochrome tailoring and relaxed dress codes. When the visual aesthetic feels alive and relevant, young audiences can connect directly with the raw emotional truth of the music.">
+      <div class="h-56 w-full bg-surface-container-high relative overflow-hidden flex items-center justify-center bg-[#f4f2ec]">
+        <span class="material-symbols-outlined text-[64px] text-primary/20">music_note</span>
+      </div>
+      <div class="p-8 flex flex-col flex-grow gap-5">
+        <span class="bg-surface text-on-surface-variant font-label-sm text-[10px] px-3 py-1 rounded-sm uppercase tracking-widest w-fit">Tips</span>
+        <h3 class="font-headline-md text-headline-md text-primary tracking-tight leading-snug group-hover:text-primary/80 transition-colors">Stop Wearing Tuxedos</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant/80 line-clamp-3">
+          How formal concert attire creates an unnecessary barrier between the orchestra and the modern audience, and what we should wear instead.
+        </p>
+        <div class="mt-auto pt-4 flex items-center justify-between">
+          <span class="font-label-sm text-xs text-on-surface-variant/60 tracking-widest uppercase">Sep 28, 2024</span>
+          <span class="font-label-sm text-xs text-primary font-semibold flex items-center gap-1">Read <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Post 3 -->
+    <article class="blog-post-card bg-white rounded-2xl border border-primary/10 overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-shadow duration-300 group cursor-pointer"
+             data-category="Repertoire"
+             data-title="Debussy's Late Works"
+             data-date="Sep 20, 2024"
+             data-readtime="6 min read"
+             data-snippet="Finding clarity in the often-misunderstood structural rigidity of his final sonatas and unpacking their complex emotional landscape."
+             data-content="Claude Debussy's final three sonatas (for cello, flute-viola-harp, and violin) are often categorized under hazy impressionist umbrellas. In truth, they represent a fiercely lucid return to French classical order and neoclassical symmetry. Written against the harrowing backdrop of World War I, these pieces strip away all orchestral excess, leaving crystalline motivic counterpoint and unforgettable harmonic yearning.">
+      <div class="h-56 w-full bg-surface-container-high relative overflow-hidden flex items-center justify-center bg-[#f4f2ec]">
+        <span class="material-symbols-outlined text-[64px] text-primary/20">auto_stories</span>
+      </div>
+      <div class="p-8 flex flex-col flex-grow gap-5">
+        <span class="bg-surface text-on-surface-variant font-label-sm text-[10px] px-3 py-1 rounded-sm uppercase tracking-widest w-fit">Repertoire</span>
+        <h3 class="font-headline-md text-headline-md text-primary tracking-tight leading-snug group-hover:text-primary/80 transition-colors">Debussy's Late Works</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant/80 line-clamp-3">
+          Finding clarity in the often-misunderstood structural rigidity of his final sonatas and unpacking their complex emotional landscape.
+        </p>
+        <div class="mt-auto pt-4 flex items-center justify-between">
+          <span class="font-label-sm text-xs text-on-surface-variant/60 tracking-widest uppercase">Sep 20, 2024</span>
+          <span class="font-label-sm text-xs text-primary font-semibold flex items-center gap-1">Read <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <!-- Newsletter Signup & Load More -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+    <div class="md:col-span-3 bg-[#1A1A1A] rounded-2xl p-10 md:p-16 flex flex-col md:flex-row items-center justify-between gap-10 text-white relative overflow-hidden shadow-lg">
+      <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 100% 100%, #ffffff 0%, transparent 50%);"></div>
+      <div class="relative z-10 flex flex-col gap-4 max-w-lg">
+        <h3 class="font-headline-md text-headline-lg font-display-lg tracking-tight">Join the Conversation</h3>
+        <p class="font-body-md text-body-lg font-normal opacity-80">Get weekly essays on classical music delivered straight to your inbox.</p>
+      </div>
+      <div class="relative z-10 w-full max-w-md">
+        <form id="newsletter-form" onsubmit="handleNewsletterSubmit(event)" class="flex flex-col sm:flex-row gap-3">
+          <input required id="newsletter-email" class="w-full bg-white/10 border border-white/20 rounded-full px-6 py-4 font-body-md text-white placeholder:text-white/50 focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-all text-sm" placeholder="Your email address" type="email">
+          <button class="w-full sm:w-auto px-8 bg-white text-[#1A1A1A] font-label-md text-label-md py-4 rounded-full hover:bg-neutral-200 transition-colors tracking-widest uppercase flex-shrink-0 cursor-pointer" type="submit">
+            Subscribe
+          </button>
+        </form>
+        <div id="newsletter-success" class="hidden text-emerald-400 font-semibold text-sm mt-3 flex items-center gap-2">
+          <span class="material-symbols-outlined text-lg">check_circle</span>
+          Thank you! You are now subscribed to The Green Room.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Load More Action -->
+  <div class="flex justify-center mt-4">
+    <button id="load-more-blog-btn" class="px-10 py-4 bg-transparent border border-primary/20 text-primary font-label-md text-label-md rounded-full hover:border-primary/50 hover:bg-primary/5 transition-all tracking-widest uppercase shadow-sm cursor-pointer">
+      Load More Articles
+    </button>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-surface-container-low border-t border-primary/10 py-10 w-full mt-auto" style="background-color: rgb(253, 249, 228);">
+  <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-6">
+    <div class="text-center md:text-left">
+      <span class="font-display-lg text-headline-sm text-primary">Arias Unlocked</span>
+      <p class="font-body-md text-sm text-on-surface-variant mt-1">The Green Room essays &amp; classical music perspectives.</p>
+    </div>
+    <div class="flex gap-6 items-center">
+      <a class="text-on-surface-variant hover:text-primary font-label-md text-sm transition-colors" href="index.html">Home</a>
+      <a class="text-on-surface-variant hover:text-primary font-label-md text-sm transition-colors" href="songs.html">Songs</a>
+      <a class="text-on-surface-variant hover:text-primary font-label-md text-sm transition-colors" href="about.html">About Me</a>
+      <button class="join-trigger text-on-surface-variant hover:text-primary font-label-md text-sm transition-colors">Join</button>
+    </div>
+  </div>
+</footer>
+
+<!-- Article Reader Modal -->
+<div id="article-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[110] hidden flex items-center justify-center p-4">
+  <div class="bg-white rounded-3xl max-w-2xl w-full p-8 relative shadow-2xl border border-secondary/20 max-h-[90vh] overflow-y-auto">
+    <button onclick="closeArticleModal()" class="absolute top-5 right-5 text-gray-400 hover:text-black">
+      <span class="material-symbols-outlined">close</span>
+    </button>
+    
+    <div class="flex items-center gap-3 mb-3">
+      <span id="article-modal-category" class="bg-secondary/10 text-secondary font-label-sm text-xs px-3 py-1 rounded-full uppercase tracking-widest font-semibold">Interpretation</span>
+      <span id="article-modal-date" class="text-xs text-gray-500 uppercase tracking-widest">Oct 12, 2024</span>
+      <span id="article-modal-readtime" class="text-xs text-gray-500 uppercase tracking-widest">7 min read</span>
+    </div>
+
+    <h2 id="article-modal-title" class="font-headline-lg text-3xl md:text-4xl text-primary mb-6 leading-tight">Finding the Silence in Turandot</h2>
+    
+    <div id="article-modal-content" class="font-body-md text-gray-700 space-y-4 leading-relaxed text-base border-t border-gray-100 pt-6">
+    </div>
+
+    <div class="mt-8 pt-6 border-t border-gray-100 flex items-center justify-between">
+      <div class="text-xs text-gray-500">By Arias Unlocked Editorial</div>
+      <button onclick="closeArticleModal()" class="px-6 py-2 bg-primary text-white rounded-full text-xs uppercase tracking-wider font-semibold">
+        Close Article
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Join Modal -->
+<div id="join-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[110] hidden flex items-center justify-center p-4">
+  <div class="bg-white rounded-3xl max-w-md w-full p-8 relative shadow-2xl border border-secondary/20">
+    <button onclick="closeJoinModal()" class="absolute top-5 right-5 text-gray-500 hover:text-black">
+      <span class="material-symbols-outlined">close</span>
+    </button>
+    <div class="text-center mb-6">
+      <span class="material-symbols-outlined text-4xl text-primary mb-2">music_note</span>
+      <h3 class="font-display-lg text-2xl text-primary">Join Arias Unlocked</h3>
+      <p class="font-body-md text-sm text-on-surface-variant mt-2">
+        Become part of our youth community decoding opera and classical music.
+      </p>
+    </div>
+    <form id="join-form" onsubmit="handleJoinSubmit(event)" class="flex flex-col gap-4">
+      <div>
+        <label class="block text-xs uppercase tracking-wider font-semibold text-gray-600 mb-1">Your Name</label>
+        <input required type="text" id="join-name" placeholder="e.g. Antonio" class="w-full px-4 py-3 rounded-xl border border-secondary/30 focus:outline-none focus:border-primary">
+      </div>
+      <div>
+        <label class="block text-xs uppercase tracking-wider font-semibold text-gray-600 mb-1">Email Address</label>
+        <input required type="email" id="join-email" placeholder="you@example.com" class="w-full px-4 py-3 rounded-xl border border-secondary/30 focus:outline-none focus:border-primary">
+      </div>
+      <button type="submit" class="w-full py-3.5 bg-primary text-white rounded-full font-label-md uppercase tracking-wider hover:bg-neutral-800 transition-colors mt-2">
+        Join Free Today
+      </button>
+    </form>
+    <div id="join-success" class="hidden text-center py-6">
+      <span class="material-symbols-outlined text-5xl text-emerald-600 mb-2">check_circle</span>
+      <h4 class="font-bold text-lg text-primary">Welcome to the family!</h4>
+      <p class="text-sm text-gray-600 mt-1">Check your inbox for our latest essay dispatch.</p>
+      <button onclick="closeJoinModal()" class="mt-4 px-6 py-2 bg-primary text-white rounded-full text-xs uppercase tracking-wider">Close</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Navigation toggle
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileBtn && mobileMenu) {
+      mobileBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+
+    // Filter and Search logic
+    const filterBtns = document.querySelectorAll('.blog-filter-btn');
+    const searchInput = document.getElementById('blog-search-input');
+    const searchClear = document.getElementById('blog-search-clear');
+    let activeFilter = 'All';
+    let searchQuery = '';
+
+    function filterArticles() {
+      const articles = document.querySelectorAll('.blog-post-card');
+      articles.forEach(art => {
+        const cat = art.getAttribute('data-category');
+        const title = (art.getAttribute('data-title') || '').toLowerCase();
+        const snippet = (art.getAttribute('data-snippet') || '').toLowerCase();
+
+        const matchesCat = (activeFilter === 'All' || cat.toLowerCase() === activeFilter.toLowerCase());
+        const matchesQuery = !searchQuery || title.includes(searchQuery) || snippet.includes(searchQuery) || cat.toLowerCase().includes(searchQuery);
+
+        if (matchesCat && matchesQuery) {
+          art.classList.remove('hidden');
+        } else {
+          art.classList.add('hidden');
+        }
+      });
+    }
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        activeFilter = btn.getAttribute('data-filter');
+        filterBtns.forEach(b => {
+          b.className = "blog-filter-btn px-5 py-2 rounded-full bg-white border border-primary/10 text-on-surface-variant hover:border-primary/30 hover:text-primary font-label-sm text-label-sm tracking-widest uppercase transition-all shadow-sm";
+        });
+        btn.className = "blog-filter-btn px-5 py-2 rounded-full bg-primary text-white font-label-sm text-label-sm tracking-widest uppercase transition-colors";
+        filterArticles();
+      });
+    });
+
+    searchInput.addEventListener('input', (e) => {
+      searchQuery = e.target.value.toLowerCase().trim();
+      searchClear.classList.toggle('hidden', !searchQuery);
+      filterArticles();
+    });
+
+    searchClear.addEventListener('click', () => {
+      searchInput.value = '';
+      searchQuery = '';
+      searchClear.classList.add('hidden');
+      filterArticles();
+    });
+
+    // Article Reader Modal
+    const articleModal = document.getElementById('article-modal');
+    const modalCategory = document.getElementById('article-modal-category');
+    const modalDate = document.getElementById('article-modal-date');
+    const modalReadtime = document.getElementById('article-modal-readtime');
+    const modalTitle = document.getElementById('article-modal-title');
+    const modalContent = document.getElementById('article-modal-content');
+
+    function attachArticleClick(card) {
+      card.addEventListener('click', () => {
+        modalCategory.textContent = card.getAttribute('data-category');
+        modalDate.textContent = card.getAttribute('data-date');
+        modalReadtime.textContent = card.getAttribute('data-readtime');
+        modalTitle.textContent = card.getAttribute('data-title');
+        
+        const rawContent = card.getAttribute('data-content') || card.getAttribute('data-snippet') || '';
+        // Convert simple markdown formatting
+        const paragraphs = rawContent.split('\n\n').map(p => `<p>${p.replace(/\*(.*?)\*/g, '<em>$1</em>')}</p>`).join('');
+        modalContent.innerHTML = paragraphs;
+        
+        articleModal.classList.remove('hidden');
+      });
+    }
+
+    document.querySelectorAll('.blog-post-card').forEach(attachArticleClick);
+
+    window.closeArticleModal = function() {
+      articleModal.classList.add('hidden');
+    };
+
+    // Load More Articles
+    const loadMoreBtn = document.getElementById('load-more-blog-btn');
+    const blogGrid = document.getElementById('blog-grid');
+    const extraArticles = [
+      {
+        category: "Vocalization",
+        title: "Bel Canto Phrasing for Young Singers",
+        date: "Sep 15, 2024",
+        readtime: "5 min read",
+        snippet: "How seamless legato connection, appoggio breath management, and vowel purity unlock Italian vocal repertoire.",
+        content: "Bel canto literally translates to 'beautiful singing', but to young vocalists it often feels elusive. The secret lies in vowel alignment. By cultivating an unwavering continuity of sound—what the old Italian masters called 'legato'—the vocal chords vibrate with optimal efficiency without squeezing. Every phrase becomes an arching ribbon of light."
+      },
+      {
+        category: "Interpretation",
+        title: "Acting with Your Voice: Beyond the Words",
+        date: "Sep 08, 2024",
+        readtime: "4 min read",
+        snippet: "Exploring how tone color and emotional inflection convey nuance that acting alone cannot deliver.",
+        content: "On the operatic stage, subtle facial expressions cannot always be seen from the amphitheater. The voice must do the heavy lifting. In Mozart's comic arias, notice how the slightest darkening of the timbre or crisp staccato immediately signals mischief to the listener."
+      },
+      {
+        category: "Technique",
+        title: "The Science of Natural Vibrato",
+        date: "Sep 01, 2024",
+        readtime: "6 min read",
+        snippet: "Dispelling common myths about oscillation speed, breath pressure, and laryngeal freedom.",
+        content: "Vibrato is not an intentional shaking of the jaw or diaphragm; it is the physiological byproduct of a balanced, resonant phonation where antagonistic muscle groups exist in dynamic equilibrium. Understanding the acoustic mechanics helps young students sing freely without artificial tension."
+      }
+    ];
+
+    let extraLoaded = false;
+    loadMoreBtn.addEventListener('click', () => {
+      if (!extraLoaded) {
+        extraArticles.forEach(item => {
+          const article = document.createElement('article');
+          article.className = "blog-post-card bg-white rounded-2xl border border-primary/10 overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-shadow duration-300 group cursor-pointer";
+          article.setAttribute('data-category', item.category);
+          article.setAttribute('data-title', item.title);
+          article.setAttribute('data-date', item.date);
+          article.setAttribute('data-readtime', item.readtime);
+          article.setAttribute('data-snippet', item.snippet);
+          article.setAttribute('data-content', item.content);
+
+          article.innerHTML = `
+            <div class="h-56 w-full bg-surface-container-high relative overflow-hidden flex items-center justify-center bg-[#f4f2ec]">
+              <span class="material-symbols-outlined text-[64px] text-primary/20">menu_book</span>
+            </div>
+            <div class="p-8 flex flex-col flex-grow gap-5">
+              <span class="bg-surface text-on-surface-variant font-label-sm text-[10px] px-3 py-1 rounded-sm uppercase tracking-widest w-fit">${item.category}</span>
+              <h3 class="font-headline-md text-headline-md text-primary tracking-tight leading-snug group-hover:text-primary/80 transition-colors">${item.title}</h3>
+              <p class="font-body-md text-body-md text-on-surface-variant/80 line-clamp-3">${item.snippet}</p>
+              <div class="mt-auto pt-4 flex items-center justify-between">
+                <span class="font-label-sm text-xs text-on-surface-variant/60 tracking-widest uppercase">${item.date}</span>
+                <span class="font-label-sm text-xs text-primary font-semibold flex items-center gap-1">Read <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+              </div>
+            </div>
+          `;
+          blogGrid.appendChild(article);
+          attachArticleClick(article);
+        });
+        extraLoaded = true;
+        loadMoreBtn.textContent = "All Articles Loaded";
+        loadMoreBtn.classList.add('opacity-50', 'pointer-events-none');
+      }
+    });
+
+    // Newsletter Submission
+    window.handleNewsletterSubmit = function(e) {
+      e.preventDefault();
+      const email = document.getElementById('newsletter-email').value;
+      const subscribers = JSON.parse(localStorage.getItem('arias_newsletter') || '[]');
+      subscribers.push({ email, date: new Date().toISOString() });
+      localStorage.setItem('arias_newsletter', JSON.stringify(subscribers));
+
+      document.getElementById('newsletter-form').reset();
+      document.getElementById('newsletter-success').classList.remove('hidden');
+    };
+
+    // Join Modal Logic
+    const joinModal = document.getElementById('join-modal');
+    const joinBtn = document.getElementById('join-btn');
+    const joinTriggers = document.querySelectorAll('.join-trigger');
+
+    window.openJoinModal = function() { joinModal.classList.remove('hidden'); };
+    window.closeJoinModal = function() {
+      joinModal.classList.add('hidden');
+      document.getElementById('join-form').reset();
+      document.getElementById('join-form').classList.remove('hidden');
+      document.getElementById('join-success').classList.add('hidden');
+    };
+    if (joinBtn) joinBtn.addEventListener('click', openJoinModal);
+    joinTriggers.forEach(t => t.addEventListener('click', openJoinModal));
+
+    window.handleJoinSubmit = function(e) {
+      e.preventDefault();
+      const name = document.getElementById('join-name').value;
+      const email = document.getElementById('join-email').value;
+      localStorage.setItem('arias_user', JSON.stringify({ name, email }));
+      document.getElementById('join-form').classList.add('hidden');
+      document.getElementById('join-success').classList.remove('hidden');
+    };
+
+    window.addEventListener('click', (e) => {
+      if (e.target === articleModal) closeArticleModal();
+      if (e.target === joinModal) closeJoinModal();
+    });
+  });
+</script>
+</body>
+</html>

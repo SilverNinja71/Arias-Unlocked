@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Arias Unlocked - Explore Arias</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;family=Times+New+Roman:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+  .material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+  }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+</style>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-secondary-fixed": "#1f1c05",
+          "inverse-on-surface": "#fff2ad",
+          "on-secondary-container": "#686346",
+          "on-primary-container": "#858383",
+          "surface-container-highest": "#f4e483",
+          "surface-container-lowest": "#ffffff",
+          "tertiary-container": "#1c1b1a",
+          "tertiary-fixed-dim": "#cac6c4",
+          "on-secondary": "#ffffff",
+          "primary-container": "#1c1b1b",
+          "inverse-primary": "#c8c6c5",
+          "outline": "#747878",
+          "on-tertiary-fixed-variant": "#484645",
+          "primary": "#000000",
+          "inverse-surface": "#383100",
+          "primary-fixed": "#e5e2e1",
+          "on-primary-fixed": "#1c1b1b",
+          "surface-tint": "#5f5e5e",
+          "on-tertiary-fixed": "#1c1b1a",
+          "surface": "#fff9ea",
+          "surface-dim": "#ecdb7b",
+          "secondary-container": "#e8e0bb",
+          "background": "#fff9ea",
+          "surface-bright": "#fff9ea",
+          "error": "#ba1a1a",
+          "on-tertiary": "#ffffff",
+          "on-primary-fixed-variant": "#474746",
+          "on-error": "#ffffff",
+          "surface-variant": "#f4e483",
+          "on-surface": "#201c00",
+          "surface-container-low": "#fff4c2",
+          "on-tertiary-container": "#868382",
+          "surface-container": "#ffef96",
+          "on-surface-variant": "#444748",
+          "error-container": "#ffdad6",
+          "tertiary": "#000000",
+          "tertiary-fixed": "#e6e2df",
+          "on-error-container": "#93000a",
+          "primary-fixed-dim": "#c8c6c5",
+          "on-secondary-fixed-variant": "#4b472c",
+          "secondary-fixed": "#ebe3be",
+          "on-background": "#201c00",
+          "secondary": "#645f42",
+          "on-primary": "#ffffff",
+          "secondary-fixed-dim": "#cec7a4",
+          "outline-variant": "#c4c7c7",
+          "surface-container-high": "#fae988"
+        },
+        "borderRadius": {
+          "DEFAULT": "1rem",
+          "lg": "2rem",
+          "xl": "3rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "margin-mobile": "20px",
+          "container-max": "1200px",
+          "gutter": "24px",
+          "base": "8px",
+          "margin-desktop": "64px"
+        },
+        "fontFamily": {
+          "headline-lg": ["Times New Roman", "serif"],
+          "headline-md": ["Times New Roman", "serif"],
+          "display-lg-mobile": ["Times New Roman", "serif"],
+          "body-lg": ["Montserrat", "sans-serif"],
+          "display-lg": ["Times New Roman", "serif"],
+          "label-sm": ["Montserrat", "sans-serif"],
+          "body-md": ["Montserrat", "sans-serif"],
+          "label-md": ["Montserrat", "sans-serif"]
+        },
+        "fontSize": {
+          "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+          "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+          "display-lg-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+          "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+          "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+          "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "500" }],
+          "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+          "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }]
+        }
+      }
+    }
+  }
+</script>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col antialiased" style="background-color: rgb(253, 249, 228);">
+
+<!-- TopNavBar -->
+<header class="bg-background text-primary w-full top-0 sticky border-b border-secondary/20 z-50 backdrop-blur-md bg-opacity-95" style="background-color: rgb(253, 249, 228);">
+  <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+    <a href="index.html" class="font-display-lg text-headline-md text-primary tracking-tight flex items-center gap-2">
+      <img alt="Arias Unlocked Logo" class="h-9 w-9 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdKVTjZIq1S0DBO4UoJSfbwTglYCiIRWt_6-hmiYbOZRRLPJ9zTsnTkorQAzRoBk0w16OB4ZO-wtqnq5EKo-eQBvKcQ3z2rqcNGrrdD_BI6FFgFha1W0RUBW8VIjdqydhmmLtHhIxcDCByxMvLXsEScmqyGH7eyK18vEykEmq1JcDhlwNz8Hf3czH8Rlmh31x-lFcURrIw6g1S6dJVdhm0RMwWK0Z5CoidP7YPUHhbSOEt8b6I7Yyc8tbRpueumI7Zl3WH7uUGTtoDWA">
+      <span>Arias Unlocked</span>
+    </a>
+    
+    <nav class="hidden md:flex space-x-8 items-center">
+      <a class="text-primary font-bold border-b-2 border-primary pb-1 uppercase tracking-widest text-sm" href="songs.html">Songs</a>
+      <a class="text-on-surface-variant font-label-md hover:text-primary transition-colors duration-200 uppercase tracking-widest text-sm" href="blog.html">Blog</a>
+      <a class="text-on-surface-variant font-label-md hover:text-primary transition-colors duration-200 uppercase tracking-widest text-sm" href="about.html">About Me</a>
+    </nav>
+    
+    <button id="join-btn" class="hidden md:block bg-primary text-on-primary font-label-md text-label-md rounded-full px-6 py-2 hover:bg-neutral-800 transition-colors">
+      Join Now
+    </button>
+    
+    <button id="mobile-menu-btn" class="md:hidden text-primary p-2">
+      <span class="material-symbols-outlined" data-icon="menu">menu</span>
+    </button>
+  </div>
+
+  <!-- Mobile Dropdown -->
+  <div id="mobile-menu" class="hidden md:hidden px-6 pb-6 pt-2 bg-background border-b border-secondary/20 flex flex-col gap-3">
+    <a class="text-primary font-bold py-2 border-b border-secondary/10" href="songs.html">Songs</a>
+    <a class="text-primary font-semibold py-2 border-b border-secondary/10" href="blog.html">Blog</a>
+    <a class="text-primary font-semibold py-2 border-b border-secondary/10" href="about.html">About Me</a>
+    <button class="join-trigger w-full bg-primary text-white py-2.5 rounded-full font-label-md uppercase tracking-wider text-sm mt-2">
+      Join Now
+    </button>
+  </div>
+</header>
+
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 flex flex-col gap-12">
+  <!-- Header & Integrated Search/Filter -->
+  <section class="flex flex-col gap-6">
+    <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary">Explore Classical Music</h1>
+    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+      Discover the emotional depth and vocal brilliance of classical repertoire, curated for the modern ear. Promoting the understanding of classical music to youth.
+    </p>
+
+    <!-- Integrated Search and Filter Bar -->
+    <div class="w-full bg-surface-container-lowest border border-secondary/30 p-4 md:p-6 flex flex-col md:flex-row items-center shadow-[0_4px_24px_rgba(48,46,32,0.05)] gap-6 rounded-2xl md:rounded-full justify-between">
+      <!-- Search Input -->
+      <div class="flex-grow flex items-center w-full px-4 py-2.5 bg-surface-container-low border border-secondary/20 focus-within:border-primary/50 transition-colors rounded-full">
+        <span class="material-symbols-outlined text-on-surface-variant mr-3" data-icon="search">search</span>
+        <input id="search-input" class="w-full bg-transparent border-none outline-none font-body-md text-on-background placeholder:text-on-surface-variant/70 text-sm" placeholder="Search by aria, composer, or emotion..." type="text">
+        <button id="search-clear-btn" class="text-gray-400 hover:text-black hidden ml-2">
+          <span class="material-symbols-outlined text-sm">close</span>
+        </button>
+      </div>
+
+      <!-- Tag Filters -->
+      <div class="flex flex-wrap items-center gap-2 w-full md:w-auto overflow-visible flex-grow md:justify-end">
+        <span class="font-label-sm text-label-sm text-on-surface-variant mr-2 uppercase tracking-wider hidden sm:inline">Filters:</span>
+        <button class="filter-btn rounded-full px-4 py-1.5 font-label-sm text-label-sm whitespace-nowrap transition-colors bg-primary text-on-primary" data-filter="All">All</button>
+        <button class="filter-btn rounded-full px-4 py-1.5 font-label-sm text-label-sm border border-secondary/20 whitespace-nowrap transition-colors bg-secondary/10 text-on-secondary-fixed hover:bg-secondary/20" data-filter="Arias">Arias</button>
+        <button class="filter-btn rounded-full px-4 py-1.5 font-label-sm text-label-sm border border-secondary/20 whitespace-nowrap transition-colors bg-secondary/10 text-on-secondary-fixed hover:bg-secondary/20" data-filter="Love">Love</button>
+        <button class="filter-btn rounded-full px-4 py-1.5 font-label-sm text-label-sm border border-secondary/20 whitespace-nowrap transition-colors bg-secondary/10 text-on-secondary-fixed hover:bg-secondary/20" data-filter="Fast">Fast</button>
+        <button class="filter-btn bg-secondary/10 hover:bg-secondary/20 text-on-secondary-fixed rounded-full px-4 py-1.5 font-label-sm text-label-sm border border-secondary/20 whitespace-nowrap transition-colors" data-filter="Legato">Legato</button>
+        <button class="filter-btn bg-secondary/10 hover:bg-secondary/20 text-on-secondary-fixed rounded-full px-4 py-1.5 font-label-sm text-label-sm border border-secondary/20 whitespace-nowrap transition-colors" data-filter="Baroque">Baroque</button>
+        <button class="filter-btn bg-secondary/10 hover:bg-secondary/20 text-on-secondary-fixed rounded-full px-4 py-1.5 font-label-sm text-label-sm border border-secondary/20 whitespace-nowrap transition-colors" data-filter="French">French</button>
+        <button class="filter-btn bg-secondary/10 hover:bg-secondary/20 text-on-secondary-fixed rounded-full px-4 py-1.5 font-label-sm text-label-sm border border-secondary/20 whitespace-nowrap transition-colors" data-filter="German">German</button>
+        
+        <!-- Plus Dropdown for Extended Categories -->
+        <div class="relative" id="dropdown-container">
+          <button id="plus-filter-btn" title="More Filters" class="bg-secondary/10 hover:bg-secondary/20 text-on-secondary-fixed rounded-full p-2 flex items-center justify-center border border-secondary/20 transition-colors">
+            <span class="material-symbols-outlined text-[20px]" data-icon="add">add</span>
+          </button>
+          
+          <div id="filter-dropdown" class="absolute right-0 top-full mt-2 w-72 bg-surface-container-lowest border border-secondary/20 rounded-2xl shadow-[0_8px_30px_rgba(48,46,32,0.15)] z-[100] p-4 hidden">
+            <div class="text-xs uppercase tracking-wider font-bold text-gray-500 mb-2">More Filter Tags</div>
+            <div class="flex flex-wrap gap-2 max-h-60 overflow-y-auto pr-1">
+              <button class="filter-btn bg-secondary/10 hover:bg-secondary/20 text-on-secondary-fixed rounded-full px-3 py-1 font-label-sm text-label-sm border border-secondary/20 whitespace-nowrap transition-colors" data-filter="Romantic">Romantic</button>
+              <button class="filter-btn bg-secondary/10 hover:bg-secondary/20 text-on-secondary-fixed rounded-full px-3 py-1 font-label-sm text-label-sm border border-secondary/20 whitespace-nowrap transition-colors" data-filter="Classical">Classical</button>
+              <button class="filter-btn bg-secondary/10 hover:bg-secondary/20 text-on-secondary-fixed rounded-full px-3 py-1 font-label-sm text-label-sm border border-secondary/20 whitespace-nowrap transition-colors" data-filter="Hate">Hate</button>
+              <button class="filter-btn bg-secondary/10 hover:bg-secondary/20 text-on-secondary-fixed rounded-full px-3 py-1 font-label-sm text-label-sm border border-secondary/20 whitespace-nowrap transition-colors" data-filter="Male">Male</button>
+              <button class="filter-btn bg-secondary/10 hover:bg-secondary/20 text-on-secondary-fixed rounded-full px-3 py-1 font-label-sm text-label-sm border border-secondary/20 whitespace-nowrap transition-colors" data-filter="Female">Female</button>
+              <button class="filter-btn bg-secondary/10 hover:bg-secondary/20 text-on-secondary-fixed rounded-full px-3 py-1 font-label-sm text-label-sm border border-secondary/20 whitespace-nowrap transition-colors" data-filter="Boy">Boy</button>
+              <button class="filter-btn bg-secondary/10 hover:bg-secondary/20 text-on-secondary-fixed rounded-full px-3 py-1 font-label-sm text-label-sm border border-secondary/20 whitespace-nowrap transition-colors" data-filter="All Genders">All Genders</button>
+              <button class="filter-btn bg-secondary/10 hover:bg-secondary/20 text-on-secondary-fixed rounded-full px-3 py-1 font-label-sm text-label-sm border border-secondary/20 whitespace-nowrap transition-colors" data-filter="Soprano">Soprano</button>
+              <button class="filter-btn bg-secondary/10 hover:bg-secondary/20 text-on-secondary-fixed rounded-full px-3 py-1 font-label-sm text-label-sm border border-secondary/20 whitespace-nowrap transition-colors" data-filter="Mezzo Soprano">Mezzo Soprano</button>
+              <button class="filter-btn bg-secondary/10 hover:bg-secondary/20 text-on-secondary-fixed rounded-full px-3 py-1 font-label-sm text-label-sm border border-secondary/20 whitespace-nowrap transition-colors" data-filter="Alto">Alto</button>
+              <button class="filter-btn bg-secondary/10 hover:bg-secondary/20 text-on-secondary-fixed rounded-full px-3 py-1 font-label-sm text-label-sm border border-secondary/20 whitespace-nowrap transition-colors" data-filter="Counter-tenor">Counter-tenor</button>
+              <button class="filter-btn bg-secondary/10 hover:bg-secondary/20 text-on-secondary-fixed rounded-full px-3 py-1 font-label-sm text-label-sm border border-secondary/20 whitespace-nowrap transition-colors" data-filter="Tenor">Tenor</button>
+              <button class="filter-btn bg-secondary/10 hover:bg-secondary/20 text-on-secondary-fixed rounded-full px-3 py-1 font-label-sm text-label-sm border border-secondary/20 whitespace-nowrap transition-colors" data-filter="Baritone">Baritone</button>
+              <button class="filter-btn bg-secondary/10 hover:bg-secondary/20 text-on-secondary-fixed rounded-full px-3 py-1 font-label-sm text-label-sm border border-secondary/20 whitespace-nowrap transition-colors" data-filter="Bass">Bass</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Song Cards Grid -->
+  <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter relative z-0" id="song-grid">
+    <!-- Empty State -->
+    <div class="col-span-1 md:col-span-2 lg:col-span-3 flex flex-col items-center justify-center py-16 hidden" id="empty-state">
+      <span class="material-symbols-outlined text-5xl text-secondary/40 mb-3">music_off</span>
+      <p class="font-body-lg text-body-lg font-bold text-primary mb-2 text-center">Maybe lower the amount of filters.</p>
+      <p class="font-body-md text-body-md text-on-surface-variant text-center">♭B - A - ♭A - G...</p>
+      <button onclick="resetFilters()" class="mt-4 px-6 py-2 bg-primary text-white rounded-full text-xs uppercase tracking-wider font-semibold">
+        Reset All Filters
+      </button>
+    </div>
+
+    <!-- Card 1: Que Fais-tu, blanche tourterelle -->
+    <article class="song-card flex flex-col bg-surface-container-lowest rounded-xl border border-secondary/20 overflow-hidden group hover:border-secondary/40 hover:shadow-md transition-all h-full" 
+             data-title="Que Fais-tu, blanche tourterelle" 
+             data-composer="Charles Gounod" 
+             data-work="Roméo et Juliette"
+             data-desc="From Roméo et Juliette. Stephano the page sings this taunting song outside the Capulet palace."
+             data-lyrics="Que fais-tu, blanche tourterelle, / Dans ce nid de vautours? / Quelque jour, déployant ton aile, / Tu suivras les amours!"
+             data-translation="What are you doing, white turtle-dove, / In this nest of vultures? / One day, spreading your wings, / You will follow love!"
+             data-tags="French,Aria">
+      <div class="w-full aspect-[4/3] bg-cover bg-center border-b border-secondary/10" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBZ-RIDQ798_gp5sArirgzUItKjt373LeokrR1pGglFlSQmzGjvDxI1dttZ64t4_tgqessjKZimqVxFxFiXsxEBcVCKDw_h8EowCkbLnASeNLbvr2_WhlF7s2BaPIE8DD8nItYZKNkfmssRvwSPIu_z91xPXVNpo7yIyqBzFNmDA_-aCLpJA04cvIbZCf78zW3O9YUzdUtFJx5YZVZg_vrkACODGZIVw5fvJ7D82LBpKVgjt1tzhu87');"></div>
+      <div class="p-6 flex flex-col flex-grow">
+        <div class="mb-4">
+          <div class="flex gap-2 mb-3">
+            <span class="inline-block bg-secondary/10 text-secondary font-label-sm text-label-sm rounded-full px-3 py-1">French</span>
+            <span class="inline-block bg-secondary/10 text-secondary font-label-sm text-label-sm rounded-full px-3 py-1">Aria</span>
+          </div>
+          <h2 class="font-headline-lg text-headline-lg text-primary leading-tight mb-1">Que Fais-tu, blanche tourterelle</h2>
+          <p class="font-label-md text-label-md text-on-surface-variant">Charles Gounod</p>
+        </div>
+        <p class="font-body-md text-body-md text-on-background/80 mb-6 flex-grow line-clamp-3">From Roméo et Juliette.</p>
+        <div class="mt-auto">
+          <button class="listen-btn w-full flex items-center justify-center gap-2 bg-transparent border border-secondary/40 hover:bg-surface-container-low text-primary rounded-full py-2.5 font-label-md text-label-md transition-colors">
+            <span class="material-symbols-outlined text-[20px]" data-icon="play_circle">play_circle</span>Listen &amp; Read
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 2: Me voici dans son boudoir -->
+    <article class="song-card flex flex-col bg-surface-container-lowest rounded-xl border border-secondary/20 overflow-hidden group hover:border-secondary/40 hover:shadow-md transition-all h-full"
+             data-title="Me voici dans son boudoir"
+             data-composer="Ambroise Thomas"
+             data-work="Mignon"
+             data-desc="A charming and playful aria from the opera Mignon, showcasing French operatic elegance."
+             data-lyrics="Me voici dans son boudoir! / Plus de doutes, plus de craintes! / O ciel! que de parfums et de fleurs!"
+             data-translation="Here I am in her boudoir! / No more doubts, no more fears! / O heaven! what perfumes and flowers!"
+             data-tags="French,Aria,Love,Boy">
+      <div class="w-full aspect-[4/3] bg-cover bg-center border-b border-secondary/10" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAB3CvDr5vcL3RexaY5OrenSHFuliJzOAn0ty6WpXjccNzSX1b5BlzTTExkJALUjaod2ZJ5V90jetF3shPhWrdm4Q80isqhipRHX3uZShUcBuIsIEESEwuZvOysERJfEVlnSTORyXDiF1eSIdN7TaUdfzLgpCct5FpazffxcstPw9BBQ16UKl4J4IIPC50_PZ7ouiBxFLd26R0lhMNa00JYHRODu3ANkTpaBWHx1Wx3L74p-oiTRXq4');"></div>
+      <div class="p-6 flex flex-col flex-grow">
+        <div class="mb-4">
+          <div class="flex gap-2 mb-3">
+            <span class="inline-block bg-secondary/10 text-secondary font-label-sm text-label-sm rounded-full px-3 py-1">French</span>
+            <span class="inline-block bg-secondary/10 text-secondary font-label-sm text-label-sm rounded-full px-3 py-1">Aria</span>
+            <span class="inline-block bg-secondary/10 text-secondary font-label-sm text-label-sm rounded-full px-3 py-1">Love</span>
+            <span class="inline-block bg-secondary/10 text-secondary font-label-sm text-label-sm rounded-full px-3 py-1 hidden">Boy</span>
+          </div>
+          <h2 class="font-headline-lg text-headline-lg text-primary leading-tight mb-1">Me voici dans son boudoir</h2>
+          <p class="font-label-md text-label-md text-on-surface-variant">Ambroise Thomas</p>
+        </div>
+        <p class="font-body-md text-body-md text-on-background/80 mb-6 flex-grow line-clamp-3">A charming and playful aria from the opera Mignon, showcasing French operatic elegance.</p>
+        <div class="mt-auto">
+          <button class="listen-btn w-full flex items-center justify-center gap-2 bg-transparent border border-secondary/40 hover:bg-surface-container-low text-primary rounded-full py-2.5 font-label-md text-label-md transition-colors">
+            <span class="material-symbols-outlined text-[20px]" data-icon="play_circle">play_circle</span>Listen &amp; Read
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 3: Non so più -->
+    <article class="song-card flex flex-col bg-surface-container-lowest rounded-xl border border-secondary/20 overflow-hidden group hover:border-secondary/40 hover:shadow-md transition-all h-full"
+             data-title="Non so più cosa son, cosa faccio"
+             data-composer="W.A. Mozart"
+             data-work="Le nozze di Figaro"
+             data-desc="Cherubino's breathless expression of adolescent confusion and awakening love from Le nozze di Figaro."
+             data-lyrics="Non so più cosa son, cosa faccio, / Or di foco, ora sono di ghiaccio, / Ogni donna cangiar di colore, / Ogni donna mi fa palpitar!"
+             data-translation="I no longer know what I am or what I do, / One moment of fire, now I am of ice, / Every woman makes my color change, / Every woman makes my heart race!"
+             data-tags="Italian,Aria,Love,Fast,Boy">
+      <div class="w-full aspect-[4/3] bg-cover bg-center border-b border-secondary/10" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDY0YI8nwbU8ajS8PQyNG5kL7VHEHid_Kz7iZ6T9_e2xY7EHpJNl2pUiGMzQU1Ufz2yHOF0q5gtvlRvf6flWh8IhKb498-WatYHY3jWlBbKUogfH-02tkQNZ2JvL6MqITfg2koc5cltEHyMYlcDpiGcych2u1D3vbmbhznFC4cbYMQ6M5_ntr5Qp6QBfAM4BzNxOrdsyW6sKDFzGKiZXJ4GIflIQYlmr64u8aJevKfFJExuTyI6cw_J');"></div>
+      <div class="p-6 flex flex-col flex-grow">
+        <div class="mb-4">
+          <div class="flex gap-2 mb-3">
+            <span class="inline-block bg-secondary/10 text-secondary font-label-sm text-label-sm rounded-full px-3 py-1">Italian</span>
+            <span class="inline-block bg-secondary/10 text-secondary font-label-sm text-label-sm rounded-full px-3 py-1">Aria</span>
+            <span class="inline-block bg-secondary/10 text-secondary font-label-sm text-label-sm rounded-full px-3 py-1">Love</span>
+            <span class="inline-block bg-secondary/10 text-secondary font-label-sm text-label-sm rounded-full px-3 py-1 hidden">Fast</span>
+            <span class="inline-block bg-secondary/10 text-secondary font-label-sm text-label-sm rounded-full px-3 py-1 hidden">Boy</span>
+          </div>
+          <h2 class="font-headline-lg text-headline-lg text-primary leading-tight mb-1">Non so più</h2>
+          <p class="font-label-md text-label-md text-on-surface-variant">W.A. Mozart</p>
+        </div>
+        <p class="font-body-md text-body-md text-on-background/80 mb-6 flex-grow line-clamp-3">Cherubino's breathless expression of adolescent confusion and awakening love from Le nozze di Figaro.</p>
+        <div class="mt-auto">
+          <button class="listen-btn w-full flex items-center justify-center gap-2 bg-transparent border border-secondary/40 hover:bg-surface-container-low text-primary rounded-full py-2.5 font-label-md text-label-md transition-colors">
+            <span class="material-symbols-outlined text-[20px]" data-icon="play_circle">play_circle</span>Listen &amp; Read
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 4: Voi che sapete -->
+    <article class="song-card flex flex-col bg-surface-container-lowest rounded-xl border border-secondary/20 overflow-hidden group hover:border-secondary/40 hover:shadow-md transition-all h-full"
+             data-title="Voi che sapete che cosa è amor"
+             data-composer="W.A. Mozart"
+             data-work="Le nozze di Figaro"
+             data-desc="One of Mozart's most beloved melodies, where Cherubino asks the ladies of the court to explain the nature of love."
+             data-lyrics="Voi che sapete che cosa è amor, / Donne, vedete s'io l'ho nel cor. / Quello ch'io provo, vi ridirò, / È per me nuovo, capir nol so."
+             data-translation="You who know what love is, / Ladies, see if I have it in my heart. / What I am feeling, I will tell you, / It is new to me, I do not understand it."
+             data-tags="Italian,Aria,Love,Fast,Boy">
+      <div class="w-full aspect-[4/3] bg-cover bg-center border-b border-secondary/10" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDo8u9iFM2DUOsWzhfzKhN40b76ZC9C5eJBXlsZOw6MR-qmfiGZoFLdJSuSQ1YSp3XAZlrwKURGSId5OUz8yil9fNrYM-4crzaTh75E5lZiPPTmMTisTITVoY4V9iZy98l_sAZfNmFz5GXbddpaHgGq7nvZpU5fDa_qfKAPL54Deim0pxksV9qm0DhgyRg7FsiwWmkV2R7S34q7plrL-la3OjuFoa-dY0RiNRQU5H_e9lR9cVQN6iph');"></div>
+      <div class="p-6 flex flex-col flex-grow">
+        <div class="mb-4">
+          <div class="flex gap-2 mb-3">
+            <span class="inline-block bg-secondary/10 text-secondary font-label-sm text-label-sm rounded-full px-3 py-1">Italian</span>
+            <span class="inline-block bg-secondary/10 text-secondary font-label-sm text-label-sm rounded-full px-3 py-1">Aria</span>
+            <span class="inline-block bg-secondary/10 text-secondary font-label-sm text-label-sm rounded-full px-3 py-1">Love</span>
+            <span class="inline-block bg-secondary/10 text-secondary font-label-sm text-label-sm rounded-full px-3 py-1 hidden">Boy</span>
+          </div>
+          <h2 class="font-headline-lg text-headline-lg text-primary leading-tight mb-1">Voi che sapete</h2>
+          <p class="font-label-md text-label-md text-on-surface-variant">W.A. Mozart</p>
+        </div>
+        <p class="font-body-md text-body-md text-on-background/80 mb-6 flex-grow line-clamp-3">One of Mozart's most beloved melodies, where Cherubino asks the ladies of the court to explain the nature of love.</p>
+        <div class="mt-auto">
+          <button class="listen-btn w-full flex items-center justify-center gap-2 bg-transparent border border-secondary/40 hover:bg-surface-container-low text-primary rounded-full py-2.5 font-label-md text-label-md transition-colors">
+            <span class="material-symbols-outlined text-[20px]" data-icon="play_circle">play_circle</span>Listen &amp; Read
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 5: Che Fiero Costume -->
+    <article class="song-card flex flex-col bg-surface-container-lowest rounded-xl border border-secondary/20 overflow-hidden group hover:border-secondary/40 hover:shadow-md transition-all h-full"
+             data-title="Che Fiero Costume"
+             data-composer="Giovanni Legrenzi"
+             data-work="Eteocle e Polinice"
+             data-desc="A spirited and rhythmic Baroque aria exploring the cruel nature of love with characteristic Italian flair and melodic elegance."
+             data-lyrics="Che fiero costume d'aligero nume, / Che a forza di pene si faccia adorar!"
+             data-translation="What a cruel custom of the winged god (Cupid), / That through suffering he forces himself to be adored!"
+             data-tags="Italian,Love,Fast,Legato,Baroque,All Genders">
+      <div class="w-full aspect-[4/3] bg-cover bg-center border-b border-secondary/10" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDo8u9iFM2DUOsWzhfzKhN40b76ZC9C5eJBXlsZOw6MR-qmfiGZoFLdJSuSQ1YSp3XAZlrwKURGSId5OUz8yil9fNrYM-4crzaTh75E5lZiPPTmMTisTITVoY4V9iZy98l_sAZfNmFz5GXbddpaHgGq7nvZpU5fDa_qfKAPL54Deim0pxksV9qm0DhgyRg7FsiwWmkV2R7S34q7plrL-la3OjuFoa-dY0RiNRQU5H_e9lR9cVQN6iph');"></div>
+      <div class="p-6 flex flex-col flex-grow">
+        <div class="mb-4">
+          <div class="flex gap-2 mb-3">
+            <span class="inline-block bg-secondary/10 text-secondary font-label-sm text-label-sm rounded-full px-3 py-1">Italian</span>
+            <span class="inline-block bg-secondary/10 text-secondary font-label-sm text-label-sm rounded-full px-3 py-1">Love</span>
+            <span class="inline-block bg-secondary/10 text-secondary font-label-sm text-label-sm rounded-full px-3 py-1">Fast</span>
+            <span class="inline-block bg-secondary/10 text-secondary font-label-sm text-label-sm rounded-full px-3 py-1 hidden">Legato</span>
+            <span class="inline-block bg-secondary/10 text-secondary font-label-sm text-label-sm rounded-full px-3 py-1 hidden">Baroque</span>
+            <span class="inline-block bg-secondary/10 text-secondary font-label-sm text-label-sm rounded-full px-3 py-1 hidden">All Genders</span>
+          </div>
+          <h2 class="font-headline-lg text-headline-lg text-primary leading-tight mb-1">Che Fiero Costume</h2>
+          <p class="font-label-md text-label-md text-on-surface-variant">Giovanni Legrenzi</p>
+        </div>
+        <p class="font-body-md text-body-md text-on-background/80 mb-6 flex-grow line-clamp-3">A spirited and rhythmic Baroque aria exploring the cruel nature of love with characteristic Italian flair and melodic elegance.</p>
+        <div class="mt-auto">
+          <button class="listen-btn w-full flex items-center justify-center gap-2 bg-transparent border border-secondary/40 hover:bg-surface-container-low text-primary rounded-full py-2.5 font-label-md text-label-md transition-colors">
+            <span class="material-symbols-outlined text-[20px]" data-icon="play_circle">play_circle</span>Listen &amp; Read
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 6: L'Heure Exquise -->
+    <article class="song-card flex flex-col bg-surface-container-lowest rounded-xl border border-secondary/20 overflow-hidden group hover:border-secondary/40 hover:shadow-md transition-all h-full"
+             data-title="L'Heure Exquise"
+             data-composer="Reynaldo Hahn"
+             data-work="Chansons grises (Paul Verlaine)"
+             data-desc="A sublime example of the French Mélodie, capturing a moment of exquisite stillness and romantic longing under the moonlight."
+             data-lyrics="La lune blanche luit dans les bois; / De chaque branche part une voix sous la ramée... / O bien-aimée! / C'est l'heure exquise."
+             data-translation="The white moon shines in the woods; / From each branch a voice departs beneath the foliage... / O beloved! / It is the exquisite hour."
+             data-tags="French,Legato,Boy,All Genders">
+      <div class="w-full aspect-[4/3] bg-cover bg-center border-b border-secondary/10" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAB3CvDr5vcL3RexaY5OrenSHFuliJzOAn0ty6WpXjccNzSX1b5BlzTTExkJALUjaod2ZJ5V90jetF3shPhWrdm4Q80isqhipRHX3uZShUcBuIsIEESEwuZvOysERJfEVlnSTORyXDiF1eSIdN7TaUdfzLgpCct5FpazffxcstPw9BBQ16UKl4J4IIPC50_PZ7ouiBxFLd26R0lhMNa00JYHRODu3ANkTpaBWHx1Wx3L74p-oiTRXq4');"></div>
+      <div class="p-6 flex flex-col flex-grow">
+        <div class="mb-4">
+          <div class="flex gap-2 mb-3">
+            <span class="inline-block bg-secondary/10 text-secondary font-label-sm text-label-sm rounded-full px-3 py-1">French</span>
+            <span class="inline-block bg-secondary/10 text-secondary font-label-sm text-label-sm rounded-full px-3 py-1">Legato</span>
+            <span class="inline-block bg-secondary/10 text-secondary font-label-sm text-label-sm rounded-full px-3 py-1">Boy</span>
+            <span class="inline-block bg-secondary/10 text-secondary font-label-sm text-label-sm rounded-full px-3 py-1 hidden">All Genders</span>
+          </div>
+          <h2 class="font-headline-lg text-headline-lg text-primary leading-tight mb-1">L'Heure Exquise</h2>
+          <p class="font-label-md text-label-md text-on-surface-variant">Reynaldo Hahn</p>
+        </div>
+        <p class="font-body-md text-body-md text-on-background/80 mb-6 flex-grow line-clamp-3">A sublime example of the French Mélodie, capturing a moment of exquisite stillness and romantic longing under the moonlight.</p>
+        <div class="mt-auto">
+          <button class="listen-btn w-full flex items-center justify-center gap-2 bg-transparent border border-secondary/40 hover:bg-surface-container-low text-primary rounded-full py-2.5 font-label-md text-label-md transition-colors">
+            <span class="material-symbols-outlined text-[20px]" data-icon="play_circle">play_circle</span>Listen &amp; Read
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 7: Neue Liebe -->
+    <article class="song-card flex flex-col bg-surface-container-lowest rounded-xl border border-secondary/20 overflow-hidden group hover:border-secondary/40 hover:shadow-md transition-all h-full"
+             data-title="Neue Liebe"
+             data-composer="Felix Mendelssohn"
+             data-work="Op. 19a, No. 4 (Heinrich Heine)"
+             data-desc="A romantic and expressive German Lied capturing nocturnal mystery, galloping rhythms, and young love."
+             data-lyrics="In dem Mondenschein im Walde / Sah ich jüngst die Elfen reiten; / Ihre Hörner hört' ich klingen, / Ihre Glöckchen hört' ich läuten."
+             data-translation="In the moonlight in the forest / I recently saw the elves riding; / I heard their horns sound, / I heard their little bells chime."
+             data-tags="German,Love,Romantic,Fast">
+      <div class="w-full aspect-[4/3] bg-cover bg-center border-b border-secondary/10" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBZ-RIDQ798_gp5sArirgzUItKjt373LeokrR1pGglFlSQmzGjvDxI1dttZ64t4_tgqessjKZimqVxFxFiXsxEBcVCKDw_h8EowCkbLnASeNLbvr2_WhlF7s2BaPIE8DD8nItYZKNkfmssRvwSPIu_z91xPXVNpo7yIyqBzFNmDA_-aCLpJA04cvIbZCf78zW3O9YUzdUtFJx5YZVZg_vrkACODGZIVw5fvJ7D82LBpKVgjt1tzhu87');"></div>
+      <div class="p-6 flex flex-col flex-grow">
+        <div class="mb-4">
+          <div class="flex gap-2 mb-3">
+            <span class="inline-block bg-secondary/10 text-secondary font-label-sm text-label-sm rounded-full px-3 py-1">German</span>
+            <span class="inline-block bg-secondary/10 text-secondary font-label-sm text-label-sm rounded-full px-3 py-1">Love</span>
+          </div>
+          <h2 class="font-headline-lg text-headline-lg text-primary leading-tight mb-1">Neue Liebe</h2>
+          <p class="font-label-md text-label-md text-on-surface-variant">Felix Mendelssohn</p>
+        </div>
+        <p class="font-body-md text-body-md text-on-background/80 mb-6 flex-grow line-clamp-3">A romantic and expressive German Lied.</p>
+        <div class="mt-auto">
+          <button class="listen-btn w-full flex items-center justify-center gap-2 bg-transparent border border-secondary/40 hover:bg-surface-container-low text-primary rounded-full py-2.5 font-label-md text-label-md transition-colors">
+            <span class="material-symbols-outlined text-[20px]" data-icon="play_circle">play_circle</span>Listen &amp; Read
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 8: Le Colibri -->
+    <article class="song-card flex flex-col bg-surface-container-lowest rounded-xl border border-secondary/20 overflow-hidden group hover:border-secondary/40 hover:shadow-md transition-all h-full"
+             data-title="Le Colibri"
+             data-composer="Ernest Chausson"
+             data-work="7 Mélodies, Op. 2, No. 7"
+             data-desc="A beautiful and delicate French melody about the hummingbird drinking nectar from a red hibiscus flower."
+             data-lyrics="Le vert colibri, le roi des collines, / Voyant les rosées et le soleil clair, / Boit dans la fleur d'hibiscus."
+             data-translation="The green hummingbird, king of the hills, / Seeing the dew and bright sun, / Drinks deeply in the hibiscus flower."
+             data-tags="French,Legato,All Genders">
+      <div class="w-full aspect-[4/3] bg-cover bg-center border-b border-secondary/10" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAB3CvDr5vcL3RexaY5OrenSHFuliJzOAn0ty6WpXjccNzSX1b5BlzTTExkJALUjaod2ZJ5V90jetF3shPhWrdm4Q80isqhipRHX3uZShUcBuIsIEESEwuZvOysERJfEVlnSTORyXDiF1eSIdN7TaUdfzLgpCct5FpazffxcstPw9BBQ16UKl4J4IIPC50_PZ7ouiBxFLd26R0lhMNa00JYHRODu3ANkTpaBWHx1Wx3L74p-oiTRXq4');"></div>
+      <div class="p-6 flex flex-col flex-grow">
+        <div class="mb-4">
+          <div class="flex gap-2 mb-3">
+            <span class="inline-block bg-secondary/10 text-secondary font-label-sm text-label-sm rounded-full px-3 py-1">French</span>
+            <span class="inline-block bg-secondary/10 text-secondary font-label-sm text-label-sm rounded-full px-3 py-1">Legato</span>
+            <span class="inline-block bg-secondary/10 text-secondary font-label-sm text-label-sm rounded-full px-3 py-1">All Genders</span>
+          </div>
+          <h2 class="font-headline-lg text-headline-lg text-primary leading-tight mb-1">Le Colibri</h2>
+          <p class="font-label-md text-label-md text-on-surface-variant">Ernest Chausson</p>
+        </div>
+        <p class="font-body-md text-body-md text-on-background/80 mb-6 flex-grow line-clamp-3">A beautiful and delicate French melody.</p>
+        <div class="mt-auto">
+          <button class="listen-btn w-full flex items-center justify-center gap-2 bg-transparent border border-secondary/40 hover:bg-surface-container-low text-primary rounded-full py-2.5 font-label-md text-label-md transition-colors">
+            <span class="material-symbols-outlined text-[20px]" data-icon="play_circle">play_circle</span>Listen &amp; Read
+          </button>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- Pagination / Load More -->
+  <div class="flex justify-center mt-8">
+    <button class="bg-primary text-on-primary font-label-md text-label-md rounded-full px-8 py-3 hover:bg-neutral-800 transition-colors cursor-pointer" id="load-more-btn">
+      Load More Arias
+    </button>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-surface-container-low border-t border-secondary/20 py-10 w-full mt-auto" style="background-color: rgb(253, 249, 228);">
+  <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-6">
+    <div class="text-center md:text-left">
+      <span class="font-display-lg text-headline-sm text-primary">Arias Unlocked</span>
+      <p class="font-body-md text-sm text-on-surface-variant mt-1">Demystifying opera and classical song for youth.</p>
+    </div>
+    <div class="flex gap-6 items-center">
+      <a class="text-on-surface-variant hover:text-primary font-label-md text-sm transition-colors" href="index.html">Home</a>
+      <a class="text-on-surface-variant hover:text-primary font-label-md text-sm transition-colors" href="blog.html">Blog</a>
+      <a class="text-on-surface-variant hover:text-primary font-label-md text-sm transition-colors" href="about.html">About Me</a>
+      <button class="join-trigger text-on-surface-variant hover:text-primary font-label-md text-sm transition-colors">Join</button>
+    </div>
+  </div>
+</footer>
+
+<!-- "Listen & Read" Interactive Player Modal -->
+<div id="player-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[110] hidden flex items-center justify-center p-4">
+  <div class="bg-white rounded-3xl max-w-2xl w-full p-6 md:p-8 relative shadow-2xl border border-secondary/20 max-h-[90vh] flex flex-col">
+    <!-- Close Button -->
+    <button onclick="closePlayerModal()" class="absolute top-5 right-5 text-gray-400 hover:text-black">
+      <span class="material-symbols-outlined">close</span>
+    </button>
+    
+    <!-- Modal Header -->
+    <div class="mb-4">
+      <span id="modal-tags" class="text-xs uppercase tracking-widest text-secondary font-semibold bg-secondary/10 px-3 py-1 rounded-full">Aria</span>
+      <h3 id="modal-title" class="font-headline-lg text-2xl md:text-3xl text-primary mt-2">Que Fais-tu, blanche tourterelle</h3>
+      <p id="modal-subtitle" class="text-sm font-semibold text-gray-500">Charles Gounod · Roméo et Juliette</p>
+    </div>
+
+    <!-- Audio Player Simulator -->
+    <div class="bg-surface-container-low rounded-2xl p-4 mb-6 border border-secondary/20 flex flex-col gap-3">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <button id="audio-play-toggle" class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center hover:bg-neutral-800 transition-colors shadow">
+            <span id="play-icon" class="material-symbols-outlined text-2xl">play_arrow</span>
+          </button>
+          <div>
+            <div class="text-xs font-semibold text-gray-700">Audio Preview</div>
+            <div class="text-[11px] text-gray-500" id="audio-status">Click to play synthesized classical motif</div>
+          </div>
+        </div>
+        <div class="text-xs font-mono text-gray-600" id="audio-time">0:00 / 0:30</div>
+      </div>
+
+      <!-- Scrubber bar -->
+      <div class="w-full bg-gray-200 h-2 rounded-full overflow-hidden cursor-pointer" id="scrubber-bar">
+        <div id="scrubber-progress" class="bg-primary h-full w-0 transition-all duration-150"></div>
+      </div>
+    </div>
+
+    <!-- Lyrics and Translation Tabs -->
+    <div class="flex gap-4 border-b border-gray-200 mb-4 pb-2 text-sm font-semibold">
+      <button id="tab-lyrics-btn" onclick="switchTab('lyrics')" class="text-primary border-b-2 border-primary pb-1">Lyrics & Translation</button>
+      <button id="tab-guide-btn" onclick="switchTab('guide')" class="text-gray-400 hover:text-black pb-1">Youth Listening Guide</button>
+    </div>
+
+    <!-- Tab 1: Lyrics & Translation -->
+    <div id="tab-lyrics-content" class="overflow-y-auto flex-grow pr-2 max-h-60 space-y-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="bg-surface p-4 rounded-xl border border-secondary/15">
+          <h4 class="text-xs uppercase font-bold text-gray-500 mb-2">Original Language</h4>
+          <p id="modal-orig-lyrics" class="font-serif italic text-gray-800 whitespace-pre-line text-sm leading-relaxed"></p>
+        </div>
+        <div class="bg-surface p-4 rounded-xl border border-secondary/15">
+          <h4 class="text-xs uppercase font-bold text-gray-500 mb-2">English Translation</h4>
+          <p id="modal-trans-lyrics" class="font-body-md text-gray-800 whitespace-pre-line text-sm leading-relaxed"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 2: Youth Guide -->
+    <div id="tab-guide-content" class="overflow-y-auto flex-grow pr-2 max-h-60 hidden space-y-3">
+      <div class="p-4 bg-surface rounded-xl border border-secondary/15 text-sm text-gray-700 leading-relaxed">
+        <h4 class="font-bold text-primary mb-1">🎭 What to Listen For:</h4>
+        <p id="modal-guide-text" class="mb-3"></p>
+        <h4 class="font-bold text-primary mb-1">💡 Vocal Tip:</h4>
+        <p class="text-xs text-gray-600">Notice how the singer balances breath control and word articulation so the high notes soar effortlessly over the orchestra without straining.</p>
+      </div>
+    </div>
+
+    <!-- Bottom Actions -->
+    <div class="mt-4 pt-3 border-t border-gray-100 flex justify-between items-center">
+      <span class="text-xs text-gray-400">Arias Unlocked Library</span>
+      <button onclick="closePlayerModal()" class="px-5 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-full text-xs font-semibold uppercase tracking-wider">
+        Done
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Join Modal -->
+<div id="join-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[110] hidden flex items-center justify-center p-4">
+  <div class="bg-white rounded-3xl max-w-md w-full p-8 relative shadow-2xl border border-secondary/20">
+    <button onclick="closeJoinModal()" class="absolute top-5 right-5 text-gray-500 hover:text-black">
+      <span class="material-symbols-outlined">close</span>
+    </button>
+    <div class="text-center mb-6">
+      <span class="material-symbols-outlined text-4xl text-primary mb-2">music_note</span>
+      <h3 class="font-display-lg text-2xl text-primary">Join Arias Unlocked</h3>
+      <p class="font-body-md text-sm text-on-surface-variant mt-2">
+        Become part of our youth community decoding opera and classical music.
+      </p>
+    </div>
+    <form id="join-form" onsubmit="handleJoinSubmit(event)" class="flex flex-col gap-4">
+      <div>
+        <label class="block text-xs uppercase tracking-wider font-semibold text-gray-600 mb-1">Your Name</label>
+        <input required type="text" id="join-name" placeholder="e.g. Antonio" class="w-full px-4 py-3 rounded-xl border border-secondary/30 focus:outline-none focus:border-primary">
+      </div>
+      <div>
+        <label class="block text-xs uppercase tracking-wider font-semibold text-gray-600 mb-1">Email Address</label>
+        <input required type="email" id="join-email" placeholder="you@example.com" class="w-full px-4 py-3 rounded-xl border border-secondary/30 focus:outline-none focus:border-primary">
+      </div>
+      <button type="submit" class="w-full py-3.5 bg-primary text-white rounded-full font-label-md uppercase tracking-wider hover:bg-neutral-800 transition-colors mt-2">
+        Join Free Today
+      </button>
+    </form>
+    <div id="join-success" class="hidden text-center py-6">
+      <span class="material-symbols-outlined text-5xl text-emerald-600 mb-2">check_circle</span>
+      <h4 class="font-bold text-lg text-primary">Welcome to the family!</h4>
+      <p class="text-sm text-gray-600 mt-1">Check your inbox for your beginner's classical repertoire pack.</p>
+      <button onclick="closeJoinModal()" class="mt-4 px-6 py-2 bg-primary text-white rounded-full text-xs uppercase tracking-wider">Close</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // DOM elements
+    const plusBtn = document.getElementById('plus-filter-btn');
+    const dropdown = document.getElementById('filter-dropdown');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const allBtn = document.querySelector('.filter-btn[data-filter="All"]');
+    const loadMoreBtn = document.getElementById('load-more-btn');
+    const emptyState = document.getElementById('empty-state');
+    const searchInput = document.getElementById('search-input');
+    const searchClearBtn = document.getElementById('search-clear-btn');
+    const songGrid = document.getElementById('song-grid');
+
+    let activeFilters = new Set(['All']);
+    let displayLimit = 6;
+    let searchQuery = '';
+
+    // Mobile menu toggle
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileBtn && mobileMenu) {
+      mobileBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+
+    // Toggle Dropdown
+    if (plusBtn && dropdown) {
+      plusBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dropdown.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!dropdown.contains(e.target) && e.target !== plusBtn) {
+          dropdown.classList.add('hidden');
+        }
+      });
+    }
+
+    // Search Input Logic
+    searchInput.addEventListener('input', (e) => {
+      searchQuery = e.target.value.toLowerCase().trim();
+      if (searchQuery.length > 0) {
+        searchClearBtn.classList.remove('hidden');
+      } else {
+        searchClearBtn.classList.add('hidden');
+      }
+      displayLimit = 6;
+      renderGrid();
+    });
+
+    searchClearBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      searchQuery = '';
+      searchClearBtn.classList.add('hidden');
+      displayLimit = 6;
+      renderGrid();
+    });
+
+    // Reset all filters function
+    window.resetFilters = function() {
+      activeFilters.clear();
+      activeFilters.add('All');
+      searchInput.value = '';
+      searchQuery = '';
+      searchClearBtn.classList.add('hidden');
+      displayLimit = 6;
+      updateFilterButtonsUI();
+      renderGrid();
+    };
+
+    function updateFilterButtonsUI() {
+      filterBtns.forEach(btn => {
+        const filter = btn.getAttribute('data-filter');
+        if (activeFilters.has(filter)) {
+          btn.classList.add('bg-primary', 'text-on-primary');
+          btn.classList.remove('bg-secondary/10', 'text-on-secondary-fixed');
+        } else {
+          btn.classList.remove('bg-primary', 'text-on-primary');
+          btn.classList.add('bg-secondary/10', 'text-on-secondary-fixed');
+        }
+      });
+    }
+
+    // Filter Buttons Click
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.getAttribute('data-filter');
+
+        if (filter === 'All') {
+          activeFilters.clear();
+          activeFilters.add('All');
+        } else {
+          activeFilters.delete('All');
+          if (activeFilters.has(filter)) {
+            activeFilters.delete(filter);
+          } else {
+            activeFilters.add(filter);
+          }
+          if (activeFilters.size === 0) {
+            activeFilters.add('All');
+          }
+        }
+
+        displayLimit = 6;
+        updateFilterButtonsUI();
+        renderGrid();
+      });
+    });
+
+    // Render Grid with AND logic and search query
+    function renderGrid() {
+      const songCards = Array.from(document.querySelectorAll('.song-card'));
+      let visibleCount = 0;
+      let totalMatching = 0;
+
+      songCards.forEach((card) => {
+        const tags = card.getAttribute('data-tags') ? card.getAttribute('data-tags').split(',').map(t => t.trim()) : [];
+        const title = (card.getAttribute('data-title') || '').toLowerCase();
+        const composer = (card.getAttribute('data-composer') || '').toLowerCase();
+        const desc = (card.getAttribute('data-desc') || '').toLowerCase();
+
+        // 1. Check tag filters
+        let matchesTags = true;
+        if (!activeFilters.has('All')) {
+          matchesTags = Array.from(activeFilters).every(filter => {
+            if (filter === 'Arias') return tags.includes('Aria');
+            return tags.includes(filter);
+          });
+        }
+
+        // 2. Check search text
+        let matchesSearch = true;
+        if (searchQuery) {
+          const haystack = `${title} ${composer} ${desc} ${tags.join(' ').toLowerCase()}`;
+          matchesSearch = haystack.includes(searchQuery);
+        }
+
+        const isMatch = matchesTags && matchesSearch;
+
+        if (isMatch) {
+          totalMatching++;
+          if (visibleCount < displayLimit) {
+            card.classList.remove('hidden');
+            visibleCount++;
+          } else {
+            card.classList.add('hidden');
+          }
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      if (totalMatching === 0) {
+        emptyState.classList.remove('hidden');
+      } else {
+        emptyState.classList.add('hidden');
+      }
+
+      if (totalMatching > displayLimit) {
+        loadMoreBtn.style.display = 'block';
+      } else {
+        loadMoreBtn.style.display = 'none';
+      }
+    }
+
+    // Additional songs for "Load More"
+    const additionalSongs = [
+      {
+        title: "O mio babbino caro",
+        composer: "Giacomo Puccini",
+        work: "Gianni Schicchi",
+        desc: "Lauretta's poignant plea to her father, filled with lyrical beauty and emotional intensity.",
+        tags: "Italian,Aria,Love,Soprano",
+        lyrics: "O mio babbino caro, / mi piace, è bello, è bello! / Vo'andare in Porta Rossa / a comperar l'anello!",
+        translation: "Oh my dear papa, / I love him, he is handsome, he is handsome! / I want to go to Porta Rossa / to buy the wedding ring!",
+        img: "https://lh3.googleusercontent.com/aida-public/AB6AXuBZ-RIDQ798_gp5sArirgzUItKjt373LeokrR1pGglFlSQmzGjvDxI1dttZ64t4_tgqessjKZimqVxFxFiXsxEBcVCKDw_h8EowCkbLnASeNLbvr2_WhlF7s2BaPIE8DD8nItYZKNkfmssRvwSPIu_z91xPXVNpo7yIyqBzFNmDA_-aCLpJA04cvIbZCf78zW3O9YUzdUtFJx5YZVZg_vrkACODGZIVw5fvJ7D82LBpKVgjt1tzhu87"
+      },
+      {
+        title: "Habanera (L'amour est un oiseau rebelle)",
+        composer: "Georges Bizet",
+        work: "Carmen",
+        desc: "Carmen's alluring entrance aria declaring love as a wild bird that obeys no laws.",
+        tags: "French,Aria,Love,Mezzo Soprano",
+        lyrics: "L'amour est un oiseau rebelle / Que nul ne peut apprivoiser, / Et c'est bien en vain qu'on l'appelle, / S'il lui convient de refuser.",
+        translation: "Love is a rebellious bird / That no one can tame, / And it is quite in vain that one calls it, / If it suits it to refuse.",
+        img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAB3CvDr5vcL3RexaY5OrenSHFuliJzOAn0ty6WpXjccNzSX1b5BlzTTExkJALUjaod2ZJ5V90jetF3shPhWrdm4Q80isqhipRHX3uZShUcBuIsIEESEwuZvOysERJfEVlnSTORyXDiF1eSIdN7TaUdfzLgpCct5FpazffxcstPw9BBQ16UKl4J4IIPC50_PZ7ouiBxFLd26R0lhMNa00JYHRODu3ANkTpaBWHx1Wx3L74p-oiTRXq4"
+      },
+      {
+        title: "Una furtiva lagrima",
+        composer: "Gaetano Donizetti",
+        work: "L'elisir d'amore",
+        desc: "A tender romance for tenor as Nemorino notices a solitary tear in Adina's eye, realizing she loves him.",
+        tags: "Italian,Aria,Legato,Tenor,Romantic",
+        lyrics: "Una furtiva lagrima / Negli occhi suoi spuntò: / Quelle festose giovani / Invidiar sembrò...",
+        translation: "A furtive tear / Sprang into her eyes: / Those festive maidens / She seemed to envy...",
+        img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDY0YI8nwbU8ajS8PQyNG5kL7VHEHid_Kz7iZ6T9_e2xY7EHpJNl2pUiGMzQU1Ufz2yHOF0q5gtvlRvf6flWh8IhKb498-WatYHY3jWlBbKUogfH-02tkQNZ2JvL6MqITfg2koc5cltEHyMYlcDpiGcych2u1D3vbmbhznFC4cbYMQ6M5_ntr5Qp6QBfAM4BzNxOrdsyW6sKDFzGKiZXJ4GIflIQYlmr64u8aJevKfFJExuTyI6cw_J"
+      }
+    ];
+
+    let additionalLoaded = false;
+    loadMoreBtn.addEventListener('click', () => {
+      if (!additionalLoaded) {
+        additionalSongs.forEach(song => {
+          const card = document.createElement('article');
+          card.className = "song-card flex flex-col bg-surface-container-lowest rounded-xl border border-secondary/20 overflow-hidden group hover:border-secondary/40 hover:shadow-md transition-all h-full";
+          card.setAttribute('data-title', song.title);
+          card.setAttribute('data-composer', song.composer);
+          card.setAttribute('data-work', song.work);
+          card.setAttribute('data-desc', song.desc);
+          card.setAttribute('data-tags', song.tags);
+          card.setAttribute('data-lyrics', song.lyrics);
+          card.setAttribute('data-translation', song.translation);
+
+          const tagList = song.tags.split(',').map(t => `<span class="inline-block bg-secondary/10 text-secondary font-label-sm text-label-sm rounded-full px-3 py-1">${t.trim()}</span>`).join('');
+
+          card.innerHTML = `
+            <div class="w-full aspect-[4/3] bg-cover bg-center border-b border-secondary/10" style="background-image: url('${song.img}');"></div>
+            <div class="p-6 flex flex-col flex-grow">
+              <div class="mb-4">
+                <div class="flex gap-2 mb-3 flex-wrap">${tagList}</div>
+                <h2 class="font-headline-lg text-headline-lg text-primary leading-tight mb-1">${song.title}</h2>
+                <p class="font-label-md text-label-md text-on-surface-variant">${song.composer}</p>
+              </div>
+              <p class="font-body-md text-body-md text-on-background/80 mb-6 flex-grow line-clamp-3">${song.desc}</p>
+              <div class="mt-auto">
+                <button class="listen-btn w-full flex items-center justify-center gap-2 bg-transparent border border-secondary/40 hover:bg-surface-container-low text-primary rounded-full py-2.5 font-label-md text-label-md transition-colors">
+                  <span class="material-symbols-outlined text-[20px]" data-icon="play_circle">play_circle</span>Listen &amp; Read
+                </button>
+              </div>
+            </div>
+          `;
+          songGrid.appendChild(card);
+          attachListenHandler(card.querySelector('.listen-btn'), card);
+        });
+        additionalLoaded = true;
+      }
+      displayLimit += 6;
+      renderGrid();
+    });
+
+    // Tag expansion "..." button logic for cards
+    document.querySelectorAll('.song-card').forEach(card => {
+      const tagContainer = card.querySelector('.flex.gap-2.mb-3');
+      if (!tagContainer) return;
+      const tags = Array.from(tagContainer.children);
+      if (tags.length > 3) {
+        tags.forEach((tag, i) => {
+          if (i >= 3) tag.classList.add('hidden');
+        });
+        const moreBtn = document.createElement('button');
+        moreBtn.className = 'inline-flex items-center justify-center bg-secondary/10 text-secondary font-label-sm text-label-sm rounded-full px-3 py-1 hover:bg-secondary/20 transition-colors cursor-pointer';
+        moreBtn.textContent = '...';
+        moreBtn.onclick = (e) => {
+          e.stopPropagation();
+          tags.forEach(tag => tag.classList.remove('hidden'));
+          moreBtn.remove();
+        };
+        tagContainer.appendChild(moreBtn);
+      }
+    });
+
+    // Listen & Read Modal Logic
+    const playerModal = document.getElementById('player-modal');
+    const modalTitle = document.getElementById('modal-title');
+    const modalSubtitle = document.getElementById('modal-subtitle');
+    const modalTags = document.getElementById('modal-tags');
+    const modalOrigLyrics = document.getElementById('modal-orig-lyrics');
+    const modalTransLyrics = document.getElementById('modal-trans-lyrics');
+    const modalGuideText = document.getElementById('modal-guide-text');
+    const playToggleBtn = document.getElementById('audio-play-toggle');
+    const playIcon = document.getElementById('play-icon');
+    const audioStatus = document.getElementById('audio-status');
+    const audioTime = document.getElementById('audio-time');
+    const scrubberProgress = document.getElementById('scrubber-progress');
+
+    let audioContext = null;
+    let isPlaying = false;
+    let playbackInterval = null;
+    let currentSeconds = 0;
+    const totalDuration = 30; // 30 second preview
+
+    function attachListenHandler(btn, card) {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const title = card.getAttribute('data-title') || card.querySelector('h2').textContent;
+        const composer = card.getAttribute('data-composer') || card.querySelector('.font-label-md').textContent;
+        const work = card.getAttribute('data-work') || '';
+        const tags = card.getAttribute('data-tags') || '';
+        const lyrics = card.getAttribute('data-lyrics') || 'Lyrics coming soon for this classical piece.';
+        const translation = card.getAttribute('data-translation') || 'Translation coming soon.';
+        const desc = card.getAttribute('data-desc') || card.querySelector('p.line-clamp-3').textContent;
+
+        modalTitle.textContent = title;
+        modalSubtitle.textContent = work ? `${composer} · ${work}` : composer;
+        modalTags.textContent = tags.split(',')[0] || 'Aria';
+        modalOrigLyrics.textContent = lyrics;
+        modalTransLyrics.textContent = translation;
+        modalGuideText.textContent = `${desc} Listen closely to how the melody mirrors the character's emotional shift. Notice the breath phrasing and tone color!`;
+
+        resetAudio();
+        playerModal.classList.remove('hidden');
+      });
+    }
+
+    document.querySelectorAll('.song-card').forEach(card => {
+      const btn = card.querySelector('.listen-btn');
+      if (btn) attachListenHandler(btn, card);
+    });
+
+    window.closePlayerModal = function() {
+      stopAudio();
+      playerModal.classList.add('hidden');
+    };
+
+    window.switchTab = function(tab) {
+      const lyricsBtn = document.getElementById('tab-lyrics-btn');
+      const guideBtn = document.getElementById('tab-guide-btn');
+      const lyricsContent = document.getElementById('tab-lyrics-content');
+      const guideContent = document.getElementById('tab-guide-content');
+
+      if (tab === 'lyrics') {
+        lyricsContent.classList.remove('hidden');
+        guideContent.classList.add('hidden');
+        lyricsBtn.className = "text-primary border-b-2 border-primary pb-1";
+        guideBtn.className = "text-gray-400 hover:text-black pb-1";
+      } else {
+        lyricsContent.classList.add('hidden');
+        guideContent.classList.remove('hidden');
+        guideBtn.className = "text-primary border-b-2 border-primary pb-1";
+        lyricsBtn.className = "text-gray-400 hover:text-black pb-1";
+      }
+    };
+
+    // Web Audio Synthesizer for Interactive Classical Motif
+    function playMelodyNotes() {
+      try {
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        if (!audioContext) audioContext = new AudioContext();
+        if (audioContext.state === 'suspended') audioContext.resume();
+
+        // Elegant classical arpeggio frequencies (C-major / A-minor operatic motif)
+        const notes = [261.63, 329.63, 392.00, 523.25, 440.00, 349.23, 392.00, 523.25];
+        let noteIndex = 0;
+
+        function playNextNote() {
+          if (!isPlaying) return;
+          const osc = audioContext.createOscillator();
+          const gain = audioContext.createGain();
+
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(notes[noteIndex % notes.length], audioContext.currentTime);
+
+          gain.gain.setValueAtTime(0.001, audioContext.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.15, audioContext.currentTime + 0.05);
+          gain.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + 0.45);
+
+          osc.connect(gain);
+          gain.connect(audioContext.destination);
+
+          osc.start();
+          osc.stop(audioContext.currentTime + 0.5);
+
+          noteIndex++;
+          if (isPlaying) {
+            setTimeout(playNextNote, 500);
+          }
+        }
+        playNextNote();
+      } catch (e) {
+        console.log("Audio not supported", e);
+      }
+    }
+
+    function startAudio() {
+      isPlaying = true;
+      playIcon.textContent = 'pause';
+      audioStatus.textContent = 'Playing classical sample...';
+      playMelodyNotes();
+
+      playbackInterval = setInterval(() => {
+        currentSeconds++;
+        const pct = (currentSeconds / totalDuration) * 100;
+        scrubberProgress.style.width = `${pct}%`;
+        const mins = Math.floor(currentSeconds / 60);
+        const secs = String(currentSeconds % 60).padStart(2, '0');
+        audioTime.textContent = `${mins}:${secs} / 0:30`;
+
+        if (currentSeconds >= totalDuration) {
+          stopAudio();
+          resetAudio();
+        }
+      }, 1000);
+    }
+
+    function stopAudio() {
+      isPlaying = false;
+      playIcon.textContent = 'play_arrow';
+      audioStatus.textContent = 'Paused';
+      if (playbackInterval) clearInterval(playbackInterval);
+    }
+
+    function resetAudio() {
+      stopAudio();
+      currentSeconds = 0;
+      scrubberProgress.style.width = '0%';
+      audioTime.textContent = '0:00 / 0:30';
+      audioStatus.textContent = 'Ready to play';
+    }
+
+    playToggleBtn.addEventListener('click', () => {
+      if (isPlaying) {
+        stopAudio();
+      } else {
+        startAudio();
+      }
+    });
+
+    // Scrubber click
+    document.getElementById('scrubber-bar').addEventListener('click', (e) => {
+      const rect = e.currentTarget.getBoundingClientRect();
+      const clickPos = (e.clientX - rect.left) / rect.width;
+      currentSeconds = Math.floor(clickPos * totalDuration);
+      scrubberProgress.style.width = `${clickPos * 100}%`;
+      const mins = Math.floor(currentSeconds / 60);
+      const secs = String(currentSeconds % 60).padStart(2, '0');
+      audioTime.textContent = `${mins}:${secs} / 0:30`;
+    });
+
+    // Join modal handling
+    const joinModal = document.getElementById('join-modal');
+    const joinBtn = document.getElementById('join-btn');
+    const joinTriggers = document.querySelectorAll('.join-trigger');
+
+    window.openJoinModal = function() { joinModal.classList.remove('hidden'); };
+    window.closeJoinModal = function() {
+      joinModal.classList.add('hidden');
+      document.getElementById('join-form').reset();
+      document.getElementById('join-form').classList.remove('hidden');
+      document.getElementById('join-success').classList.add('hidden');
+    };
+    if (joinBtn) joinBtn.addEventListener('click', openJoinModal);
+    joinTriggers.forEach(t => t.addEventListener('click', openJoinModal));
+
+    window.handleJoinSubmit = function(e) {
+      e.preventDefault();
+      const name = document.getElementById('join-name').value;
+      const email = document.getElementById('join-email').value;
+      localStorage.setItem('arias_user', JSON.stringify({ name, email }));
+      document.getElementById('join-form').classList.add('hidden');
+      document.getElementById('join-success').classList.remove('hidden');
+    };
+
+    window.addEventListener('click', (e) => {
+      if (e.target === playerModal) closePlayerModal();
+      if (e.target === joinModal) closeJoinModal();
+    });
+
+    // Initial render
+    renderGrid();
+  });
+</script>
+</body>
+</html>

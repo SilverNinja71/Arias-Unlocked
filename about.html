@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>About Me - Arias Unlocked</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;family=Times+New+Roman:wght@400;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-secondary-fixed": "#1f1c05",
+          "inverse-on-surface": "#fff2ad",
+          "on-secondary-container": "#686346",
+          "on-primary-container": "#858383",
+          "surface-container-highest": "#f4e483",
+          "surface-container-lowest": "#ffffff",
+          "tertiary-container": "#1c1b1a",
+          "tertiary-fixed-dim": "#cac6c4",
+          "on-secondary": "#ffffff",
+          "primary-container": "#1c1b1b",
+          "inverse-primary": "#c8c6c5",
+          "outline": "#747878",
+          "on-tertiary-fixed-variant": "#484645",
+          "primary": "#000000",
+          "inverse-surface": "#383100",
+          "primary-fixed": "#e5e2e1",
+          "on-primary-fixed": "#1c1b1b",
+          "surface-tint": "#5f5e5e",
+          "on-tertiary-fixed": "#1c1b1a",
+          "surface": "#fff9ea",
+          "surface-dim": "#ecdb7b",
+          "secondary-container": "#e8e0bb",
+          "background": "#fff9ea",
+          "surface-bright": "#fff9ea",
+          "error": "#ba1a1a",
+          "on-tertiary": "#ffffff",
+          "on-primary-fixed-variant": "#474746",
+          "on-error": "#ffffff",
+          "surface-variant": "#f4e483",
+          "on-surface": "#201c00",
+          "surface-container-low": "#fff4c2",
+          "on-tertiary-container": "#868382",
+          "surface-container": "#ffef96",
+          "on-surface-variant": "#444748",
+          "error-container": "#ffdad6",
+          "tertiary": "#000000",
+          "tertiary-fixed": "#e6e2df",
+          "on-error-container": "#93000a",
+          "primary-fixed-dim": "#c8c6c5",
+          "on-secondary-fixed-variant": "#4b472c",
+          "secondary-fixed": "#ebe3be",
+          "on-background": "#201c00",
+          "secondary": "#645f42",
+          "on-primary": "#ffffff",
+          "secondary-fixed-dim": "#cec7a4",
+          "outline-variant": "#c4c7c7",
+          "surface-container-high": "#fae988"
+        },
+        "borderRadius": {
+          "DEFAULT": "1rem",
+          "lg": "2rem",
+          "xl": "3rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "container-max": "1200px",
+          "gutter": "24px",
+          "base": "8px",
+          "margin-desktop": "64px",
+          "margin-mobile": "20px"
+        },
+        "fontFamily": {
+          "display-lg": ["Times New Roman", "serif"],
+          "label-md": ["Montserrat", "sans-serif"],
+          "label-sm": ["Montserrat", "sans-serif"],
+          "headline-lg": ["Times New Roman", "serif"],
+          "body-md": ["Montserrat", "sans-serif"],
+          "body-lg": ["Montserrat", "sans-serif"],
+          "headline-md": ["Times New Roman", "serif"],
+          "display-lg-mobile": ["Times New Roman", "serif"]
+        },
+        "fontSize": {
+          "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+          "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+          "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "500" }],
+          "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+          "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+          "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+          "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+          "display-lg-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700" }]
+        }
+      }
+    }
+  }
+</script>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased flex flex-col min-h-screen" style="background-color: rgb(253, 249, 228);">
+
+<!-- TopNavBar -->
+<header class="bg-background text-primary w-full top-0 sticky border-b border-secondary/20 z-50 backdrop-blur-md bg-opacity-95" style="background-color: rgb(253, 249, 228);">
+  <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+    <a href="index.html" class="font-display-lg text-headline-md text-primary tracking-tight flex items-center gap-2">
+      <img alt="Arias Unlocked Logo" class="h-9 w-9 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdKVTjZIq1S0DBO4UoJSfbwTglYCiIRWt_6-hmiYbOZRRLPJ9zTsnTkorQAzRoBk0w16OB4ZO-wtqnq5EKo-eQBvKcQ3z2rqcNGrrdD_BI6FFgFha1W0RUBW8VIjdqydhmmLtHhIxcDCByxMvLXsEScmqyGH7eyK18vEykEmq1JcDhlwNz8Hf3czH8Rlmh31x-lFcURrIw6g1S6dJVdhm0RMwWK0Z5CoidP7YPUHhbSOEt8b6I7Yyc8tbRpueumI7Zl3WH7uUGTtoDWA">
+      <span>Arias Unlocked</span>
+    </a>
+    
+    <nav class="hidden md:flex space-x-8 items-center">
+      <a class="text-on-surface-variant font-label-md hover:text-primary transition-colors duration-200 uppercase tracking-widest text-sm" href="songs.html">Songs</a>
+      <a class="text-on-surface-variant font-label-md hover:text-primary transition-colors duration-200 uppercase tracking-widest text-sm" href="blog.html">Blog</a>
+      <a class="text-primary font-bold border-b-2 border-primary pb-1 uppercase tracking-widest text-sm" href="about.html">About Me</a>
+    </nav>
+    
+    <button id="join-btn" class="hidden md:block bg-primary text-on-primary font-label-md text-label-md rounded-full px-6 py-2 hover:bg-neutral-800 transition-colors">
+      Join Now
+    </button>
+    
+    <button id="mobile-menu-btn" class="md:hidden text-primary p-2">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+  </div>
+
+  <!-- Mobile Dropdown -->
+  <div id="mobile-menu" class="hidden md:hidden px-6 pb-6 pt-2 bg-background border-b border-secondary/20 flex flex-col gap-3">
+    <a class="text-primary font-semibold py-2 border-b border-secondary/10" href="songs.html">Songs</a>
+    <a class="text-primary font-semibold py-2 border-b border-secondary/10" href="blog.html">Blog</a>
+    <a class="text-primary font-bold py-2 border-b border-secondary/10" href="about.html">About Me</a>
+    <button class="join-trigger w-full bg-primary text-white py-2.5 rounded-full font-label-md uppercase tracking-wider text-sm mt-2">
+      Join Now
+    </button>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main class="flex-grow max-w-container-max mx-auto w-full px-margin-mobile md:px-margin-desktop py-16 flex flex-col gap-16">
+  <!-- Mission Statement -->
+  <section class="max-w-3xl flex flex-col gap-6">
+    <span class="text-xs uppercase tracking-widest text-secondary font-bold bg-secondary/10 px-4 py-1 rounded-full w-max">
+      The Mission
+    </span>
+    <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary tracking-tight">
+      Unlocking Opera for the Next Generation.
+    </h1>
+    <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+      Classical music is often seen through a haze of velvet curtains, tuxedos, and foreign languages that feel inaccessible. <strong>Arias Unlocked</strong> was built with a singular goal: to tear down those barriers and prove that 300-year-old vocal stories are just as urgent, dramatic, and emotionally electric as anything on Spotify today.
+    </p>
+  </section>
+
+  <!-- Pillars Cards -->
+  <section class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="bg-surface-container-lowest p-8 rounded-2xl border border-secondary/20 shadow-sm flex flex-col gap-4">
+      <div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-primary">
+        <span class="material-symbols-outlined text-2xl">translate</span>
+      </div>
+      <h3 class="font-headline-md text-xl text-primary">Poetic Clarity</h3>
+      <p class="font-body-md text-sm text-gray-700 leading-relaxed">
+        Foreign lyrics in Italian, French, and German shouldn't be a brick wall. We provide side-by-side poetic translations that unpack character motives in real modern speech.
+      </p>
+    </div>
+
+    <div class="bg-surface-container-lowest p-8 rounded-2xl border border-secondary/20 shadow-sm flex flex-col gap-4">
+      <div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-primary">
+        <span class="material-symbols-outlined text-2xl">graphic_eq</span>
+      </div>
+      <h3 class="font-headline-md text-xl text-primary">Vocal Anatomy</h3>
+      <p class="font-body-md text-sm text-gray-700 leading-relaxed">
+        Understand the physical wizardry behind the human voice—from breath support (appoggio) to resonance color and effortless high notes.
+      </p>
+    </div>
+
+    <div class="bg-surface-container-lowest p-8 rounded-2xl border border-secondary/20 shadow-sm flex flex-col gap-4">
+      <div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-primary">
+        <span class="material-symbols-outlined text-2xl">diversity_3</span>
+      </div>
+      <h3 class="font-headline-md text-xl text-primary">Youth-Centered</h3>
+      <p class="font-body-md text-sm text-gray-700 leading-relaxed">
+        Created for young singers, drama students, and curious music lovers who want to explore classical beauty on their own terms.
+      </p>
+    </div>
+  </section>
+
+  <!-- Suggest a Song / Feedback Form -->
+  <section class="bg-white rounded-3xl p-8 md:p-12 border border-secondary/20 shadow-sm max-w-2xl mx-auto w-full">
+    <div class="text-center mb-8">
+      <h2 class="font-headline-lg text-2xl md:text-3xl text-primary">Suggest an Aria or Say Hello</h2>
+      <p class="text-sm text-gray-600 mt-2">Have a favorite piece you'd like unlocked with lyrics and analysis?</p>
+    </div>
+    <form id="suggest-form" onsubmit="handleSuggestSubmit(event)" class="flex flex-col gap-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-xs uppercase tracking-wider font-semibold text-gray-600 mb-1">Your Name</label>
+          <input required type="text" class="w-full px-4 py-3 rounded-xl border border-secondary/30 focus:outline-none focus:border-primary text-sm" placeholder="Antonio">
+        </div>
+        <div>
+          <label class="block text-xs uppercase tracking-wider font-semibold text-gray-600 mb-1">Your Email</label>
+          <input required type="email" class="w-full px-4 py-3 rounded-xl border border-secondary/30 focus:outline-none focus:border-primary text-sm" placeholder="you@example.com">
+        </div>
+      </div>
+      <div>
+        <label class="block text-xs uppercase tracking-wider font-semibold text-gray-600 mb-1">Song / Composer Suggestion or Message</label>
+        <textarea required rows="4" class="w-full px-4 py-3 rounded-xl border border-secondary/30 focus:outline-none focus:border-primary text-sm" placeholder="Tell us what you'd like to hear or learn about..."></textarea>
+      </div>
+      <button type="submit" class="w-full py-3.5 bg-primary text-white rounded-full font-label-md uppercase tracking-wider hover:bg-neutral-800 transition-colors cursor-pointer text-xs">
+        Submit Suggestion
+      </button>
+    </form>
+    <div id="suggest-success" class="hidden text-center py-6">
+      <span class="material-symbols-outlined text-4xl text-emerald-600 mb-2">check_circle</span>
+      <h4 class="font-bold text-lg text-primary">Thank you for your note!</h4>
+      <p class="text-sm text-gray-600 mt-1">We'll review your suggested aria and feature it soon.</p>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-surface-container-low border-t border-secondary/20 py-10 w-full mt-auto" style="background-color: rgb(253, 249, 228);">
+  <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-6">
+    <div class="text-center md:text-left">
+      <span class="font-display-lg text-headline-sm text-primary">Arias Unlocked</span>
+      <p class="font-body-md text-sm text-on-surface-variant mt-1">Promoting the comprehension of classical music to youth.</p>
+    </div>
+    <div class="flex gap-6 items-center">
+      <a class="text-on-surface-variant hover:text-primary font-label-md text-sm transition-colors" href="index.html">Home</a>
+      <a class="text-on-surface-variant hover:text-primary font-label-md text-sm transition-colors" href="songs.html">Songs</a>
+      <a class="text-on-surface-variant hover:text-primary font-label-md text-sm transition-colors" href="blog.html">Blog</a>
+      <button class="join-trigger text-on-surface-variant hover:text-primary font-label-md text-sm transition-colors">Join</button>
+    </div>
+  </div>
+</footer>
+
+<!-- Join Modal -->
+<div id="join-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[110] hidden flex items-center justify-center p-4">
+  <div class="bg-white rounded-3xl max-w-md w-full p-8 relative shadow-2xl border border-secondary/20">
+    <button onclick="closeJoinModal()" class="absolute top-5 right-5 text-gray-500 hover:text-black">
+      <span class="material-symbols-outlined">close</span>
+    </button>
+    <div class="text-center mb-6">
+      <span class="material-symbols-outlined text-4xl text-primary mb-2">music_note</span>
+      <h3 class="font-display-lg text-2xl text-primary">Join Arias Unlocked</h3>
+      <p class="font-body-md text-sm text-on-surface-variant mt-2">
+        Become part of our youth community decoding opera and classical music.
+      </p>
+    </div>
+    <form id="join-form" onsubmit="handleJoinSubmit(event)" class="flex flex-col gap-4">
+      <div>
+        <label class="block text-xs uppercase tracking-wider font-semibold text-gray-600 mb-1">Your Name</label>
+        <input required type="text" id="join-name" placeholder="e.g. Antonio" class="w-full px-4 py-3 rounded-xl border border-secondary/30 focus:outline-none focus:border-primary">
+      </div>
+      <div>
+        <label class="block text-xs uppercase tracking-wider font-semibold text-gray-600 mb-1">Email Address</label>
+        <input required type="email" id="join-email" placeholder="you@example.com" class="w-full px-4 py-3 rounded-xl border border-secondary/30 focus:outline-none focus:border-primary">
+      </div>
+      <button type="submit" class="w-full py-3.5 bg-primary text-white rounded-full font-label-md uppercase tracking-wider hover:bg-neutral-800 transition-colors mt-2">
+        Join Free Today
+      </button>
+    </form>
+    <div id="join-success" class="hidden text-center py-6">
+      <span class="material-symbols-outlined text-5xl text-emerald-600 mb-2">check_circle</span>
+      <h4 class="font-bold text-lg text-primary">Welcome to the family!</h4>
+      <p class="text-sm text-gray-600 mt-1">Check your inbox for your beginner's classical repertoire pack.</p>
+      <button onclick="closeJoinModal()" class="mt-4 px-6 py-2 bg-primary text-white rounded-full text-xs uppercase tracking-wider">Close</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Mobile Nav Toggle
+  const mobileBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  if (mobileBtn && mobileMenu) {
+    mobileBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  }
+
+  // Suggest Form
+  function handleSuggestSubmit(e) {
+    e.preventDefault();
+    document.getElementById('suggest-form').classList.add('hidden');
+    document.getElementById('suggest-success').classList.remove('hidden');
+  }
+
+  // Join Modal
+  const joinModal = document.getElementById('join-modal');
+  const joinBtn = document.getElementById('join-btn');
+  const joinTriggers = document.querySelectorAll('.join-trigger');
+
+  window.openJoinModal = function() { joinModal.classList.remove('hidden'); };
+  window.closeJoinModal = function() {
+    joinModal.classList.add('hidden');
+    document.getElementById('join-form').reset();
+    document.getElementById('join-form').classList.remove('hidden');
+    document.getElementById('join-success').classList.add('hidden');
+  };
+  if (joinBtn) joinBtn.addEventListener('click', openJoinModal);
+  joinTriggers.forEach(t => t.addEventListener('click', openJoinModal));
+
+  window.handleJoinSubmit = function(e) {
+    e.preventDefault();
+    const name = document.getElementById('join-name').value;
+    const email = document.getElementById('join-email').value;
+    localStorage.setItem('arias_user', JSON.stringify({ name, email }));
+    document.getElementById('join-form').classList.add('hidden');
+    document.getElementById('join-success').classList.remove('hidden');
+  };
+
+  window.addEventListener('click', (e) => {
+    if (e.target === joinModal) closeJoinModal();
+  });
+</script>
+</body>
+</html>
