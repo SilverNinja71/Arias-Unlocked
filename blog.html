@@ -409,15 +409,25 @@ True musical tension is not created by sound alone—it is sculpted by the silen
     let activeFilter = 'All';
     let searchQuery = '';
 
+    function stripAccents(str) {
+      if (!str) return '';
+      return str
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .toLowerCase()
+        .trim();
+    }
+
     function filterArticles() {
       const articles = document.querySelectorAll('.blog-post-card');
       articles.forEach(art => {
-        const cat = art.getAttribute('data-category');
-        const title = (art.getAttribute('data-title') || '').toLowerCase();
-        const snippet = (art.getAttribute('data-snippet') || '').toLowerCase();
+        const cat = art.getAttribute('data-category') || '';
+        const title = art.getAttribute('data-title') || '';
+        const snippet = art.getAttribute('data-snippet') || '';
 
-        const matchesCat = (activeFilter === 'All' || cat.toLowerCase() === activeFilter.toLowerCase());
-        const matchesQuery = !searchQuery || title.includes(searchQuery) || snippet.includes(searchQuery) || cat.toLowerCase().includes(searchQuery);
+        const matchesCat = (activeFilter === 'All' || stripAccents(cat) === stripAccents(activeFilter));
+        const normalizedHaystack = stripAccents(`${title} ${snippet} ${cat}`);
+        const matchesQuery = !searchQuery || normalizedHaystack.includes(searchQuery);
 
         if (matchesCat && matchesQuery) {
           art.classList.remove('hidden');
@@ -439,7 +449,7 @@ True musical tension is not created by sound alone—it is sculpted by the silen
     });
 
     searchInput.addEventListener('input', (e) => {
-      searchQuery = e.target.value.toLowerCase().trim();
+      searchQuery = stripAccents(e.target.value);
       searchClear.classList.toggle('hidden', !searchQuery);
       filterArticles();
     });
