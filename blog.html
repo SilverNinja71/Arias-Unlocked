@@ -8,107 +8,99 @@
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Times+New+Roman:wght@400;700&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "secondary": "#645f42",
-                        "on-tertiary-fixed-variant": "#484645",
-                        "secondary-container": "#e8e0bb",
-                        "surface": "#fff9ea",
-                        "on-secondary": "#ffffff",
-                        "surface-container-low": "#fff4c2",
-                        "primary": "#000000",
-                        "tertiary-fixed": "#e6e2df",
-                        "on-surface-variant": "#444748",
-                        "surface-variant": "#f4e483",
-                        "surface-bright": "#fff9ea",
-                        "surface-tint": "#5f5e5e",
-                        "outline": "#747878",
-                        "surface-container-high": "#fae988",
-                        "on-tertiary-fixed": "#1c1b1a",
-                        "primary-fixed": "#e5e2e1",
-                        "on-error-container": "#93000a",
-                        "secondary-fixed-dim": "#cec7a4",
-                        "on-primary-fixed-variant": "#474746",
-                        "tertiary-container": "#1c1b1a",
-                        "secondary-fixed": "#ebe3be",
-                        "on-error": "#ffffff",
-                        "primary-container": "#1c1b1b",
-                        "inverse-on-surface": "#fff2ad",
-                        "on-primary-container": "#858383",
-                        "surface-dim": "#ecdb7b",
-                        "on-background": "#201c00",
-                        "error": "#ba1a1a",
-                        "on-tertiary": "#ffffff",
-                        "outline-variant": "#c4c7c7",
-                        "on-primary-fixed": "#1c1b1b",
-                        "background": "#fdfbd4",
-                        "on-secondary-fixed": "#1f1c05",
-                        "on-surface": "#201c00",
-                        "on-secondary-fixed-variant": "#4b472c",
-                        "surface-container": "#ffef96",
-                        "on-secondary-container": "#686346",
-                        "surface-container-highest": "#f4e483",
-                        "inverse-primary": "#c8c6c5",
-                        "on-primary": "#ffffff",
-                        "primary-fixed-dim": "#c8c6c5",
-                        "inverse-surface": "#383100",
-                        "on-tertiary-container": "#868382",
-                        "error-container": "#ffdad6",
-                        "surface-container-lowest": "#ffffff",
-                        "tertiary-fixed-dim": "#cac6c4",
-                        "tertiary": "#000000"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "1rem",
-                        "lg": "2rem",
-                        "xl": "3rem",
-                        "full": "9999px"
-                    },
-                    "spacing": {
-                        "container-max": "1200px",
-                        "base": "8px",
-                        "margin-mobile": "20px",
-                        "margin-desktop": "64px",
-                        "gutter": "24px"
-                    },
-                    "fontFamily": {
-                        "body-md": ["Montserrat", "sans-serif"],
-                        "body-lg": ["Montserrat", "sans-serif"],
-                        "label-md": ["Montserrat", "sans-serif"],
-                        "display-lg": ["Times New Roman", "serif"],
-                        "headline-lg": ["Times New Roman", "serif"],
-                        "display-lg-mobile": ["Times New Roman", "serif"],
-                        "label-sm": ["Montserrat", "sans-serif"],
-                        "headline-md": ["Times New Roman", "serif"]
-                    },
-                    "fontSize": {
-                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
-                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
-                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
-                        "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
-                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
-                        "display-lg-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
-                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "500" }],
-                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }]
-                    }
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                "colors": {
+                    "secondary": "#645f42",
+                    "surface": "#f2dc87",
+                    "primary": "#000000",
+                    "on-surface-variant": "#444748",
+                    "surface-variant": "#ecd46e",
+                    "background": "#f2dc87",
+                    "surface-container-high": "#fae988",
+                    "surface-container-low": "#eed979"
+                },
+                "borderRadius": {
+                    "none": "0px",
+                    "sm": "2px",
+                    "DEFAULT": "6px",
+                    "md": "8px",
+                    "lg": "10px",
+                    "xl": "12px",
+                    "2xl": "14px",
+                    "3xl": "16px",
+                    "full": "9999px"
+                },
+                "spacing": {
+                    "container-max": "1200px",
+                    "base": "8px",
+                    "margin-mobile": "20px",
+                    "margin-desktop": "64px",
+                    "gutter": "24px"
+                },
+                "fontFamily": {
+                    "body-md": ["Montserrat", "sans-serif"],
+                    "body-lg": ["Montserrat", "sans-serif"],
+                    "label-md": ["Montserrat", "sans-serif"],
+                    "label-sm": ["Montserrat", "sans-serif"],
+                    "display-lg": ["Times New Roman", "serif"],
+                    "headline-lg": ["Times New Roman", "serif"],
+                    "display-lg-mobile": ["Times New Roman", "serif"],
+                    "headline-md": ["Times New Roman", "serif"]
+                },
+                "fontSize": {
+                    "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                    "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                    "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                    "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                    "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                    "display-lg-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                    "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "500" }],
+                    "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }]
                 }
             }
         }
-    </script>
+    }
+</script>
 <style>
   .material-symbols-outlined {
     font-variation-settings: 'FILL' 1;
   }
+  /* Google Docs editor styling */
+  #gdocs-paper h1 { font-size: 26px; font-weight: 700; margin-bottom: 14px; color: #111827; }
+  #gdocs-paper h2 { font-size: 20px; font-weight: 700; margin-top: 18px; margin-bottom: 10px; color: #1f2937; }
+  #gdocs-paper h3 { font-size: 17px; font-weight: 600; margin-top: 14px; margin-bottom: 8px; color: #374151; }
+  #gdocs-paper p { margin-bottom: 12px; }
+  #gdocs-paper blockquote { border-left: 4px solid #1a73e8; padding-left: 16px; margin: 16px 0; font-style: italic; color: #4b5563; }
+  #gdocs-paper ul { list-style-type: disc; margin-left: 24px; margin-bottom: 12px; }
+  #gdocs-paper ol { list-style-type: decimal; margin-left: 24px; margin-bottom: 12px; }
+  #gdocs-paper hr { border: 0; border-top: 1px solid #dadce0; margin: 20px 0; }
+  #gdocs-paper a { color: #1a73e8; text-decoration: underline; }
+  #gdocs-paper img { max-width: 100%; border-radius: 6px; margin: 14px 0; }
+  #gdocs-paper:empty:before { content: "Start writing your essay here just like Google Docs..."; color: #9ca3af; }
+
+  /* Toast Notification */
+  #xp-toast {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
 </style>
 </head>
-<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md" style="background-color: rgb(253, 249, 228);">
+<body class="bg-[#f2dc87] text-primary min-h-screen flex flex-col font-body-md" style="background-color: #f2dc87;">
+
+<!-- XP Toast Popup -->
+<div id="xp-toast" class="fixed top-6 right-6 z-[200] bg-black text-white px-5 py-3 rounded-lg shadow-xl border border-amber-400 flex items-center gap-3 transform -translate-y-20 opacity-0 pointer-events-none">
+  <span class="material-symbols-outlined text-amber-400 text-xl">stars</span>
+  <div>
+    <span class="block text-xs font-bold uppercase tracking-wider text-amber-400">XP Earned!</span>
+    <span class="block text-xs font-medium text-gray-200" id="xp-toast-message">+15 XP: Read an Article</span>
+  </div>
+</div>
 
 <!-- TopNavBar -->
-<header class="w-full top-0 sticky bg-background text-primary z-50 backdrop-blur-md bg-opacity-95" style="background-color: rgb(253, 249, 228);">
-  <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto border-b border-primary/10">
+<header class="w-full top-0 sticky bg-[#f2dc87] text-primary z-50 border-b border-primary/10 select-none">
+  <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
     <!-- Brand Logo -->
     <a class="font-display-lg text-headline-md text-primary tracking-tight flex items-center gap-2" href="index.html">
       <img alt="Arias Unlocked Logo" class="h-9 w-9 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdKVTjZIq1S0DBO4UoJSfbwTglYCiIRWt_6-hmiYbOZRRLPJ9zTsnTkorQAzRoBk0w16OB4ZO-wtqnq5EKo-eQBvKcQ3z2rqcNGrrdD_BI6FFgFha1W0RUBW8VIjdqydhmmLtHhIxcDCByxMvLXsEScmqyGH7eyK18vEykEmq1JcDhlwNz8Hf3czH8Rlmh31x-lFcURrIw6g1S6dJVdhm0RMwWK0Z5CoidP7YPUHhbSOEt8b6I7Yyc8tbRpueumI7Zl3WH7uUGTtoDWA">
@@ -116,277 +108,985 @@
     </a>
     
     <!-- Desktop Nav -->
-    <nav class="hidden md:flex gap-10 items-center">
-      <a class="text-on-surface-variant font-label-md hover:text-primary transition-colors duration-200 uppercase tracking-widest text-sm" href="songs.html">Songs</a>
-      <a class="text-primary font-bold border-b-2 border-primary pb-1 uppercase tracking-widest text-sm" href="blog.html">Blog</a>
-      <a class="text-on-surface-variant font-label-md hover:text-primary transition-colors duration-200 uppercase tracking-widest text-sm" href="about.html">About Me</a>
+    <nav class="hidden md:flex gap-8 items-center">
+      <a class="text-on-surface-variant font-label-md hover:text-primary transition-colors uppercase tracking-widest text-xs" href="songs.html">Songs</a>
+      <a class="text-primary font-bold border-b-2 border-primary pb-1 uppercase tracking-widest text-xs" href="blog.html">Blog</a>
+      <a class="text-on-surface-variant font-label-md hover:text-primary transition-colors uppercase tracking-widest text-xs flex items-center gap-1" href="donate.html">
+        <span class="material-symbols-outlined text-xs text-red-700">favorite</span>
+        <span>Donate</span>
+      </a>
+      <a class="text-on-surface-variant font-label-md hover:text-primary transition-colors uppercase tracking-widest text-xs" href="about.html">About Me</a>
     </nav>
     
-    <!-- Trailing Action (Desktop) -->
-    <button id="join-btn" class="hidden md:inline-flex items-center justify-center bg-primary text-white font-label-md rounded-full px-8 py-3 hover:bg-neutral-800 transition-colors uppercase tracking-widest text-xs">
-      Join Now
-    </button>
+    <!-- Trailing Actions (Desktop) -->
+    <div class="hidden md:flex items-center gap-3">
+      <!-- Profile Button with Level & XP Indicator -->
+      <button id="header-profile-btn" onclick="toggleProfileDrawer()" class="flex items-center gap-2.5 px-3 py-1.5 bg-white border border-primary/20 rounded-lg hover:border-black transition-all cursor-pointer shadow-xs" title="View Profile, Reading Levels, XP & Settings">
+        <div class="w-7 h-7 rounded-full bg-black text-white flex items-center justify-center font-bold text-xs" id="header-avatar-initial">A</div>
+        <div class="text-left">
+          <span class="block text-[11px] font-bold text-primary leading-tight" id="header-username-display">Antonio</span>
+          <span class="block text-[9px] text-gray-600 font-semibold leading-none mt-0.5" id="header-level-badge">Lv. 1 · 0 XP</span>
+        </div>
+        <span class="material-symbols-outlined text-sm text-gray-400">expand_more</span>
+      </button>
+
+      <!-- Author Portal Button -->
+      <button id="author-nav-btn" onclick="openAuthorPortal()" class="inline-flex items-center gap-1.5 px-3.5 py-2 bg-secondary/10 hover:bg-secondary/20 text-secondary border border-secondary/30 rounded-lg font-label-md text-xs uppercase tracking-wider transition-all cursor-pointer" title="Author Only: Write and Edit Essays in Google Docs">
+        <span class="material-symbols-outlined text-sm">lock</span>
+        <span id="author-nav-text">Author Portal</span>
+      </button>
+
+      <button id="join-btn" class="inline-flex items-center justify-center bg-primary text-white font-label-md rounded-lg px-5 py-2 hover:bg-neutral-800 transition-colors uppercase tracking-widest text-xs cursor-pointer">
+        Join Now
+      </button>
+    </div>
     
     <!-- Mobile Menu Button -->
-    <button id="mobile-menu-btn" class="md:hidden text-primary p-2">
-      <span class="material-symbols-outlined text-headline-md">menu</span>
-    </button>
+    <div class="md:hidden flex items-center gap-2">
+      <button onclick="toggleProfileDrawer()" class="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center font-bold text-xs">
+        <span id="mobile-avatar-initial">A</span>
+      </button>
+      <button id="mobile-menu-btn" class="text-primary p-2">
+        <span class="material-symbols-outlined text-2xl">menu</span>
+      </button>
+    </div>
   </div>
 
   <!-- Mobile Dropdown -->
-  <div id="mobile-menu" class="hidden md:hidden px-6 pb-6 pt-2 bg-background border-b border-primary/10 flex flex-col gap-3">
+  <div id="mobile-menu" class="hidden md:hidden px-6 pb-6 pt-2 bg-[#f2dc87] border-b border-primary/10 flex flex-col gap-3 text-xs">
     <a class="text-primary font-semibold py-2 border-b border-primary/10" href="songs.html">Songs</a>
     <a class="text-primary font-bold py-2 border-b border-primary/10" href="blog.html">Blog</a>
+    <a class="text-primary font-semibold py-2 border-b border-primary/10 flex items-center gap-1" href="donate.html">
+      <span class="material-symbols-outlined text-xs text-red-700">favorite</span>
+      <span>Donate to Operas</span>
+    </a>
     <a class="text-primary font-semibold py-2 border-b border-primary/10" href="about.html">About Me</a>
-    <button class="join-trigger w-full bg-primary text-white py-3 rounded-full font-label-md uppercase tracking-wider text-xs mt-2">
-      Join Now
+    <button onclick="toggleProfileDrawer()" class="w-full text-left py-2 font-semibold text-primary flex items-center gap-2">
+      <span class="material-symbols-outlined text-sm">account_circle</span>
+      <span>My Profile, Reading Level &amp; Settings</span>
+    </button>
+    <button onclick="openAuthorPortal()" class="w-full text-left py-2 font-semibold text-secondary flex items-center gap-2 border-t border-secondary/10 pt-3">
+      <span class="material-symbols-outlined text-sm">edit_note</span>
+      <span id="author-mobile-text">Author Portal (Google Docs)</span>
     </button>
   </div>
 </header>
 
 <!-- Main Content Canvas -->
-<main class="flex-grow max-w-container-max mx-auto w-full px-margin-mobile md:px-margin-desktop py-16 flex flex-col gap-16">
-  <!-- Page Header & Search/Filter -->
-  <header class="flex flex-col gap-10 max-w-4xl w-full">
-    <div class="flex flex-col gap-4">
-      <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary tracking-tight">The Green Room</h1>
-      <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+<main class="flex-grow max-w-container-max mx-auto w-full px-margin-mobile md:px-margin-desktop py-12 flex flex-col gap-10">
+  
+  <!-- Page Header & Actions -->
+  <header class="flex flex-col gap-6 max-w-4xl w-full">
+    <div class="flex flex-col gap-3">
+      <div class="flex items-center justify-between flex-wrap gap-4">
+        <h1 class="font-display-lg text-3xl md:text-5xl text-primary tracking-tight">The Green Room</h1>
+        
+        <div class="flex items-center gap-2.5 flex-wrap">
+          <button onclick="openContributorEditor()" class="inline-flex items-center gap-1.5 px-4 py-2 bg-white hover:bg-gray-50 text-secondary border border-secondary/30 rounded-lg font-label-md text-xs uppercase tracking-wider transition-all cursor-pointer shadow-xs" title="Anyone can suggest a blog post reviewed by AI">
+            <span class="material-symbols-outlined text-sm text-indigo-600">neurology</span>
+            <span>Suggest a Post (AI Review)</span>
+          </button>
+          
+          <button id="author-quick-portal-btn" onclick="openAuthorPortal()" class="inline-flex items-center gap-1.5 px-4 py-2 bg-black hover:bg-neutral-800 text-white border border-primary/20 rounded-lg font-label-md text-xs uppercase tracking-wider transition-all cursor-pointer shadow-xs">
+            <span class="material-symbols-outlined text-sm">add</span>
+            <span id="author-quick-portal-text">New Essay</span>
+          </button>
+        </div>
+      </div>
+      <p class="font-body-md text-sm md:text-base text-gray-800 max-w-2xl leading-relaxed">
         Reflections on classical repertoire, modern interpretation, and the spaces between notes.
       </p>
     </div>
+
+    <!-- Reading Stats & Level Banner -->
+    <div id="user-stats-banner" class="bg-white border border-primary/10 rounded-lg p-4 shadow-sm flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3.5">
+        <div class="w-11 h-11 rounded-lg bg-amber-100 text-amber-900 border border-amber-200 flex items-center justify-center font-bold text-base flex-shrink-0">
+          <span class="material-symbols-outlined text-2xl">workspace_premium</span>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-amber-900 bg-amber-50 px-2 py-0.5 rounded border border-amber-200" id="banner-level-name">Level 1: Opera Novice</span>
+            <span class="text-xs font-bold text-gray-800" id="banner-xp-count">0 XP</span>
+          </div>
+          <p class="text-xs text-gray-600 mt-0.5">
+            You have read <strong id="banner-read-count" class="text-black">0</strong> blog posts · Read more to advance your rank!
+          </p>
+        </div>
+      </div>
+      <div class="flex items-center gap-3 w-full md:w-auto justify-between md:justify-end">
+        <div class="w-36 bg-gray-100 h-2 rounded-full overflow-hidden border border-gray-200">
+          <div id="banner-xp-bar-fill" class="h-full bg-amber-500 transition-all duration-300" style="width: 0%;"></div>
+        </div>
+        <button onclick="toggleProfileDrawer()" class="text-xs font-semibold text-primary hover:underline flex items-center gap-1 cursor-pointer">
+          <span>Profile &amp; Settings</span>
+          <span class="material-symbols-outlined text-xs">arrow_forward</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Author Active Ribbon (Visible when Antonio is logged in) -->
+    <div id="author-ribbon" class="hidden flex items-center justify-between bg-white border border-emerald-300 rounded-lg p-4 shadow-xs">
+      <div class="flex items-center gap-3">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+        <div>
+          <span class="text-xs font-bold text-primary tracking-wider uppercase" id="author-ribbon-name">Author Mode: Antonio</span>
+          <p class="text-[11px] text-gray-500">Destination: <code class="font-mono bg-gray-50 px-1.5 py-0.5 rounded border border-gray-200">Google Drive / Arias Unlocked / Blog</code></p>
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <button onclick="openGoogleDocsEditor()" class="px-4 py-2 bg-primary text-white rounded-lg text-xs font-semibold hover:bg-neutral-800 transition-colors flex items-center gap-1.5 cursor-pointer shadow-xs">
+          <span class="material-symbols-outlined text-sm">add</span>
+          <span>New Essay</span>
+        </button>
+        <button onclick="logoutAuthor()" class="text-xs text-gray-500 hover:text-red-600 font-medium transition-colors cursor-pointer">Log Out</button>
+      </div>
+    </div>
     
     <!-- Search and Filter Bar -->
-    <div class="flex flex-col gap-6 w-full mt-4">
+    <div class="flex flex-col gap-4 w-full mt-2">
       <div class="relative max-w-xl mx-auto w-full">
-        <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant/50">search</span>
-        <input id="blog-search-input" class="w-full bg-white border border-primary/10 rounded-full py-4 pl-12 pr-10 font-body-md text-on-surface focus:outline-none focus:border-primary/30 focus:ring-1 focus:ring-primary/30 shadow-sm transition-all text-sm" placeholder="Search essays, repertoire, insights..." type="text">
-        <button id="blog-search-clear" class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-black hidden">
+        <span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400">search</span>
+        <input id="blog-search-input" class="w-full bg-white border border-primary/10 rounded-lg py-3 pl-10 pr-10 font-body-md text-gray-900 focus:outline-none focus:border-black text-xs shadow-xs" placeholder="Search essays, repertoire, vocal techniques..." type="text">
+        <button id="blog-search-clear" class="absolute right-3.5 top-1/2 -translate-y-1/2 text-gray-400 hover:text-black hidden cursor-pointer">
           <span class="material-symbols-outlined text-sm">close</span>
         </button>
       </div>
       
-      <div class="flex flex-wrap justify-center gap-3" id="blog-filters">
-        <button class="blog-filter-btn px-5 py-2 rounded-full bg-primary text-white font-label-sm text-label-sm tracking-widest uppercase transition-colors" data-filter="All">All</button>
-        <button class="blog-filter-btn px-5 py-2 rounded-full bg-white border border-primary/10 text-on-surface-variant hover:border-primary/30 hover:text-primary font-label-sm text-label-sm tracking-widest uppercase transition-all shadow-sm" data-filter="Vocalization">Vocalization</button>
-        <button class="blog-filter-btn px-5 py-2 rounded-full bg-white border border-primary/10 text-on-surface-variant hover:border-primary/30 hover:text-primary font-label-sm text-label-sm tracking-widest uppercase transition-all shadow-sm" data-filter="Interpretation">Interpretation</button>
-        <button class="blog-filter-btn px-5 py-2 rounded-full bg-white border border-primary/10 text-on-surface-variant hover:border-primary/30 hover:text-primary font-label-sm text-label-sm tracking-widest uppercase transition-all shadow-sm" data-filter="Repertoire">Repertoire</button>
-        <button class="blog-filter-btn px-5 py-2 rounded-full bg-white border border-primary/10 text-on-surface-variant hover:border-primary/30 hover:text-primary font-label-sm text-label-sm tracking-widest uppercase transition-all shadow-sm" data-filter="Technique">Technique</button>
-        <button class="blog-filter-btn px-5 py-2 rounded-full bg-white border border-primary/10 text-on-surface-variant hover:border-primary/30 hover:text-primary font-label-sm text-label-sm tracking-widest uppercase transition-all shadow-sm" data-filter="Tips">Tips</button>
+      <div class="flex flex-wrap justify-center gap-2" id="blog-filters">
+        <button class="blog-filter-btn px-4 py-1.5 rounded-lg bg-black text-white font-label-sm text-xs tracking-wider uppercase transition-colors" data-filter="All">All</button>
+        <button class="blog-filter-btn px-4 py-1.5 rounded-lg bg-white border border-primary/10 text-gray-700 hover:border-black font-label-sm text-xs tracking-wider uppercase transition-all shadow-xs" data-filter="Tutorial & Guide">Tutorial &amp; Guide</button>
+        <button class="blog-filter-btn px-4 py-1.5 rounded-lg bg-white border border-primary/10 text-gray-700 hover:border-black font-label-sm text-xs tracking-wider uppercase transition-all shadow-xs" data-filter="Technique">Technique</button>
+        <button class="blog-filter-btn px-4 py-1.5 rounded-lg bg-white border border-primary/10 text-gray-700 hover:border-black font-label-sm text-xs tracking-wider uppercase transition-all shadow-xs" data-filter="Interpretation">Interpretation</button>
+        <button class="blog-filter-btn px-4 py-1.5 rounded-lg bg-white border border-primary/10 text-gray-700 hover:border-black font-label-sm text-xs tracking-wider uppercase transition-all shadow-xs" data-filter="Vocalization">Vocalization</button>
+        <button class="blog-filter-btn px-4 py-1.5 rounded-lg bg-white border border-primary/10 text-gray-700 hover:border-black font-label-sm text-xs tracking-wider uppercase transition-all shadow-xs" data-filter="Repertoire">Repertoire</button>
       </div>
     </div>
   </header>
 
-  <!-- Featured Post (Hero Style) -->
-  <article class="blog-post-card w-full bg-white rounded-2xl border border-primary/10 overflow-hidden flex flex-col md:flex-row shadow-sm hover:shadow-md transition-shadow duration-300 group cursor-pointer"
-           data-category="Interpretation"
-           data-title="Finding the Silence in Turandot"
-           data-date="Oct 12, 2024"
-           data-readtime="7 min read"
-           data-snippet="Beyond the bombast of Nessun Dorma lies a subtle architecture of silence. Exploring how rests and pauses build the true tension in Puccini's final masterpiece, and why modern performers often rush the quiet moments."
-           data-content="Giacomo Puccini's final unfinished masterpiece, *Turandot*, is universally renowned for its monumental vocal demands and the thundering triumph of 'Nessun Dorma'. Yet when we reduce this opera to high Cs and blazing brass, we miss the heart of Puccini's musical architecture: the profound power of silence.
-
-In Act I, as Prince Calaf prepares to strike the ceremonial gong, the orchestration thins into suspended pedal tones. The silence before each riddle is where the psychological stakes live. For young classical singers and conductors, learning not to rush these fermatas and grand pauses is the single most transformative artistic choice you can make. 
-
-True musical tension is not created by sound alone—it is sculpted by the silence that surrounds it.">
-    <div class="md:w-3/5 h-64 md:h-[500px] bg-surface-container-high relative overflow-hidden">
-      <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Opera stage viewed from the wings" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8iqBEEJoJKWCTSQWa0XSHEHzURpoxmh0PMZHc7i3xjGMu4oxCnV_7iDklPGFsHFamsazaKgCQT8h81gXg4opBpVORa2WitCjQzN1Rn1ixwVMkk8HfkFF7v1KqiLblj1Dv2ve-QSOECgdRtPe8UmAHRWSdaozekWIkuIQOnkTb-3879CbOkkGQQWiKsRS6_8etI103C-VKJtLkYmGxcFGaUzSNWWGlZLyuPpHbHh5CMTCrvfXB9HZW">
-    </div>
-    <div class="md:w-2/5 p-8 md:p-12 flex flex-col justify-center gap-6">
-      <div class="flex gap-2 flex-wrap">
-        <span class="bg-surface text-on-surface-variant font-label-sm text-[10px] px-3 py-1 rounded-sm uppercase tracking-widest">Interpretation</span>
+  <!-- Interactive "Operas Near Me" Finder -->
+  <section class="bg-white border border-primary/10 rounded-lg p-6 shadow-sm flex flex-col gap-4">
+    <div class="flex items-center justify-between flex-wrap gap-2">
+      <div class="flex items-center gap-2">
+        <span class="material-symbols-outlined text-amber-800 text-xl">near_me</span>
+        <h3 class="font-display-lg text-xl text-primary">Find Live Operas Near You</h3>
       </div>
-      <h2 class="font-headline-lg text-[40px] leading-[48px] text-primary tracking-tight group-hover:text-primary/80 transition-colors">Finding the Silence in Turandot</h2>
-      <p class="font-body-md text-body-lg text-on-surface-variant/80">
-        Beyond the bombast of Nessun Dorma lies a subtle architecture of silence. Exploring how rests and pauses build the true tension in Puccini's final masterpiece, and why modern performers often rush the quiet moments.
+      <span class="text-xs text-gray-500">Discover upcoming productions &amp; opera houses</span>
+    </div>
+
+    <div class="flex flex-col sm:flex-row gap-2.5">
+      <div class="relative flex-grow">
+        <span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400 text-sm">search</span>
+        <input type="text" id="opera-near-me-input" placeholder="Search city or zip (e.g. New York, Los Angeles, Chicago, London...)" class="w-full bg-[#fcfaf2] border border-gray-300 rounded-lg py-2.5 pl-10 pr-4 text-xs font-medium text-gray-800 focus:outline-none focus:border-black">
+      </div>
+      <button type="button" onclick="searchOperasNearMe()" class="px-5 py-2.5 bg-black text-white rounded-lg text-xs font-bold uppercase tracking-wider hover:bg-neutral-800 transition-colors flex items-center justify-center gap-1.5 cursor-pointer shadow-xs">
+        <span>Search</span>
+      </button>
+      <button type="button" onclick="useMyLocationForOperas()" id="location-opera-btn" class="px-4 py-2.5 bg-amber-100 hover:bg-amber-200 text-amber-900 border border-amber-300 rounded-lg text-xs font-bold flex items-center justify-center gap-1.5 transition-colors cursor-pointer" title="Location sharing is completely optional">
+        <span class="material-symbols-outlined text-sm">my_location</span>
+        <span>Use My Location (Optional)</span>
+      </button>
+    </div>
+    <p id="opera-location-notice" class="text-[11px] text-gray-500">
+      📍 Location sharing is completely optional. We never store or share your location.
+    </p>
+
+    <!-- Operas Near Me Grid -->
+    <div id="operas-near-me-results" class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-1">
+      <!-- Injected dynamically -->
+    </div>
+  </section>
+
+  <!-- Donate Callout Banner -->
+  <section class="bg-black text-white rounded-lg p-6 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
+    <div class="flex items-center gap-4">
+      <div class="w-12 h-12 rounded-lg bg-amber-400 text-black flex items-center justify-center font-bold text-xl flex-shrink-0">
+        <span class="material-symbols-outlined text-2xl">favorite</span>
+      </div>
+      <div>
+        <h4 class="font-display-lg text-xl text-white">Support The Met, LA Opera &amp; Historic Repertoire</h4>
+        <p class="text-xs text-gray-300 mt-0.5 max-w-xl leading-relaxed">
+          Arias Unlocked dedicates community contributions to preserving historic opera archives and funding young vocalist fellowships.
+        </p>
+      </div>
+    </div>
+    <a href="donate.html" class="px-6 py-3 bg-amber-400 hover:bg-amber-300 text-black rounded-lg text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 flex-shrink-0 transition-colors shadow-sm">
+      <span>Donate to Opera (+100 XP)</span>
+      <span class="material-symbols-outlined text-sm">arrow_forward</span>
+    </a>
+  </section>
+
+  <!-- Featured Blog Post (Hero: Tutorial Post) -->
+  <section id="hero-post-container" class="w-full">
+    <!-- Rendered dynamically -->
+  </section>
+
+  <!-- Section Divider: Subsequent Articles -->
+  <div class="flex items-center justify-between border-b border-primary/10 pb-3">
+    <h2 class="font-display-lg text-2xl text-primary">All Essays &amp; Masterclasses</h2>
+    <span class="text-xs text-gray-600 font-medium" id="posts-counter-label">Showing articles</span>
+  </div>
+
+  <!-- Blog Articles Grid -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="blog-grid">
+    <!-- Posts are dynamically injected here -->
+  </div>
+
+  <!-- The Monthly Singing Paper Box -->
+  <section class="bg-[#1c1b1b] rounded-lg p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 text-white shadow-sm">
+    <div class="flex flex-col gap-2 max-w-lg">
+      <h3 class="font-display-lg text-2xl md:text-3xl tracking-tight text-white">The Monthly Singing Paper</h3>
+      <p class="font-body-md text-xs text-gray-300 leading-relaxed">
+        Get our monthly classical vocal analysis and opera paper delivered straight to your inbox from <span class="text-white font-semibold">antonio27181019@gmail.com</span>.
       </p>
-      <div class="flex items-center gap-4 mt-4">
-        <span class="font-label-sm text-xs text-on-surface-variant/60 tracking-widest uppercase">Oct 12, 2024</span>
-        <div class="w-1 h-1 rounded-full bg-primary/20"></div>
-        <span class="font-label-sm text-xs text-on-surface-variant/60 tracking-widest uppercase">7 min read</span>
+      <p class="text-[11px] text-gray-400">Strictly singing emails—no Google Chat, no spam.</p>
+    </div>
+    <div class="w-full max-w-md">
+      <form id="newsletter-form" onsubmit="handleNewsletterSubmit(event)" class="flex flex-col sm:flex-row gap-2.5">
+        <input required id="newsletter-email" class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-2.5 font-body-md text-white placeholder:text-white/50 focus:outline-none focus:border-white text-xs" placeholder="Your email address" type="email">
+        <button class="px-6 bg-white text-black font-label-md text-xs py-2.5 rounded-lg hover:bg-neutral-200 transition-colors tracking-wider uppercase flex-shrink-0 cursor-pointer font-bold" type="submit">
+          Subscribe
+        </button>
+      </form>
+      <div id="newsletter-success" class="hidden text-emerald-400 font-semibold text-xs mt-2 flex items-center gap-1.5">
+        <span class="material-symbols-outlined text-base">check_circle</span>
+        <span>Subscribed for monthly singing paper from <strong class="text-white">antonio27181019@gmail.com</strong>!</span>
       </div>
     </div>
-  </article>
+  </section>
 
-  <!-- Grid Layout for Subsequent Posts -->
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="blog-grid">
-    <!-- Post 1 -->
-    <article class="blog-post-card bg-white rounded-2xl border border-primary/10 overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-shadow duration-300 group cursor-pointer"
-             data-category="Technique"
-             data-title="The Modern Bow: Agility vs Weight"
-             data-date="Oct 05, 2024"
-             data-readtime="5 min read"
-             data-snippet="A technical deep dive into shifting paradigms in string playing over the last decade and how it affects resonance."
-             data-content="In string playing and vocal accompaniment alike, the delicate balance between bow speed and contact point determines clarity versus warmth. Modern string players are rediscovering historical bowings that prioritize buoyant articulative releases over relentless pressure. By easing tension at the frog and allowing acoustic resonance to bloom, the instrument sings with a vocal purity that blends seamlessly with opera soloists.">
-      <div class="h-56 w-full bg-surface-container-high relative overflow-hidden">
-        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Cello bridge and strings" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC625CHb6gPl76ko62q28PzlCKOBHHMxaH9F-OkqKsfYRn31IfNiPv7ZB_zXTljDyKzruj8OXj6xcknnEheVq2e6h38UDpz7PTz89Bw0smM69yiQnCnVk_MYEH2_uTL4Zzb_aNAPYqFPawy7wvDAp8_F9fnJd1OYOLXF8pk2XIrjh3riyE2dSQihifOpvGNYLKtjUR8Pt3KLON7AB5dKCBXVPx7EBcromg7eLNbmFbtjbrNf1FjZ9lX">
-      </div>
-      <div class="p-8 flex flex-col flex-grow gap-5">
-        <span class="bg-surface text-on-surface-variant font-label-sm text-[10px] px-3 py-1 rounded-sm uppercase tracking-widest w-fit">Technique</span>
-        <h3 class="font-headline-md text-headline-md text-primary tracking-tight leading-snug group-hover:text-primary/80 transition-colors">The Modern Bow: Agility vs Weight</h3>
-        <p class="font-body-md text-body-md text-on-surface-variant/80 line-clamp-3">
-          A technical deep dive into shifting paradigms in string playing over the last decade and how it affects resonance.
-        </p>
-        <div class="mt-auto pt-4 flex items-center justify-between">
-          <span class="font-label-sm text-xs text-on-surface-variant/60 tracking-widest uppercase">Oct 05, 2024</span>
-          <span class="font-label-sm text-xs text-primary font-semibold flex items-center gap-1">Read <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
-        </div>
-      </div>
-    </article>
-
-    <!-- Post 2 -->
-    <article class="blog-post-card bg-white rounded-2xl border border-primary/10 overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-shadow duration-300 group cursor-pointer"
-             data-category="Tips"
-             data-title="Stop Wearing Tuxedos"
-             data-date="Sep 28, 2024"
-             data-readtime="4 min read"
-             data-snippet="How formal concert attire creates an unnecessary barrier between the orchestra and the modern audience, and what we should wear instead."
-             data-content="Why are young concertgoers intimidated by classical halls? Often, it starts before a single note is played. The Victorian penguin suit creates an unspoken psychological distance between audience and performer. Contemporary concert halls in Berlin, London, and Tokyo are experimenting with modern monochrome tailoring and relaxed dress codes. When the visual aesthetic feels alive and relevant, young audiences can connect directly with the raw emotional truth of the music.">
-      <div class="h-56 w-full bg-surface-container-high relative overflow-hidden flex items-center justify-center bg-[#f4f2ec]">
-        <span class="material-symbols-outlined text-[64px] text-primary/20">music_note</span>
-      </div>
-      <div class="p-8 flex flex-col flex-grow gap-5">
-        <span class="bg-surface text-on-surface-variant font-label-sm text-[10px] px-3 py-1 rounded-sm uppercase tracking-widest w-fit">Tips</span>
-        <h3 class="font-headline-md text-headline-md text-primary tracking-tight leading-snug group-hover:text-primary/80 transition-colors">Stop Wearing Tuxedos</h3>
-        <p class="font-body-md text-body-md text-on-surface-variant/80 line-clamp-3">
-          How formal concert attire creates an unnecessary barrier between the orchestra and the modern audience, and what we should wear instead.
-        </p>
-        <div class="mt-auto pt-4 flex items-center justify-between">
-          <span class="font-label-sm text-xs text-on-surface-variant/60 tracking-widest uppercase">Sep 28, 2024</span>
-          <span class="font-label-sm text-xs text-primary font-semibold flex items-center gap-1">Read <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
-        </div>
-      </div>
-    </article>
-
-    <!-- Post 3 -->
-    <article class="blog-post-card bg-white rounded-2xl border border-primary/10 overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-shadow duration-300 group cursor-pointer"
-             data-category="Repertoire"
-             data-title="Debussy's Late Works"
-             data-date="Sep 20, 2024"
-             data-readtime="6 min read"
-             data-snippet="Finding clarity in the often-misunderstood structural rigidity of his final sonatas and unpacking their complex emotional landscape."
-             data-content="Claude Debussy's final three sonatas (for cello, flute-viola-harp, and violin) are often categorized under hazy impressionist umbrellas. In truth, they represent a fiercely lucid return to French classical order and neoclassical symmetry. Written against the harrowing backdrop of World War I, these pieces strip away all orchestral excess, leaving crystalline motivic counterpoint and unforgettable harmonic yearning.">
-      <div class="h-56 w-full bg-surface-container-high relative overflow-hidden flex items-center justify-center bg-[#f4f2ec]">
-        <span class="material-symbols-outlined text-[64px] text-primary/20">auto_stories</span>
-      </div>
-      <div class="p-8 flex flex-col flex-grow gap-5">
-        <span class="bg-surface text-on-surface-variant font-label-sm text-[10px] px-3 py-1 rounded-sm uppercase tracking-widest w-fit">Repertoire</span>
-        <h3 class="font-headline-md text-headline-md text-primary tracking-tight leading-snug group-hover:text-primary/80 transition-colors">Debussy's Late Works</h3>
-        <p class="font-body-md text-body-md text-on-surface-variant/80 line-clamp-3">
-          Finding clarity in the often-misunderstood structural rigidity of his final sonatas and unpacking their complex emotional landscape.
-        </p>
-        <div class="mt-auto pt-4 flex items-center justify-between">
-          <span class="font-label-sm text-xs text-on-surface-variant/60 tracking-widest uppercase">Sep 20, 2024</span>
-          <span class="font-label-sm text-xs text-primary font-semibold flex items-center gap-1">Read <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
-        </div>
-      </div>
-    </article>
-  </div>
-
-  <!-- Newsletter Signup & Load More -->
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
-    <div class="md:col-span-3 bg-[#1A1A1A] rounded-2xl p-10 md:p-16 flex flex-col md:flex-row items-center justify-between gap-10 text-white relative overflow-hidden shadow-lg">
-      <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 100% 100%, #ffffff 0%, transparent 50%);"></div>
-      <div class="relative z-10 flex flex-col gap-4 max-w-lg">
-        <h3 class="font-headline-md text-headline-lg font-display-lg tracking-tight">Join the Conversation</h3>
-        <p class="font-body-md text-body-lg font-normal opacity-80">Get weekly essays on classical music delivered straight to your inbox.</p>
-      </div>
-      <div class="relative z-10 w-full max-w-md">
-        <form id="newsletter-form" onsubmit="handleNewsletterSubmit(event)" class="flex flex-col sm:flex-row gap-3">
-          <input required id="newsletter-email" class="w-full bg-white/10 border border-white/20 rounded-full px-6 py-4 font-body-md text-white placeholder:text-white/50 focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-all text-sm" placeholder="Your email address" type="email">
-          <button class="w-full sm:w-auto px-8 bg-white text-[#1A1A1A] font-label-md text-label-md py-4 rounded-full hover:bg-neutral-200 transition-colors tracking-widest uppercase flex-shrink-0 cursor-pointer" type="submit">
-            Subscribe
-          </button>
-        </form>
-        <div id="newsletter-success" class="hidden text-emerald-400 font-semibold text-sm mt-3 flex items-center gap-2">
-          <span class="material-symbols-outlined text-lg">check_circle</span>
-          Thank you! You are now subscribed to The Green Room.
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Load More Action -->
-  <div class="flex justify-center mt-4">
-    <button id="load-more-blog-btn" class="px-10 py-4 bg-transparent border border-primary/20 text-primary font-label-md text-label-md rounded-full hover:border-primary/50 hover:bg-primary/5 transition-all tracking-widest uppercase shadow-sm cursor-pointer">
-      Load More Articles
-    </button>
-  </div>
 </main>
 
 <!-- Footer -->
-<footer class="bg-surface-container-low border-t border-primary/10 py-10 w-full mt-auto" style="background-color: rgb(253, 249, 228);">
+<footer class="bg-[#f2dc87] border-t border-primary/10 py-10 w-full mt-auto">
   <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-6">
     <div class="text-center md:text-left">
-      <span class="font-display-lg text-headline-sm text-primary">Arias Unlocked</span>
-      <p class="font-body-md text-sm text-on-surface-variant mt-1">The Green Room essays &amp; classical music perspectives.</p>
+      <span class="font-display-lg text-xl text-primary">Arias Unlocked</span>
+      <p class="font-body-md text-xs text-gray-700 mt-1">The Green Room essays &amp; classical music perspectives.</p>
     </div>
-    <div class="flex gap-6 items-center">
-      <a class="text-on-surface-variant hover:text-primary font-label-md text-sm transition-colors" href="index.html">Home</a>
-      <a class="text-on-surface-variant hover:text-primary font-label-md text-sm transition-colors" href="songs.html">Songs</a>
-      <a class="text-on-surface-variant hover:text-primary font-label-md text-sm transition-colors" href="about.html">About Me</a>
-      <button class="join-trigger text-on-surface-variant hover:text-primary font-label-md text-sm transition-colors">Join</button>
+    <div class="flex gap-6 items-center text-xs">
+      <a class="text-gray-700 hover:text-primary transition-colors" href="index.html">Home</a>
+      <a class="text-gray-700 hover:text-primary transition-colors" href="songs.html">Songs</a>
+      <a class="text-primary font-bold transition-colors" href="blog.html">Blog</a>
+      <a class="text-gray-700 hover:text-primary transition-colors" href="donate.html">Donate</a>
+      <a class="text-gray-700 hover:text-primary transition-colors" href="about.html">About Me</a>
+      <a class="text-gray-700 hover:text-primary transition-colors" href="mailto:antonio27181019@gmail.com">Contact</a>
+      <button class="join-trigger text-gray-700 hover:text-primary transition-colors cursor-pointer">Join</button>
     </div>
   </div>
 </footer>
 
-<!-- Article Reader Modal -->
-<div id="article-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[110] hidden flex items-center justify-center p-4">
-  <div class="bg-white rounded-3xl max-w-2xl w-full p-8 relative shadow-2xl border border-secondary/20 max-h-[90vh] overflow-y-auto">
-    <button onclick="closeArticleModal()" class="absolute top-5 right-5 text-gray-400 hover:text-black">
-      <span class="material-symbols-outlined">close</span>
+<!-- ==========================================
+     EXPANSIVE FULL-FEATURED ARTICLE READER VIEW
+     (Replaces the small cramped modal)
+     ========================================== -->
+<div id="article-reader-view" class="fixed inset-0 bg-[#f2dc87] z-[110] hidden overflow-y-auto">
+  <!-- Sticky Top Reading Nav -->
+  <div class="sticky top-0 bg-[#f2dc87] border-b border-primary/20 z-20 px-6 md:px-12 py-3.5 flex items-center justify-between shadow-xs">
+    <button onclick="closeArticleReader()" class="flex items-center gap-1.5 px-3 py-1.5 bg-white border border-primary/20 rounded-lg text-xs font-bold text-primary hover:border-black transition-colors cursor-pointer shadow-xs">
+      <span class="material-symbols-outlined text-sm">arrow_back</span>
+      <span>Back to All Articles</span>
     </button>
-    
-    <div class="flex items-center gap-3 mb-3">
-      <span id="article-modal-category" class="bg-secondary/10 text-secondary font-label-sm text-xs px-3 py-1 rounded-full uppercase tracking-widest font-semibold">Interpretation</span>
-      <span id="article-modal-date" class="text-xs text-gray-500 uppercase tracking-widest">Oct 12, 2024</span>
-      <span id="article-modal-readtime" class="text-xs text-gray-500 uppercase tracking-widest">7 min read</span>
+
+    <!-- Post Title Mini Preview -->
+    <div class="hidden sm:flex items-center gap-2 max-w-md truncate">
+      <span class="text-xs font-bold text-gray-900 truncate" id="reader-top-progress-title">Tutorial: How to Navigate and Master Arias Unlocked</span>
     </div>
 
-    <h2 id="article-modal-title" class="font-headline-lg text-3xl md:text-4xl text-primary mb-6 leading-tight">Finding the Silence in Turandot</h2>
-    
-    <div id="article-modal-content" class="font-body-md text-gray-700 space-y-4 leading-relaxed text-base border-t border-gray-100 pt-6">
-    </div>
-
-    <div class="mt-8 pt-6 border-t border-gray-100 flex items-center justify-between">
-      <div class="text-xs text-gray-500">By Arias Unlocked Editorial</div>
-      <button onclick="closeArticleModal()" class="px-6 py-2 bg-primary text-white rounded-full text-xs uppercase tracking-wider font-semibold">
-        Close Article
+    <!-- Actions: Like & Close -->
+    <div class="flex items-center gap-2.5">
+      <button id="reader-like-btn" onclick="toggleLikeCurrentReaderPost()" class="flex items-center gap-1.5 px-3.5 py-1.5 bg-white border border-gray-300 rounded-lg text-xs font-bold text-gray-800 hover:border-red-400 transition-colors cursor-pointer shadow-xs">
+        <span class="material-symbols-outlined text-sm text-red-500" id="reader-like-icon">favorite_border</span>
+        <span id="reader-like-count-text">Like (0)</span>
       </button>
+      <button onclick="closeArticleReader()" class="p-1.5 hover:bg-black/10 rounded-lg text-gray-700 cursor-pointer">
+        <span class="material-symbols-outlined text-xl">close</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Expansive Article Container -->
+  <div class="max-w-4xl mx-auto w-full px-6 md:px-12 py-10 my-6 bg-white rounded-lg border border-primary/20 shadow-md">
+    
+    <!-- Meta Ribbon -->
+    <div class="flex items-center justify-between flex-wrap gap-2 border-b border-gray-100 pb-4 mb-6">
+      <div class="flex items-center gap-2 flex-wrap text-xs">
+        <span id="reader-category" class="bg-amber-100 text-amber-900 border border-amber-300 font-bold px-2.5 py-0.5 rounded uppercase tracking-wider">Tutorial &amp; Guide</span>
+        <span id="reader-level-badge" class="bg-indigo-50 text-indigo-800 border border-indigo-200 font-semibold px-2.5 py-0.5 rounded">Level 1 · All Readers</span>
+        <span id="reader-readtime" class="text-gray-500">5 min read</span>
+        <span id="reader-date" class="text-gray-500">Oct 07, 2026</span>
+      </div>
+      <div id="reader-read-badge" class="text-xs text-emerald-700 font-bold flex items-center gap-1 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
+        <span class="material-symbols-outlined text-xs">check_circle</span> Read (+15 XP)
+      </div>
+    </div>
+
+    <!-- Title -->
+    <h1 id="reader-title" class="font-display-lg text-3xl md:text-5xl text-primary leading-tight mb-6">
+      Tutorial: How to Navigate and Master Arias Unlocked
+    </h1>
+
+    <!-- Author Line -->
+    <div class="flex items-center gap-3 mb-8 pb-6 border-b border-gray-100 text-xs text-gray-600">
+      <div class="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center font-bold" id="reader-author-avatar">A</div>
+      <div>
+        <span class="font-bold text-primary block" id="reader-author-name">Antonio</span>
+        <span class="text-[11px] text-gray-500" id="reader-author-subtitle">Arias Unlocked Founder · Google Drive / Blog</span>
+      </div>
+    </div>
+
+    <!-- Article Content -->
+    <div id="reader-body-content" class="font-body-md text-gray-800 space-y-5 leading-relaxed text-base">
+      <!-- Injected HTML -->
+    </div>
+
+    <!-- Patron Paywall Notice (Visible if isPremium and not subscribed) -->
+    <div id="reader-paywall-box" class="hidden my-8 p-8 bg-[#fffbe6] border-2 border-amber-400 rounded-lg text-center flex flex-col items-center gap-3 shadow-xs">
+      <div class="w-12 h-12 rounded-lg bg-amber-300 text-black flex items-center justify-center font-bold text-2xl">
+        <span class="material-symbols-outlined text-3xl">lock</span>
+      </div>
+      <h3 class="font-display-lg text-2xl text-primary">Arias Unlocked Patron Exclusive</h3>
+      <p class="text-xs text-gray-700 max-w-lg leading-relaxed">
+        This masterclass essay is reserved for Arias Unlocked Patrons. Subscribe for <strong>$9/month</strong> to unlock all protected vocal analyses, advanced coloratura score annotations, and masterclasses!
+      </p>
+      <button onclick="toggleProfileDrawer()" class="px-6 py-3 bg-black text-white rounded-lg text-xs font-bold uppercase tracking-wider hover:bg-neutral-800 transition-colors shadow-sm mt-1 cursor-pointer">
+        Unlock with Patron Pass ($9/mo)
+      </button>
+    </div>
+
+    <!-- Finished Reading XP & Like Banner -->
+    <div class="mt-12 pt-6 border-t border-gray-100 flex items-center justify-between flex-wrap gap-4 bg-gray-50 p-4 rounded-lg">
+      <div class="flex items-center gap-2">
+        <span class="material-symbols-outlined text-amber-600">celebration</span>
+        <span class="text-xs font-semibold text-gray-700">Finished reading? You earned <strong>+15 Reading XP</strong>!</span>
+      </div>
+      <button onclick="toggleLikeCurrentReaderPost()" class="px-4 py-2 bg-white border border-gray-300 rounded-lg text-xs font-bold text-gray-800 hover:border-red-400 flex items-center gap-1.5 transition-colors cursor-pointer shadow-xs">
+        <span class="material-symbols-outlined text-sm text-red-500" id="reader-bottom-like-icon">favorite_border</span>
+        <span id="reader-bottom-like-text">Like this Essay</span>
+      </button>
+    </div>
+
+    <!-- ==========================================
+         COMMENTS SECTION AT VERY BOTTOM OF BLOG POST
+         With Sign-In Gate & Arrow to Profile Icon
+         ========================================== -->
+    <div class="mt-14 pt-8 border-t-2 border-primary/10 flex flex-col gap-6" id="article-comments-container">
+      <div class="flex items-center justify-between">
+        <h3 class="font-display-lg text-2xl text-primary flex items-center gap-2">
+          <span class="material-symbols-outlined text-xl">forum</span>
+          <span>Discussion &amp; Comments (<span id="comments-count">0</span>)</span>
+        </h3>
+        <span class="text-xs text-gray-500">Community Perspectives</span>
+      </div>
+
+      <!-- Existing Comments List -->
+      <div id="comments-list" class="flex flex-col gap-3">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <!-- Active Comment Form (If signed in) -->
+      <div id="comment-active-form-box" class="hidden flex flex-col gap-3 bg-gray-50 p-5 rounded-lg border border-gray-200">
+        <label class="text-xs font-bold uppercase tracking-wider text-gray-700 flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-sm">edit</span>
+          <span>Leave a Comment as <strong id="comment-user-name">Antonio</strong> (+10 XP)</span>
+        </label>
+        <textarea id="comment-input-text" rows="3" placeholder="Share your insights on this aria, vocal technique, or performance interpretation..." class="w-full p-3 bg-white border border-gray-300 rounded-lg text-xs font-medium text-gray-800 focus:outline-none focus:border-black"></textarea>
+        <div class="flex justify-end">
+          <button onclick="submitNewComment()" class="px-5 py-2.5 bg-black text-white rounded-lg text-xs font-bold uppercase tracking-wider hover:bg-neutral-800 transition-colors cursor-pointer shadow-xs">
+            Post Comment (+10 XP)
+          </button>
+        </div>
+      </div>
+
+      <!-- Sign-In Gate with Arrow & Guidance Box pointing to Profile Icon (If NOT signed in) -->
+      <div id="comment-sign-in-gate" class="bg-[#fff9e0] border border-amber-300 rounded-lg p-6 relative">
+        <div class="flex items-start gap-4">
+          <div class="w-10 h-10 rounded-lg bg-black text-white flex items-center justify-center font-bold text-lg flex-shrink-0">
+            💬
+          </div>
+          <div class="flex-grow">
+            <div class="flex items-center gap-2 mb-1">
+              <span class="font-bold text-base text-primary">Join the Discussion</span>
+              <span class="text-xs bg-amber-200 text-amber-900 font-bold px-2 py-0.5 rounded">Sign-in Required</span>
+            </div>
+            <p class="text-xs text-gray-700 leading-relaxed mb-4">
+              To add comments and share musical reflections with classical singers, you must first be signed in.
+            </p>
+            
+            <!-- The Arrow & Guidance Box pointing to top right Profile Icon -->
+            <div class="bg-white border-2 border-primary/20 rounded-lg p-4 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">
+              <div class="flex items-center gap-3">
+                <span class="text-2xl animate-bounce text-primary font-bold">↗</span>
+                <div class="text-xs text-gray-800">
+                  <strong class="text-primary block text-sm">Look up at the Profile Icon in the top right!</strong>
+                  Click the <strong>Profile Icon</strong> ↗ in the top navigation bar to sign in with your Google account (<code class="bg-gray-100 px-1 py-0.5 rounded font-mono text-primary font-bold">antonio27181019@gmail.com</code>) or create your reader profile.
+                </div>
+              </div>
+              <button onclick="guideToProfileIcon()" class="px-5 py-2.5 bg-primary text-white rounded-lg text-xs font-bold uppercase tracking-wider hover:bg-neutral-800 transition-colors flex items-center gap-1.5 flex-shrink-0 cursor-pointer shadow-sm">
+                <span>Guide Me to Profile</span>
+                <span class="material-symbols-outlined text-sm">north_east</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
 
+<!-- ==========================================
+     PROFILE & SETTINGS DRAWER / MODAL
+     (With Paid Subscription, Levels & XP)
+     ========================================== -->
+<div id="profile-drawer-modal" class="fixed inset-0 bg-black/60 z-[125] hidden flex items-center justify-center p-4">
+  <div class="bg-white rounded-lg max-w-md w-full p-6 relative shadow-2xl border border-primary/20 max-h-[90vh] overflow-y-auto flex flex-col gap-5">
+    <button onclick="toggleProfileDrawer()" class="absolute top-4 right-4 text-gray-400 hover:text-black cursor-pointer">
+      <span class="material-symbols-outlined">close</span>
+    </button>
+
+    <!-- Profile Header -->
+    <div class="flex items-center gap-3.5 border-b border-gray-100 pb-4">
+      <div class="w-14 h-14 rounded-full bg-black text-white flex items-center justify-center font-bold text-xl flex-shrink-0" id="drawer-avatar">
+        A
+      </div>
+      <div>
+        <h3 class="font-display-lg text-xl text-primary flex items-center gap-1.5">
+          <span id="drawer-name">Antonio</span>
+          <span class="material-symbols-outlined text-sm text-emerald-600" id="drawer-verified-icon" title="Recognized Account">verified</span>
+        </h3>
+        <p class="text-xs text-gray-500 font-mono" id="drawer-email">antonio27181019@gmail.com</p>
+        <span class="inline-block mt-1 text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-amber-100 text-amber-900" id="drawer-role-badge">Author · Maestro</span>
+      </div>
+    </div>
+
+    <!-- XP & Level Rank Box -->
+    <div class="bg-[#fcfaf2] border border-amber-200 rounded-lg p-4">
+      <div class="flex items-center justify-between mb-1.5">
+        <span class="text-xs font-bold text-amber-900 uppercase tracking-wider" id="drawer-level-title">Level 1 · Opera Novice</span>
+        <span class="text-xs font-extrabold text-black" id="drawer-xp-display">0 / 50 XP</span>
+      </div>
+      <div class="w-full bg-gray-200 h-2 rounded-full overflow-hidden mb-3">
+        <div id="drawer-xp-fill" class="h-full bg-amber-500 transition-all duration-300 rounded-full" style="width: 0%;"></div>
+      </div>
+      
+      <!-- Stats 3-Column -->
+      <div class="grid grid-cols-3 gap-2 text-center pt-2 border-t border-amber-200/60 text-xs">
+        <div>
+          <span class="block font-bold text-black" id="drawer-stat-read">0</span>
+          <span class="text-[10px] text-gray-500">Articles Read</span>
+        </div>
+        <div>
+          <span class="block font-bold text-black" id="drawer-stat-written">0</span>
+          <span class="text-[10px] text-gray-500">Written (+50 XP)</span>
+        </div>
+        <div>
+          <span class="block font-bold text-emerald-700" id="drawer-stat-accepted">0</span>
+          <span class="text-[10px] text-gray-500">Accepted (+100 XP)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Paid Subscription: Arias Unlocked Patron Pass -->
+    <div class="border border-gray-200 rounded-lg p-4 flex flex-col gap-2.5">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-amber-600 text-base">star</span>
+          <span class="text-xs font-bold uppercase tracking-wider text-gray-800">Patron Membership</span>
+        </div>
+        <span id="drawer-patron-badge" class="text-[10px] font-bold px-2 py-0.5 rounded bg-gray-100 text-gray-600">Standard Free</span>
+      </div>
+      <p class="text-xs text-gray-600 leading-relaxed">
+        Subscribe for <strong>$9/month</strong> to unlock all exclusive Patron-only masterclasses, score annotations, and support partner opera companies.
+      </p>
+      <button type="button" onclick="togglePatronSubscription()" id="drawer-patron-btn" class="w-full py-2.5 bg-black text-white rounded-lg text-xs font-bold uppercase tracking-wider hover:bg-neutral-800 transition-colors cursor-pointer shadow-xs">
+        Activate Patron Pass ($9/mo)
+      </button>
+    </div>
+
+    <!-- Account Recognition for Antonio -->
+    <div class="border border-gray-200 rounded-lg p-4 flex flex-col gap-2.5">
+      <span class="text-xs font-bold uppercase tracking-wider text-gray-700">Google Account Recognition</span>
+      <button type="button" onclick="loginWithGoogle('antonio27181019@gmail.com'); toggleProfileDrawer();" class="w-full py-2.5 px-3 bg-white hover:bg-gray-50 border border-gray-300 rounded-lg text-xs font-semibold text-gray-800 flex items-center justify-center gap-2 cursor-pointer shadow-xs">
+        <svg class="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24">
+          <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+          <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+          <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+          <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+        </svg>
+        <span>Sign in as <strong>antonio27181019@gmail.com</strong></span>
+      </button>
+      <p class="text-[10px] text-gray-500 text-center">Bypasses PIN entry automatically on this browser.</p>
+    </div>
+
+    <!-- Actions / Reset -->
+    <div class="pt-2 border-t border-gray-100 flex items-center justify-between text-xs">
+      <button onclick="resetDemoProgress()" class="text-gray-400 hover:text-red-600 transition-colors cursor-pointer">Reset XP / Stats</button>
+      <button onclick="logoutAuthor(); toggleProfileDrawer();" class="text-gray-700 hover:text-black font-semibold cursor-pointer">Sign Out</button>
+    </div>
+  </div>
+</div>
+
+<!-- Author Auth Modal (PIN-Protected for Antonio Only) -->
+<div id="author-auth-modal" class="fixed inset-0 bg-black/60 z-[115] hidden flex items-center justify-center p-4">
+  <div class="bg-white rounded-lg max-w-sm w-full p-8 relative shadow-2xl border border-secondary/20">
+    <button onclick="closeAuthorAuthModal()" class="absolute top-5 right-5 text-gray-400 hover:text-black cursor-pointer">
+      <span class="material-symbols-outlined">close</span>
+    </button>
+    <div class="text-center mb-5">
+      <div class="w-14 h-14 bg-primary/10 text-primary rounded-lg flex items-center justify-center mx-auto mb-3">
+        <span class="material-symbols-outlined text-3xl">lock</span>
+      </div>
+      <h3 class="font-display-lg text-2xl text-primary">Author Portal</h3>
+      <p class="font-body-md text-xs text-on-surface-variant mt-1.5 leading-relaxed">
+        Manage and publish essays to Arias Unlocked. Sign in with Google for instant automatic recognition.
+      </p>
+    </div>
+
+    <!-- Google Account Recognition Option -->
+    <div class="mb-4 flex flex-col gap-2">
+      <button type="button" onclick="loginWithGoogle('antonio27181019@gmail.com')" class="w-full py-3 px-4 bg-white hover:bg-gray-50 border border-gray-300 hover:border-gray-400 text-gray-700 rounded-lg font-semibold text-xs flex items-center justify-center gap-2.5 transition-all shadow-xs cursor-pointer group">
+        <svg class="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24">
+          <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+          <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+          <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+          <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+        </svg>
+        <span class="truncate">Sign in as <strong>antonio27181019@gmail.com</strong></span>
+      </button>
+      <p class="text-[10px] text-gray-500 text-center">Auto-recognizes your account so you never have to enter a PIN.</p>
+    </div>
+
+    <div class="relative flex py-2 items-center">
+      <div class="flex-grow border-t border-gray-200"></div>
+      <span class="flex-shrink mx-2 text-[10px] text-gray-400 uppercase tracking-widest font-semibold">or with PIN</span>
+      <div class="flex-grow border-t border-gray-200"></div>
+    </div>
+
+    <form id="author-auth-form" onsubmit="handleAuthorLogin(event)" class="flex flex-col gap-3.5 mt-1">
+      <div>
+        <label class="block text-xs uppercase tracking-wider font-semibold text-gray-600 mb-1">Author PIN</label>
+        <div class="relative">
+          <input required type="password" id="author-pin-input" placeholder="Enter PIN (2718)" class="w-full px-4 py-2.5 rounded-lg border border-secondary/30 focus:outline-none focus:border-primary text-center tracking-widest text-base font-mono">
+          <button type="button" onclick="togglePinVisibility()" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 cursor-pointer">
+            <span id="pin-vis-icon" class="material-symbols-outlined text-sm">visibility</span>
+          </button>
+        </div>
+        <p id="author-auth-error" class="hidden text-xs text-red-600 mt-1 font-medium text-center">Incorrect PIN. Please try again.</p>
+      </div>
+      <button type="submit" class="w-full py-3 bg-primary text-white rounded-lg font-label-md uppercase tracking-wider hover:bg-neutral-800 transition-colors cursor-pointer shadow-sm text-xs">
+        Unlock Google Docs Editor
+      </button>
+      <div class="flex items-center justify-between text-[11px] text-gray-500 pt-2 border-t border-gray-100">
+        <span>Default PIN: <code class="font-mono bg-gray-100 px-1 py-0.5 rounded text-primary font-bold">2718</code></span>
+        <button type="button" onclick="promptChangePin()" class="text-primary hover:underline font-medium cursor-pointer">Change PIN</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- ==========================================
+     GOOGLE DOCS ESSAY EDITOR MODAL
+     (With Crisp Corners, Solid Colors & Clean Toolbar)
+     ========================================== -->
+<div id="gdocs-modal" class="fixed inset-0 z-[120] bg-[#f8f9fa] hidden flex flex-col overflow-hidden">
+  <!-- Top App Bar (Google Docs Branding & Actions) -->
+  <header class="bg-white border-b border-gray-200 px-4 py-2 flex items-center justify-between flex-wrap gap-2 select-none shadow-xs">
+    <div class="flex items-center gap-3">
+      <!-- Google Docs Blue Icon -->
+      <div class="w-9 h-9 flex items-center justify-center rounded-lg bg-blue-50 text-[#1a73e8]" title="Arias Unlocked Google Docs Editor">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+        </svg>
+      </div>
+      
+      <!-- Document Info & Menus -->
+      <div class="flex flex-col">
+        <div class="flex items-center gap-2">
+          <input id="gdocs-doc-title" type="text" value="Untitled essay" oninput="gdocsUpdateSlugPreview()" placeholder="Untitled essay" class="text-sm font-semibold text-gray-800 bg-transparent hover:bg-gray-100 focus:bg-white border border-transparent hover:border-gray-300 focus:border-blue-500 rounded px-2 py-0.5 outline-none transition-colors w-64 md:w-96">
+          <span class="material-symbols-outlined text-gray-400 text-sm cursor-pointer hover:text-amber-500" title="Star document">star</span>
+        </div>
+        <!-- Menus -->
+        <div class="flex items-center gap-3 text-xs text-gray-600 mt-0.5">
+          <button onclick="gdocsMenuAction('new')" class="hover:bg-gray-100 px-1.5 py-0.5 rounded cursor-pointer">File</button>
+          <button onclick="gdocsExec('undo')" class="hover:bg-gray-100 px-1.5 py-0.5 rounded cursor-pointer">Edit</button>
+          <button onclick="gdocsToggleWordCountAlert()" class="hover:bg-gray-100 px-1.5 py-0.5 rounded cursor-pointer">Tools</button>
+          <button onclick="gdocsInsertLink()" class="hover:bg-gray-100 px-1.5 py-0.5 rounded cursor-pointer">Insert</button>
+          <button onclick="gdocsExec('removeFormat')" class="hover:bg-gray-100 px-1.5 py-0.5 rounded cursor-pointer">Format</button>
+          <span class="text-gray-300">|</span>
+          <span id="gdocs-save-status" class="flex items-center gap-1 text-[11px] text-gray-500">
+            <span class="material-symbols-outlined text-xs text-gray-500">cloud_done</span>
+            <span>Saved to Drive</span>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header Actions -->
+    <div class="flex items-center gap-2.5">
+      <!-- Recognized Google Account Indicator -->
+      <div id="gdocs-author-badge" class="hidden md:flex items-center gap-1.5 px-3 py-1 bg-emerald-50 text-emerald-800 border border-emerald-200 rounded-lg text-xs font-medium shadow-2xs">
+        <svg class="w-3.5 h-3.5 flex-shrink-0" viewBox="0 0 24 24">
+          <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+          <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+          <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+          <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+        </svg>
+        <span id="gdocs-badge-text" class="truncate font-semibold">antonio27181019@gmail.com</span>
+      </div>
+
+      <!-- Save to Drive Button -->
+      <button onclick="gdocsSaveToDriveOnly()" class="flex items-center gap-1.5 px-3 py-1.5 border border-gray-300 hover:bg-gray-100 text-gray-700 rounded-lg text-xs font-medium cursor-pointer transition-colors shadow-xs" title="Save .md file directly into Google Drive / Blog">
+        <span class="material-symbols-outlined text-sm text-[#1a73e8]">save_as</span>
+        <span>Save to Drive</span>
+      </button>
+
+      <!-- Publish Button (Google Docs Blue) -->
+      <button onclick="publishGDocsPost()" class="flex items-center gap-1.5 px-4 py-1.5 bg-[#1a73e8] hover:bg-[#1557b0] text-white rounded-lg text-xs font-semibold cursor-pointer transition-colors shadow-sm" title="Publish and Save to Google Drive / Blog">
+        <span class="material-symbols-outlined text-sm">send</span>
+        <span id="gdocs-publish-btn-text">Publish Essay</span>
+      </button>
+
+      <!-- Close Button -->
+      <button onclick="closeGoogleDocsEditor()" class="p-1.5 hover:bg-gray-200 text-gray-500 rounded-lg cursor-pointer ml-1" title="Close Google Docs">
+        <span class="material-symbols-outlined text-lg">close</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Post Metadata Ribbon (Category, Read Time, Snippet & Drive Target) -->
+  <div class="bg-[#edf2fa] border-b border-gray-200 px-4 py-2 flex items-center justify-between flex-wrap gap-3 text-xs select-none">
+    <div class="flex items-center gap-3 flex-wrap">
+      <div class="flex items-center gap-1.5">
+        <span class="text-gray-500 font-semibold text-[11px] uppercase tracking-wider">Category:</span>
+        <select id="gdocs-category" class="bg-white border border-gray-300 rounded px-2 py-1 text-xs text-gray-800 font-medium focus:outline-none focus:border-blue-500">
+          <option value="Interpretation">Interpretation</option>
+          <option value="Vocalization">Vocalization</option>
+          <option value="Repertoire">Repertoire</option>
+          <option value="Technique">Technique</option>
+          <option value="Tips">Tips</option>
+        </select>
+      </div>
+
+      <div class="flex items-center gap-1.5">
+        <span class="text-gray-500 font-semibold text-[11px] uppercase tracking-wider">Read Time:</span>
+        <input id="gdocs-readtime" type="text" value="5 min read" class="bg-white border border-gray-300 rounded px-2 py-1 text-xs text-gray-800 font-medium w-24 focus:outline-none focus:border-blue-500">
+      </div>
+
+      <div class="flex items-center gap-1.5">
+        <span class="text-gray-500 font-semibold text-[11px] uppercase tracking-wider">Card Snippet:</span>
+        <input id="gdocs-snippet" type="text" placeholder="Short preview snippet for the blog card..." class="bg-white border border-gray-300 rounded px-2.5 py-1 text-xs text-gray-800 font-medium w-64 md:w-80 focus:outline-none focus:border-blue-500">
+      </div>
+    </div>
+
+    <div class="flex items-center gap-1.5 text-gray-500 text-[11px] bg-white px-2.5 py-1 rounded border border-gray-200 shadow-2xs">
+      <span class="material-symbols-outlined text-xs text-emerald-600">folder</span>
+      <span>Destination: <code class="font-mono text-gray-700">Google Drive/Arias Unlocked/Blog/<span id="gdocs-slug-preview">untitled-essay.md</span></code></span>
+    </div>
+  </div>
+
+  <!-- Google Docs Toolbar -->
+  <div class="bg-[#edf2fa] border-b border-gray-200 px-4 py-1.5 flex items-center gap-1 overflow-x-auto select-none">
+    <!-- Undo / Redo / Print -->
+    <button onclick="gdocsExec('undo')" title="Undo (Ctrl+Z)" class="p-1.5 hover:bg-gray-200 text-gray-700 rounded cursor-pointer">
+      <span class="material-symbols-outlined text-base">undo</span>
+    </button>
+    <button onclick="gdocsExec('redo')" title="Redo (Ctrl+Y)" class="p-1.5 hover:bg-gray-200 text-gray-700 rounded cursor-pointer">
+      <span class="material-symbols-outlined text-base">redo</span>
+    </button>
+    <button onclick="window.print()" title="Print" class="p-1.5 hover:bg-gray-200 text-gray-700 rounded cursor-pointer">
+      <span class="material-symbols-outlined text-base">print</span>
+    </button>
+
+    <div class="w-[1px] h-4 bg-gray-300 mx-1"></div>
+
+    <!-- Zoom -->
+    <select onchange="gdocsChangeZoom(this.value)" class="text-xs bg-transparent hover:bg-gray-200 border-0 text-gray-700 rounded px-1 py-1 outline-none cursor-pointer">
+      <option value="100">100%</option>
+      <option value="90">90%</option>
+      <option value="75">75%</option>
+      <option value="125">125%</option>
+    </select>
+
+    <div class="w-[1px] h-4 bg-gray-300 mx-1"></div>
+
+    <!-- Style / Paragraph format -->
+    <select onchange="gdocsApplyStyle(this.value)" class="text-xs bg-white border border-gray-300 rounded px-2 py-1 text-gray-700 outline-none cursor-pointer">
+      <option value="p">Normal text</option>
+      <option value="h1">Heading 1</option>
+      <option value="h2">Heading 2</option>
+      <option value="h3">Heading 3</option>
+      <option value="blockquote">Quote</option>
+    </select>
+
+    <!-- Font Family -->
+    <select id="gdocs-font-select" onchange="gdocsApplyFont(this.value)" class="text-xs bg-white border border-gray-300 rounded px-2 py-1 text-gray-700 outline-none cursor-pointer">
+      <option value="Montserrat, sans-serif">Montserrat</option>
+      <option value="Arial, sans-serif">Arial</option>
+      <option value="'Times New Roman', serif">Times New Roman</option>
+      <option value="Georgia, serif">Georgia</option>
+      <option value="'Courier New', monospace">Courier New</option>
+    </select>
+
+    <!-- Font Size Controls -->
+    <div class="flex items-center bg-white border border-gray-300 rounded overflow-hidden">
+      <button onclick="gdocsChangeFontSize(-1)" class="w-5 h-6 flex items-center justify-center hover:bg-gray-100 text-xs text-gray-700 cursor-pointer font-bold">-</button>
+      <span id="gdocs-font-size-label" class="text-xs font-medium w-5 text-center text-gray-800">11</span>
+      <button onclick="gdocsChangeFontSize(1)" class="w-5 h-6 flex items-center justify-center hover:bg-gray-100 text-xs text-gray-700 cursor-pointer font-bold">+</button>
+    </div>
+
+    <div class="w-[1px] h-4 bg-gray-300 mx-1"></div>
+
+    <!-- Formatting: Bold, Italic, Underline -->
+    <button onclick="gdocsExec('bold')" title="Bold (Ctrl+B)" class="w-7 h-7 flex items-center justify-center hover:bg-gray-200 rounded text-gray-800 font-bold text-sm cursor-pointer">
+      B
+    </button>
+    <button onclick="gdocsExec('italic')" title="Italic (Ctrl+I)" class="w-7 h-7 flex items-center justify-center hover:bg-gray-200 rounded text-gray-800 italic font-serif text-sm cursor-pointer">
+      I
+    </button>
+    <button onclick="gdocsExec('underline')" title="Underline (Ctrl+U)" class="w-7 h-7 flex items-center justify-center hover:bg-gray-200 rounded text-gray-800 underline text-sm cursor-pointer">
+      U
+    </button>
+    <button onclick="gdocsExec('strikeThrough')" title="Strikethrough" class="w-7 h-7 flex items-center justify-center hover:bg-gray-200 rounded text-gray-800 line-through text-xs cursor-pointer">
+      S
+    </button>
+
+    <!-- Text Color & Highlight -->
+    <label class="w-7 h-7 flex items-center justify-center hover:bg-gray-200 rounded text-gray-700 cursor-pointer relative" title="Text color">
+      <span class="font-bold text-xs border-b-2 border-red-500">A</span>
+      <input type="color" onchange="gdocsExec('foreColor', this.value)" class="absolute opacity-0 inset-0 cursor-pointer w-full h-full">
+    </label>
+    <label class="w-7 h-7 flex items-center justify-center hover:bg-gray-200 rounded text-gray-700 cursor-pointer relative" title="Highlight color">
+      <span class="material-symbols-outlined text-sm text-amber-500">format_ink_highlighter</span>
+      <input type="color" value="#ffff00" onchange="gdocsExec('hiliteColor', this.value)" class="absolute opacity-0 inset-0 cursor-pointer w-full h-full">
+    </label>
+
+    <div class="w-[1px] h-4 bg-gray-300 mx-1"></div>
+
+    <!-- Insert: Link & Image -->
+    <button onclick="gdocsInsertLink()" title="Insert Link" class="p-1.5 hover:bg-gray-200 text-gray-700 rounded cursor-pointer">
+      <span class="material-symbols-outlined text-base">link</span>
+    </button>
+    <button onclick="gdocsInsertImage()" title="Insert Image from URL" class="p-1.5 hover:bg-gray-200 text-gray-700 rounded cursor-pointer">
+      <span class="material-symbols-outlined text-base">image</span>
+    </button>
+    <button onclick="gdocsInsertDivider()" title="Insert Horizontal Rule" class="p-1.5 hover:bg-gray-200 text-gray-700 rounded cursor-pointer">
+      <span class="material-symbols-outlined text-base">horizontal_rule</span>
+    </button>
+
+    <div class="w-[1px] h-4 bg-gray-300 mx-1"></div>
+
+    <!-- Alignments -->
+    <button onclick="gdocsExec('justifyLeft')" title="Left align" class="p-1.5 hover:bg-gray-200 text-gray-700 rounded cursor-pointer">
+      <span class="material-symbols-outlined text-base">format_align_left</span>
+    </button>
+    <button onclick="gdocsExec('justifyCenter')" title="Center align" class="p-1.5 hover:bg-gray-200 text-gray-700 rounded cursor-pointer">
+      <span class="material-symbols-outlined text-base">format_align_center</span>
+    </button>
+    <button onclick="gdocsExec('justifyRight')" title="Right align" class="p-1.5 hover:bg-gray-200 text-gray-700 rounded cursor-pointer">
+      <span class="material-symbols-outlined text-base">format_align_right</span>
+    </button>
+    <button onclick="gdocsExec('justifyFull')" title="Justify" class="p-1.5 hover:bg-gray-200 text-gray-700 rounded cursor-pointer">
+      <span class="material-symbols-outlined text-base">format_align_justify</span>
+    </button>
+
+    <div class="w-[1px] h-4 bg-gray-300 mx-1"></div>
+
+    <!-- Lists & Indent -->
+    <button onclick="gdocsExec('insertUnorderedList')" title="Bulleted list" class="p-1.5 hover:bg-gray-200 text-gray-700 rounded cursor-pointer">
+      <span class="material-symbols-outlined text-base">format_list_bulleted</span>
+    </button>
+    <button onclick="gdocsExec('insertOrderedList')" title="Numbered list" class="p-1.5 hover:bg-gray-200 text-gray-700 rounded cursor-pointer">
+      <span class="material-symbols-outlined text-base">format_list_numbered</span>
+    </button>
+    <button onclick="gdocsExec('outdent')" title="Decrease indent" class="p-1.5 hover:bg-gray-200 text-gray-700 rounded cursor-pointer">
+      <span class="material-symbols-outlined text-base">format_indent_decrease</span>
+    </button>
+    <button onclick="gdocsExec('indent')" title="Increase indent" class="p-1.5 hover:bg-gray-200 text-gray-700 rounded cursor-pointer">
+      <span class="material-symbols-outlined text-base">format_indent_increase</span>
+    </button>
+  </div>
+
+  <!-- Document Canvas (Google Docs White Page on Light Gray Background) -->
+  <div class="flex-grow overflow-y-auto p-4 md:p-8 flex justify-center bg-[#f8f9fa] relative" id="gdocs-canvas">
+    <div id="gdocs-paper" contenteditable="true" oninput="gdocsOnContentInput()" class="bg-white shadow-md border border-gray-300 w-full max-w-[816px] min-h-[1056px] p-12 md:p-16 focus:outline-none text-[#202124] text-[15px] leading-relaxed select-text font-serif rounded-sm">
+      <h1>Untitled Essay</h1>
+      <p>Start writing your essay here just like Google Docs...</p>
+    </div>
+  </div>
+
+  <!-- Floating AI Review Bar (Bottom Right, Crisp Corners, Solid Colors) -->
+  <div id="ai-review-floating-bar" onclick="openAiReviewInspector()" class="fixed bottom-12 right-6 z-[130] bg-white border border-gray-300 shadow-lg rounded-lg p-3 cursor-pointer hover:border-black transition-all select-none group flex flex-col gap-1.5 w-72">
+    <div class="flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <span class="w-6 h-6 rounded bg-indigo-100 text-indigo-700 flex items-center justify-center font-bold text-xs">
+          <span class="material-symbols-outlined text-sm">auto_awesome</span>
+        </span>
+        <div>
+          <span class="text-xs font-bold text-gray-900 tracking-tight flex items-center gap-1">
+            AI Score: <span id="ai-score-label" class="text-amber-700 font-bold">42%</span>
+          </span>
+          <span id="ai-status-subtext" class="text-[10px] text-gray-600 block leading-tight">Click to view missing parts</span>
+        </div>
+      </div>
+      <span class="material-symbols-outlined text-gray-400 group-hover:text-black transition-colors text-base">expand_less</span>
+    </div>
+    
+    <!-- Score Progress Bar -->
+    <div class="w-full bg-gray-100 h-2 rounded-full overflow-hidden border border-gray-200">
+      <div id="ai-score-bar-fill" class="h-full bg-amber-500 transition-all duration-300" style="width: 42%;"></div>
+    </div>
+
+    <!-- 3 Qualifications Mini Status Pills -->
+    <div class="flex items-center justify-between text-[10px] text-gray-600 pt-1 border-t border-gray-100">
+      <span id="ai-pill-factuality" class="flex items-center gap-1">
+        <span class="material-symbols-outlined text-[12px] text-amber-600">pending</span> Factuality
+      </span>
+      <span id="ai-pill-relevance" class="flex items-center gap-1">
+        <span class="material-symbols-outlined text-[12px] text-amber-600">pending</span> Relevance
+      </span>
+      <span id="ai-pill-vocabulary" class="flex items-center gap-1">
+        <span class="material-symbols-outlined text-[12px] text-emerald-600">check_circle</span> Clean Vocab
+      </span>
+    </div>
+  </div>
+
+  <!-- AI Review Inspector Modal (Shows Missing Parts, Crisp Borders) -->
+  <div id="ai-inspector-modal" class="fixed inset-0 bg-black/40 z-[135] hidden flex items-center justify-center md:justify-end p-4 md:p-6">
+    <div class="bg-white rounded-lg max-w-md w-full p-6 relative shadow-2xl border border-gray-300 max-h-[90vh] overflow-y-auto flex flex-col gap-4">
+      <div class="flex items-center justify-between border-b border-gray-100 pb-3">
+        <div class="flex items-center gap-2">
+          <span class="w-8 h-8 rounded bg-indigo-100 text-indigo-700 flex items-center justify-center">
+            <span class="material-symbols-outlined text-lg">auto_awesome</span>
+          </span>
+          <div>
+            <h3 class="font-bold text-sm text-gray-900">AI Quality Inspection</h3>
+            <p class="text-[11px] text-gray-500">Factuality · Relevance · Vocabulary</p>
+          </div>
+        </div>
+        <button onclick="closeAiReviewInspector()" class="p-1 hover:bg-gray-100 text-gray-400 hover:text-black rounded cursor-pointer">
+          <span class="material-symbols-outlined text-lg">close</span>
+        </button>
+      </div>
+
+      <!-- Overall Assessment Banner -->
+      <div id="ai-inspector-summary-banner" class="bg-amber-50 border border-amber-300 rounded-lg p-4 flex items-center justify-between">
+        <div>
+          <div class="flex items-center gap-1.5">
+            <span id="ai-summary-badge" class="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-amber-200 text-amber-900">Needs Work</span>
+            <span class="text-xs font-semibold text-gray-700">Overall: <strong id="ai-summary-score" class="text-amber-800">42%</strong></span>
+          </div>
+          <p id="ai-summary-advice" class="text-xs text-gray-600 mt-1">Complete the missing items below to qualify for publication.</p>
+        </div>
+        <div class="w-12 h-12 rounded-lg bg-amber-100 border-2 border-amber-500 flex items-center justify-center font-bold text-sm text-amber-800 flex-shrink-0">
+          <span id="ai-circle-score">42%</span>
+        </div>
+      </div>
+
+      <!-- Missing Parts Alert Box -->
+      <div>
+        <h4 class="text-xs uppercase tracking-wider font-bold text-gray-500 mb-2">Parts Missing from Your Blog</h4>
+        <ul id="ai-missing-parts-list" class="space-y-2 text-xs">
+          <!-- Dynamically populated -->
+        </ul>
+      </div>
+
+      <!-- 3 Qualifications Details (Crisp borders, Solid Colors) -->
+      <div class="space-y-3">
+        <h4 class="text-xs uppercase tracking-wider font-bold text-gray-500">The 3 Required Qualifications</h4>
+
+        <!-- Qualification 1: Factuality -->
+        <div class="bg-white rounded-lg p-3.5 border border-gray-200">
+          <div class="flex items-center justify-between mb-1">
+            <span class="text-xs font-bold text-gray-800 flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-sm text-indigo-600">menu_book</span> 1. Factuality
+            </span>
+            <span id="ai-factuality-status" class="text-[10px] font-semibold px-2 py-0.5 rounded bg-amber-100 text-amber-800">Needs Facts</span>
+          </div>
+          <p id="ai-factuality-desc" class="text-[11px] text-gray-600">Verifies historical accuracy, composer citations (such as Puccini, Mozart, Verdi), and vocal mechanics.</p>
+          <div id="ai-factuality-tags" class="flex flex-wrap gap-1 mt-2 text-[10px]"></div>
+        </div>
+
+        <!-- Qualification 2: Relevance -->
+        <div class="bg-white rounded-lg p-3.5 border border-gray-200">
+          <div class="flex items-center justify-between mb-1">
+            <span class="text-xs font-bold text-gray-800 flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-sm text-purple-600">podium</span> 2. Relevance
+            </span>
+            <span id="ai-relevance-status" class="text-[10px] font-semibold px-2 py-0.5 rounded bg-amber-100 text-amber-800">Low Focus</span>
+          </div>
+          <p id="ai-relevance-desc" class="text-[11px] text-gray-600">Ensures the post remains strictly centered on classical singing, opera, vocal arts, and musicianship.</p>
+          <div id="ai-relevance-tags" class="flex flex-wrap gap-1 mt-2 text-[10px]"></div>
+        </div>
+
+        <!-- Qualification 3: Vocabulary -->
+        <div class="bg-white rounded-lg p-3.5 border border-gray-200">
+          <div class="flex items-center justify-between mb-1">
+            <span class="text-xs font-bold text-gray-800 flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-sm text-emerald-600">verified</span> 3. Vocabulary (No Swear Words)
+            </span>
+            <span id="ai-vocabulary-status" class="text-[10px] font-semibold px-2 py-0.5 rounded bg-emerald-100 text-emerald-800">Passed (Clean)</span>
+          </div>
+          <p id="ai-vocabulary-desc" class="text-[11px] text-gray-600">Enforces zero profanity, swear words, or vulgarities, while rewarding expressive vocal prose.</p>
+        </div>
+      </div>
+
+      <div class="pt-2 flex items-center justify-between border-t border-gray-100">
+        <span class="text-[10px] text-gray-400">Live evaluation</span>
+        <button onclick="closeAiReviewInspector()" class="px-5 py-2 bg-primary text-white rounded-lg text-xs font-medium cursor-pointer hover:bg-neutral-800 transition-colors">
+          Continue Writing
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Google Docs Bottom Status Bar -->
+  <footer class="bg-white border-t border-gray-200 px-6 py-2 flex items-center justify-between text-xs text-gray-500 select-none">
+    <div class="flex items-center gap-4">
+      <span>Page 1 of 1</span>
+      <span>Words: <strong id="gdocs-word-count" class="text-gray-800 font-medium">0</strong></span>
+      <span>Characters: <strong id="gdocs-char-count" class="text-gray-800 font-medium">0</strong></span>
+    </div>
+    <div class="flex items-center gap-2">
+      <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+      <span>Google Drive Sync: <code class="font-mono text-gray-700 bg-gray-100 px-1 py-0.5 rounded">Arias Unlocked / Blog</code></span>
+    </div>
+  </footer>
+</div>
+
 <!-- Join Modal -->
-<div id="join-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[110] hidden flex items-center justify-center p-4">
-  <div class="bg-white rounded-3xl max-w-md w-full p-8 relative shadow-2xl border border-secondary/20">
-    <button onclick="closeJoinModal()" class="absolute top-5 right-5 text-gray-500 hover:text-black">
+<div id="join-modal" class="fixed inset-0 bg-black/60 z-[110] hidden flex items-center justify-center p-4">
+  <div class="bg-white rounded-lg max-w-md w-full p-8 relative shadow-2xl border border-secondary/20">
+    <button onclick="closeJoinModal()" class="absolute top-5 right-5 text-gray-500 hover:text-black cursor-pointer">
       <span class="material-symbols-outlined">close</span>
     </button>
     <div class="text-center mb-6">
-      <span class="material-symbols-outlined text-4xl text-primary mb-2">music_note</span>
-      <h3 class="font-display-lg text-2xl text-primary">Join Arias Unlocked</h3>
-      <p class="font-body-md text-sm text-on-surface-variant mt-2">
-        Become part of our youth community decoding opera and classical music.
+      <span class="material-symbols-outlined text-4xl text-primary mb-2">mark_email_unread</span>
+      <h3 class="font-display-lg text-2xl text-primary">Monthly Singing Paper</h3>
+      <p class="font-body-md text-xs text-on-surface-variant mt-2">
+        Join our Gmail group to receive our monthly paper for singing directly from <span class="font-semibold text-primary">antonio27181019@gmail.com</span>. Strictly singing emails—no Google Chat, no spam.
       </p>
     </div>
     <form id="join-form" onsubmit="handleJoinSubmit(event)" class="flex flex-col gap-4">
       <div>
         <label class="block text-xs uppercase tracking-wider font-semibold text-gray-600 mb-1">Your Name</label>
-        <input required type="text" id="join-name" placeholder="e.g. Antonio" class="w-full px-4 py-3 rounded-xl border border-secondary/30 focus:outline-none focus:border-primary">
+        <input required type="text" id="join-name" placeholder="Antonio" class="w-full px-4 py-2.5 rounded-lg border border-secondary/30 focus:outline-none focus:border-primary text-xs">
       </div>
       <div>
         <label class="block text-xs uppercase tracking-wider font-semibold text-gray-600 mb-1">Email Address</label>
-        <input required type="email" id="join-email" placeholder="you@example.com" class="w-full px-4 py-3 rounded-xl border border-secondary/30 focus:outline-none focus:border-primary">
+        <input required type="email" id="join-email" placeholder="you@example.com" class="w-full px-4 py-2.5 rounded-lg border border-secondary/30 focus:outline-none focus:border-primary text-xs">
       </div>
-      <button type="submit" class="w-full py-3.5 bg-primary text-white rounded-full font-label-md uppercase tracking-wider hover:bg-neutral-800 transition-colors mt-2">
-        Join Free Today
+      <button type="submit" class="w-full py-3 bg-primary text-white rounded-lg font-label-md uppercase tracking-wider hover:bg-neutral-800 transition-colors mt-2 cursor-pointer text-xs font-bold">
+        Join Monthly Singing Paper Group
       </button>
+      <p class="text-[11px] text-gray-500 text-center">Managed by Antonio · <a href="mailto:antonio27181019@gmail.com" class="text-primary underline font-medium">antonio27181019@gmail.com</a></p>
     </form>
     <div id="join-success" class="hidden text-center py-6">
-      <span class="material-symbols-outlined text-5xl text-emerald-600 mb-2">check_circle</span>
-      <h4 class="font-bold text-lg text-primary">Welcome to the family!</h4>
-      <p class="text-sm text-gray-600 mt-1">Check your inbox for our latest essay dispatch.</p>
-      <button onclick="closeJoinModal()" class="mt-4 px-6 py-2 bg-primary text-white rounded-full text-xs uppercase tracking-wider">Close</button>
+      <span class="material-symbols-outlined text-5xl text-emerald-600 mb-2">mark_email_read</span>
+      <h4 class="font-bold text-lg text-primary">You're on the list!</h4>
+      <p class="text-xs text-gray-600 mt-1">Preparing your subscription for the monthly singing paper from <span class="font-semibold text-primary">antonio27181019@gmail.com</span>.</p>
+      <p class="text-xs text-gray-500 mt-2">Didn't open? <a id="join-fallback-link" href="mailto:antonio27181019@gmail.com" class="text-primary underline font-medium">Click here to send subscription email</a></p>
+      <button onclick="closeJoinModal()" class="mt-4 px-6 py-2 bg-primary text-white rounded-lg text-xs uppercase tracking-wider cursor-pointer">Close</button>
     </div>
   </div>
 </div>
@@ -402,32 +1102,1484 @@ True musical tension is not created by sound alone—it is sculpted by the silen
       });
     }
 
-    // Filter and Search logic
+    // ==========================================
+    // SEED ARTICLES (Tutorial as #1, Old Posts Deleted)
+    // ==========================================
+    const DEFAULT_SEED_POSTS = [
+      {
+        id: "tutorial-how-to-navigate-arias-unlocked",
+        title: "Tutorial: How to Navigate and Master Arias Unlocked",
+        category: "Tutorial & Guide",
+        date: "Oct 07, 2026",
+        readtime: "5 min read",
+        level: "Level 1 · All Readers",
+        snippet: "Everything you need to know about exploring classical repertoire, reading essays to level up and earn XP, suggesting blog posts via our 3-qualification AI review, unlocking Patron articles, and finding operas near you.",
+        content: `Welcome to **Arias Unlocked**! Whether you are an aspiring bel canto singer, an opera connoisseur, or exploring classical repertoire for the first time, this platform was built for you.\n\n### 1. Exploring Songs & Repertoire\nHead over to the **Songs** tab to explore a curated archive of world-renowned classical arias, art songs, and vocal mechanics. Filter by voice type (Soprano, Tenor, Baritone, Mezzo, Bass), language, or composer (Mozart, Puccini, Verdi, Handel, and more).\n\n### 2. Reading Essays, Tracking Levels & Earning XP\nEvery time you read an essay in **The Green Room**, you advance your personal vocal knowledge:\n- **Reading an Article:** Earns **+15 XP** and advances your reading level from *Opera Novice* to *Bel Canto Connoisseur* and *Opera Maestro*.\n- **Tracking Your Stats:** Click the **Profile Icon** in the top right at any time to see how many articles you have read, your current level, and your progress toward the next rank.\n\n### 3. Suggesting Articles & The 3-Qualification AI Review\nAnyone in the community can write and suggest an essay! Click **Suggest a Post (AI Review)** to write in our in-browser editor. Before publishing, our AI evaluates your draft in real-time on 3 strict qualifications:\n1. **Factuality:** Historical composer citations (such as Mozart, Puccini, Verdi, Debussy) and accurate vocal mechanics (legato, appoggio, resonance, timbre).\n2. **Relevance:** Keeping the focus strictly centered on classical singing, opera, and musicianship.\n3. **Vocabulary (Zero Swear Words):** Zero profanity allowed—enforcing polite, courteous, artistic vocabulary.\n\n**XP Rewards:** You earn **+50 XP** just for writing a post. If your post passes AI review and gets accepted, you get **double the XP (+100 XP bonus)!**\n\n### 4. Author Recognition for Antonio\nWhen Antonio logs in with his Google account (**antonio27181019@gmail.com**), Arias Unlocked automatically recognizes him across all visits. He can publish essays directly into Google Drive with no PIN prompts needed.\n\n### 5. Paid Patron Subscriptions\nCertain advanced vocal masterclasses and deep harmonic analyses are reserved for **Arias Unlocked Patrons**. You can activate your Patron subscription ($9/month) inside the **Profile Settings** to unlock all protected articles instantly.\n\n### 6. Operas Near Me & Donating to Historic Opera Houses\n- Use the **Operas Near Me** tool below to find live opera seasons in your area (sharing your location is completely optional!).\n- Visit our **Donate** page to support the **Metropolitan Opera**, **LA Opera**, **San Francisco Opera**, and young artist fellowships.\n\n### 7. Joining the Conversation\nScroll to the very bottom of any article to read and leave comments! Just remember to sign in at the top-right profile icon first to join the discussion.`,
+        isTutorial: true,
+        likes: 32,
+        isCustom: false,
+        isPremium: false
+      },
+      {
+        id: "masterclass-bel-canto-agility-phrasing",
+        title: "Masterclass: Bel Canto Agility & Phrasing (Patron Exclusive)",
+        category: "Technique",
+        date: "Oct 06, 2026",
+        readtime: "6 min read",
+        level: "Level 3 · Connoisseur",
+        snippet: "An advanced masterclass examining Bellini and Donizetti's vocal lines, appoggio breath pressure balance, and vowel modification across the soprano and tenor passaggio.",
+        content: `Bel canto ('beautiful singing') is not merely an aesthetic; it is an acoustic discipline where breath management and vowel modification achieve seamless legato.\n\nIn Bellini's *Norma* and Donizetti's *Lucia di Lammermoor*, the singer must never push air through the passaggio. Instead, the sensation of *appoggio*—leaning into the epigastric and intercostal musculature—allows the vocal cords to thin naturally for high tones without gripping.\n\n### The Passaggio Architecture\nWhen approaching the vocal turn around F4-F#4 for tenors or E5-F5 for sopranos, the vowel must slightly modify towards a rounded acoustic shape (often termed *copertura* or narrowing).\n\n### Practicing Agility Without Tension\n1. Practice coloratura arpeggios on a light, buoyant 'staccato' first to align the cords.\n2. Connect the notes into a seamless legato ribbon, imagining the sound traveling forward into the mask.\n3. Keep the larynx stably poised, allowing the pharyngeal resonator to expand naturally.`,
+        isPremium: true,
+        likes: 19,
+        isCustom: false
+      },
+      {
+        id: "puccinis-dramatic-tension-tosca",
+        title: "Puccini's Dramatic Tension: A Vocal Analysis of Tosca",
+        category: "Interpretation",
+        date: "Oct 04, 2026",
+        readtime: "5 min read",
+        level: "Level 2 · Apprentice",
+        snippet: "Exploring how Puccini balances high dramatic intensity with vocal preservation in Act II of Tosca, from Scarpia's interrogations to the sublime lyricism of Vissi d'arte.",
+        content: `In *Tosca*, Giacomo Puccini creates an unbearable psychological pressure cooker. Yet for the singing actor, surviving Act II requires immense technical discipline.\n\n### The Contrast in 'Vissi d'arte'\nAfter minutes of raw dramatic declamation against Baron Scarpia, the orchestra drops to muted strings. Tosca sings *Vissi d'arte* in pianissimo. Puccini reminds us that the greatest power in opera comes not from sustained shouting, but from vulnerable, floating legato.\n\nSingers must resist the urge to over-press the chest register during violent emotional scenes, saving acoustic squillo for the orchestration's true climaxes.`,
+        aiApproved: true,
+        isContributor: true,
+        likes: 27,
+        isCustom: false,
+        isPremium: false
+      }
+    ];
+
+    // ==========================================
+    // XP & READING LEVEL SYSTEM
+    // ==========================================
+    function getUserXP() {
+      return parseInt(localStorage.getItem('arias_user_xp') || '0', 10);
+    }
+
+    function getUserLevelInfo(xp) {
+      if (xp >= 500) {
+        return { level: 5, name: "Level 5: Opera Maestro", title: "Opera Maestro", minXP: 500, nextXP: 1000, progress: 100 };
+      } else if (xp >= 300) {
+        const prog = Math.round(((xp - 300) / 200) * 100);
+        return { level: 4, name: "Level 4: Aria Virtuoso", title: "Aria Virtuoso", minXP: 300, nextXP: 500, progress: prog };
+      } else if (xp >= 150) {
+        const prog = Math.round(((xp - 150) / 150) * 100);
+        return { level: 3, name: "Level 3: Bel Canto Connoisseur", title: "Bel Canto Connoisseur", minXP: 150, nextXP: 300, progress: prog };
+      } else if (xp >= 50) {
+        const prog = Math.round(((xp - 50) / 100) * 100);
+        return { level: 2, name: "Level 2: Apprentice Vocalist", title: "Apprentice Vocalist", minXP: 50, nextXP: 150, progress: prog };
+      } else {
+        const prog = Math.round((xp / 50) * 100);
+        return { level: 1, name: "Level 1: Opera Novice", title: "Opera Novice", minXP: 0, nextXP: 50, progress: prog };
+      }
+    }
+
+    window.awardXP = function(points, reason) {
+      const currentXP = getUserXP();
+      const newXP = currentXP + points;
+      localStorage.setItem('arias_user_xp', newXP);
+      showXpToast(`+${points} XP: ${reason}`);
+      updateUserStatsUI();
+    };
+
+    function showXpToast(msg) {
+      const toast = document.getElementById('xp-toast');
+      const msgElem = document.getElementById('xp-toast-message');
+      if (toast && msgElem) {
+        msgElem.textContent = msg;
+        toast.classList.remove('-translate-y-20', 'opacity-0');
+        toast.classList.add('translate-y-0', 'opacity-100');
+        clearTimeout(window._xpToastTimer);
+        window._xpToastTimer = setTimeout(() => {
+          toast.classList.remove('translate-y-0', 'opacity-100');
+          toast.classList.add('-translate-y-20', 'opacity-0');
+        }, 3200);
+      }
+    }
+
+    function getReadPosts() {
+      return JSON.parse(localStorage.getItem('arias_read_posts') || '[]');
+    }
+
+    function markPostAsRead(postId) {
+      const readPosts = getReadPosts();
+      if (!readPosts.includes(postId)) {
+        readPosts.push(postId);
+        localStorage.setItem('arias_read_posts', JSON.stringify(readPosts));
+        awardXP(15, "Read an Article");
+      }
+      updateUserStatsUI();
+      renderAllPosts();
+    }
+
+    function updateUserStatsUI() {
+      const xp = getUserXP();
+      const levelInfo = getUserLevelInfo(xp);
+      const readPosts = getReadPosts();
+      const writtenCount = parseInt(localStorage.getItem('arias_written_count') || '0', 10);
+      const acceptedCount = parseInt(localStorage.getItem('arias_accepted_count') || '0', 10);
+
+      // Top banner
+      const bannerLvl = document.getElementById('banner-level-name');
+      const bannerXP = document.getElementById('banner-xp-count');
+      const bannerRead = document.getElementById('banner-read-count');
+      const bannerBar = document.getElementById('banner-xp-bar-fill');
+      if (bannerLvl) bannerLvl.textContent = levelInfo.name;
+      if (bannerXP) bannerXP.textContent = `${xp} XP`;
+      if (bannerRead) bannerRead.textContent = readPosts.length;
+      if (bannerBar) bannerBar.style.width = `${levelInfo.progress}%`;
+
+      // Header button
+      const headerLvl = document.getElementById('header-level-badge');
+      if (headerLvl) headerLvl.textContent = `Lv. ${levelInfo.level} · ${xp} XP`;
+
+      // Drawer
+      const drawerLvlTitle = document.getElementById('drawer-level-title');
+      const drawerXPDisplay = document.getElementById('drawer-xp-display');
+      const drawerXPFill = document.getElementById('drawer-xp-fill');
+      const drawerStatRead = document.getElementById('drawer-stat-read');
+      const drawerStatWritten = document.getElementById('drawer-stat-written');
+      const drawerStatAccepted = document.getElementById('drawer-stat-accepted');
+
+      if (drawerLvlTitle) drawerLvlTitle.textContent = levelInfo.name;
+      if (drawerXPDisplay) drawerXPDisplay.textContent = `${xp} / ${levelInfo.nextXP} XP`;
+      if (drawerXPFill) drawerXPFill.style.width = `${levelInfo.progress}%`;
+      if (drawerStatRead) drawerStatRead.textContent = readPosts.length;
+      if (drawerStatWritten) drawerStatWritten.textContent = writtenCount;
+      if (drawerStatAccepted) drawerStatAccepted.textContent = acceptedCount;
+
+      // Drawer user identity
+      const isGoogleAntonio = isAuthorLoggedIn();
+      const regularUser = JSON.parse(localStorage.getItem('arias_user') || '{}');
+      const drawerName = document.getElementById('drawer-name');
+      const drawerEmail = document.getElementById('drawer-email');
+      const drawerAvatar = document.getElementById('drawer-avatar');
+      const headerAvatar = document.getElementById('header-avatar-initial');
+      const mobileAvatar = document.getElementById('mobile-avatar-initial');
+      const headerUser = document.getElementById('header-username-display');
+      const commentUser = document.getElementById('comment-user-name');
+
+      if (isGoogleAntonio) {
+        if (drawerName) drawerName.textContent = "Antonio";
+        if (drawerEmail) drawerEmail.textContent = ANTONIO_GOOGLE_EMAIL;
+        if (drawerAvatar) drawerAvatar.textContent = "A";
+        if (headerAvatar) headerAvatar.textContent = "A";
+        if (mobileAvatar) mobileAvatar.textContent = "A";
+        if (headerUser) headerUser.textContent = "Antonio";
+        if (commentUser) commentUser.textContent = "Antonio";
+      } else if (regularUser.name) {
+        const init = regularUser.name.charAt(0).toUpperCase() || 'U';
+        if (drawerName) drawerName.textContent = regularUser.name;
+        if (drawerEmail) drawerEmail.textContent = regularUser.email || 'Reader';
+        if (drawerAvatar) drawerAvatar.textContent = init;
+        if (headerAvatar) headerAvatar.textContent = init;
+        if (mobileAvatar) mobileAvatar.textContent = init;
+        if (headerUser) headerUser.textContent = regularUser.name;
+        if (commentUser) commentUser.textContent = regularUser.name;
+      } else {
+        if (drawerName) drawerName.textContent = "Guest Reader";
+        if (drawerEmail) drawerEmail.textContent = "Not signed in";
+        if (drawerAvatar) drawerAvatar.textContent = "G";
+        if (headerAvatar) headerAvatar.textContent = "G";
+        if (mobileAvatar) mobileAvatar.textContent = "G";
+        if (headerUser) headerUser.textContent = "Guest";
+        if (commentUser) commentUser.textContent = "Guest";
+      }
+
+      // Patron status
+      const isPatron = localStorage.getItem('arias_is_patron') === 'true';
+      const patronBadge = document.getElementById('drawer-patron-badge');
+      const patronBtn = document.getElementById('drawer-patron-btn');
+      if (patronBadge) {
+        patronBadge.textContent = isPatron ? "⭐ Active Patron" : "Standard Free";
+        patronBadge.className = isPatron
+          ? "text-[10px] font-bold px-2 py-0.5 rounded bg-amber-100 text-amber-900 border border-amber-300"
+          : "text-[10px] font-bold px-2 py-0.5 rounded bg-gray-100 text-gray-600";
+      }
+      if (patronBtn) {
+        patronBtn.textContent = isPatron ? "Cancel / Pause Patron Pass" : "Activate Patron Pass ($9/mo)";
+        patronBtn.className = isPatron
+          ? "w-full py-2.5 bg-gray-100 text-gray-800 border border-gray-300 rounded-lg text-xs font-bold uppercase tracking-wider hover:bg-gray-200 transition-colors cursor-pointer"
+          : "w-full py-2.5 bg-black text-white rounded-lg text-xs font-bold uppercase tracking-wider hover:bg-neutral-800 transition-colors cursor-pointer shadow-xs";
+      }
+    }
+
+    window.togglePatronSubscription = function() {
+      const isPatron = localStorage.getItem('arias_is_patron') === 'true';
+      if (isPatron) {
+        localStorage.setItem('arias_is_patron', 'false');
+        alert("Your Patron Pass has been paused. You can reactivate anytime!");
+      } else {
+        localStorage.setItem('arias_is_patron', 'true');
+        awardXP(50, "Subscribed as an Arias Unlocked Patron");
+        alert("🎉 Bravo! You are now an active Arias Unlocked Patron! All exclusive masterclasses and harmonic analyses are now unlocked.");
+      }
+      updateUserStatsUI();
+      renderAllPosts();
+      if (currentReadingPostId) {
+        openArticleReader(currentReadingPostId);
+      }
+    };
+
+    window.resetDemoProgress = function() {
+      if (!confirm("Reset demo progress (XP, read articles, and likes)?")) return;
+      localStorage.removeItem('arias_user_xp');
+      localStorage.removeItem('arias_read_posts');
+      localStorage.removeItem('arias_liked_posts');
+      localStorage.removeItem('arias_post_likes');
+      localStorage.removeItem('arias_is_patron');
+      localStorage.removeItem('arias_written_count');
+      localStorage.removeItem('arias_accepted_count');
+      updateUserStatsUI();
+      renderAllPosts();
+      alert("Progress reset to zero.");
+    };
+
+    // ==========================================
+    // AUTHOR AUTHENTICATION & GOOGLE ACCOUNT RECOGNITION
+    // ==========================================
+    const DEFAULT_PIN = '2718';
+    const ANTONIO_GOOGLE_EMAIL = 'antonio27181019@gmail.com';
+
+    const authModal = document.getElementById('author-auth-modal');
+    const authorRibbon = document.getElementById('author-ribbon');
+    const pinInput = document.getElementById('author-pin-input');
+    const authError = document.getElementById('author-auth-error');
+    const authorNavText = document.getElementById('author-nav-text');
+    const authorNavBtn = document.getElementById('author-nav-btn');
+    const authorMobileText = document.getElementById('author-mobile-text');
+    const authorRibbonName = document.getElementById('author-ribbon-name');
+
+    let isContributorMode = false;
+
+    function isAuthorLoggedIn() {
+      const googleUser = (localStorage.getItem('arias_google_user') || '').toLowerCase();
+      const session = localStorage.getItem('arias_author_session');
+      return (googleUser === ANTONIO_GOOGLE_EMAIL.toLowerCase()) || (session === 'true');
+    }
+
+    function isUserSignedIn() {
+      const googleUser = localStorage.getItem('arias_google_user');
+      const regularUser = JSON.parse(localStorage.getItem('arias_user') || '{}');
+      return !!(googleUser || regularUser.email);
+    }
+
+    function checkGoogleAutoRecognition() {
+      const params = new URLSearchParams(window.location.search);
+      const queryEmail = params.get('email') || params.get('user') || params.get('google');
+      if (queryEmail && queryEmail.toLowerCase() === ANTONIO_GOOGLE_EMAIL.toLowerCase()) {
+        localStorage.setItem('arias_google_user', ANTONIO_GOOGLE_EMAIL);
+        localStorage.setItem('arias_author_session', 'true');
+      }
+
+      const googleUser = (localStorage.getItem('arias_google_user') || '').toLowerCase();
+      const regularUser = JSON.parse(localStorage.getItem('arias_user') || '{}');
+      const regularEmail = (regularUser.email || '').toLowerCase();
+
+      if (googleUser === ANTONIO_GOOGLE_EMAIL.toLowerCase() || regularEmail === ANTONIO_GOOGLE_EMAIL.toLowerCase()) {
+        localStorage.setItem('arias_google_user', ANTONIO_GOOGLE_EMAIL);
+        localStorage.setItem('arias_author_session', 'true');
+      }
+    }
+
+    window.loginWithGoogle = function(email = ANTONIO_GOOGLE_EMAIL) {
+      localStorage.setItem('arias_google_user', email);
+      if (email.toLowerCase() === ANTONIO_GOOGLE_EMAIL.toLowerCase()) {
+        localStorage.setItem('arias_author_session', 'true');
+        closeAuthorAuthModal();
+        updateAuthorUI();
+        updateUserStatsUI();
+        awardXP(25, "Signed in with Google");
+        alert(`Welcome back, Antonio! Recognized as ${email}. You now have full Author permissions without entering a PIN.`);
+      }
+    };
+
+    window.openAuthorPortal = function() {
+      if (isAuthorLoggedIn()) {
+        openGoogleDocsEditor();
+      } else {
+        if (pinInput) pinInput.value = '';
+        if (authError) authError.classList.add('hidden');
+        if (authModal) authModal.classList.remove('hidden');
+        setTimeout(() => pinInput && pinInput.focus(), 150);
+      }
+    };
+
+    window.closeAuthorAuthModal = function() {
+      if (authModal) authModal.classList.add('hidden');
+    };
+
+    window.togglePinVisibility = function() {
+      if (!pinInput) return;
+      const isPass = pinInput.type === 'password';
+      pinInput.type = isPass ? 'text' : 'password';
+      const icon = document.getElementById('pin-vis-icon');
+      if (icon) icon.textContent = isPass ? 'visibility_off' : 'visibility';
+    };
+
+    window.handleAuthorLogin = function(e) {
+      e.preventDefault();
+      const enteredPin = (pinInput ? pinInput.value : '').trim();
+      const storedPin = localStorage.getItem('arias_author_pin') || DEFAULT_PIN;
+
+      if (enteredPin === storedPin) {
+        localStorage.setItem('arias_author_session', 'true');
+        localStorage.setItem('arias_google_user', ANTONIO_GOOGLE_EMAIL);
+        closeAuthorAuthModal();
+        updateAuthorUI();
+        updateUserStatsUI();
+        openGoogleDocsEditor();
+      } else {
+        if (authError) authError.classList.remove('hidden');
+        if (pinInput) pinInput.select();
+      }
+    };
+
+    window.logoutAuthor = function() {
+      localStorage.removeItem('arias_author_session');
+      localStorage.removeItem('arias_google_user');
+      updateAuthorUI();
+      updateUserStatsUI();
+      closeGoogleDocsEditor();
+    };
+
+    function updateAuthorUI() {
+      const loggedIn = isAuthorLoggedIn();
+      if (authorRibbon) authorRibbon.classList.toggle('hidden', !loggedIn);
+      if (authorRibbonName) authorRibbonName.textContent = loggedIn ? "Author Mode: Antonio (antonio27181019@gmail.com)" : "Author Mode";
+      if (authorNavText) authorNavText.textContent = loggedIn ? "Author: Antonio" : "Author Portal";
+
+      const quickBtnText = document.getElementById('author-quick-portal-text');
+      if (quickBtnText) quickBtnText.textContent = loggedIn ? "New Essay" : "Author Portal";
+
+      if (authorNavBtn) {
+        const icon = authorNavBtn.querySelector('.material-symbols-outlined');
+        if (icon) icon.textContent = loggedIn ? 'verified' : 'lock';
+        if (loggedIn) {
+          authorNavBtn.className = "inline-flex items-center gap-1.5 px-3.5 py-2 bg-emerald-100 hover:bg-emerald-200 text-emerald-900 border border-emerald-300 rounded-lg font-label-md text-xs uppercase tracking-wider transition-all cursor-pointer shadow-xs";
+        } else {
+          authorNavBtn.className = "inline-flex items-center gap-1.5 px-3.5 py-2 bg-secondary/10 hover:bg-secondary/20 text-secondary border border-secondary/30 rounded-lg font-label-md text-xs uppercase tracking-wider transition-all cursor-pointer";
+        }
+      }
+      if (authorMobileText) {
+        authorMobileText.textContent = loggedIn ? "Author Mode (antonio27181019@gmail.com)" : "Author Portal (Google Docs)";
+      }
+      renderAllPosts();
+    }
+
+    // ==========================================
+    // PROFILE DRAWER & GUIDANCE
+    // ==========================================
+    window.toggleProfileDrawer = function() {
+      const drawer = document.getElementById('profile-drawer-modal');
+      if (drawer) {
+        drawer.classList.toggle('hidden');
+        updateUserStatsUI();
+      }
+    };
+
+    window.guideToProfileIcon = function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      const profileBtn = document.getElementById('header-profile-btn');
+      if (profileBtn) {
+        profileBtn.classList.add('ring-4', 'ring-black', 'ring-offset-2');
+        setTimeout(() => {
+          profileBtn.classList.remove('ring-4', 'ring-black', 'ring-offset-2');
+          toggleProfileDrawer();
+        }, 800);
+      } else {
+        toggleProfileDrawer();
+      }
+    };
+
+    // ==========================================
+    // "OPERAS NEAR ME" INTERACTIVE FINDER
+    // ==========================================
+    const OPERA_HOUSES = [
+      {
+        name: "The Metropolitan Opera",
+        city: "New York, NY",
+        venue: "Lincoln Center for the Performing Arts",
+        lat: 40.7725,
+        lon: -73.9841,
+        season: "La Bohème, Tosca, Aida, Die Zauberflöte",
+        url: "https://www.metopera.org"
+      },
+      {
+        name: "LA Opera",
+        city: "Los Angeles, CA",
+        venue: "Dorothy Chandler Pavilion",
+        lat: 34.0567,
+        lon: -118.2486,
+        season: "Turandot, Madama Butterfly, Rigoletto",
+        url: "https://www.laopera.org"
+      },
+      {
+        name: "San Francisco Opera",
+        city: "San Francisco, CA",
+        venue: "War Memorial Opera House",
+        lat: 37.7786,
+        lon: -122.4208,
+        season: "Carmen, Tristan und Isolde, Partenope",
+        url: "https://sfopera.com"
+      },
+      {
+        name: "Lyric Opera of Chicago",
+        city: "Chicago, IL",
+        venue: "Civic Opera Building",
+        lat: 41.8821,
+        lon: -87.6375,
+        season: "The Flying Dutchman, La Cenerentola, Fidelio",
+        url: "https://www.lyricopera.org"
+      },
+      {
+        name: "Houston Grand Opera",
+        city: "Houston, TX",
+        venue: "Wortham Theater Center",
+        lat: 29.7628,
+        lon: -95.3670,
+        season: "Don Giovanni, Il Trovatore, West Side Story",
+        url: "https://www.houstongrandopera.org"
+      },
+      {
+        name: "Seattle Opera",
+        city: "Seattle, WA",
+        venue: "Marion Oliver McCaw Hall",
+        lat: 47.6247,
+        lon: -122.3518,
+        season: "The Magic Flute, Pagliacci, Les Troyens",
+        url: "https://www.seattleopera.org"
+      },
+      {
+        name: "Royal Opera House",
+        city: "London, UK",
+        venue: "Bow Street, Covent Garden",
+        lat: 51.5129,
+        lon: -0.1222,
+        season: "La Traviata, Otello, Lucia di Lammermoor",
+        url: "https://www.roh.org.uk"
+      },
+      {
+        name: "Teatro alla Scala",
+        city: "Milan, Italy",
+        venue: "Piazza della Scala",
+        lat: 45.4673,
+        lon: 9.1895,
+        season: "Nabucco, Falstaff, Simon Boccanegra",
+        url: "https://www.teatroallascala.org"
+      },
+      {
+        name: "Vienna State Opera",
+        city: "Vienna, Austria",
+        venue: "Opernring 2",
+        lat: 48.2030,
+        lon: 16.3691,
+        season: "Le Nozze di Figaro, Der Rosenkavalier",
+        url: "https://www.wiener-staatsoper.at"
+      }
+    ];
+
+    function calculateDistanceMiles(lat1, lon1, lat2, lon2) {
+      const R = 3958.8; // Earth radius in miles
+      const dLat = (lat2 - lat1) * Math.PI / 180;
+      const dLon = (lon2 - lon1) * Math.PI / 180;
+      const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+                Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+                Math.sin(dLon / 2) * Math.sin(dLon / 2);
+      const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+      return Math.round(R * c);
+    }
+
+    function renderOperaHouses(houses) {
+      const container = document.getElementById('operas-near-me-results');
+      if (!container) return;
+      container.innerHTML = houses.slice(0, 3).map(h => `
+        <div class="bg-[#fcfaf2] border border-gray-200 rounded-lg p-4 flex flex-col justify-between shadow-2xs">
+          <div>
+            <div class="flex items-center justify-between mb-1.5">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-amber-900 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">${h.city}</span>
+              ${h.distance !== undefined ? `<span class="text-[11px] font-bold text-emerald-800">📍 ${h.distance} miles away</span>` : ''}
+            </div>
+            <h4 class="font-display-lg text-lg text-primary leading-tight">${h.name}</h4>
+            <p class="text-[11px] text-gray-500 mt-0.5">${h.venue}</p>
+            <p class="text-xs text-gray-700 mt-2 font-medium">Repertoire: <span class="text-black font-semibold">${h.season}</span></p>
+          </div>
+          <div class="pt-3 border-t border-gray-200 mt-3 flex items-center justify-between text-xs">
+            <a href="${h.url}" target="_blank" class="font-bold text-black hover:underline flex items-center gap-1">
+              Tickets &amp; Site <span class="material-symbols-outlined text-xs">arrow_forward</span>
+            </a>
+            <a href="https://maps.google.com/?q=${encodeURIComponent(h.name + ' ' + h.venue)}" target="_blank" class="text-gray-500 hover:text-black">
+              Directions
+            </a>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    window.searchOperasNearMe = function() {
+      const query = (document.getElementById('opera-near-me-input')?.value || '').toLowerCase().trim();
+      if (!query) {
+        renderOperaHouses(OPERA_HOUSES);
+        return;
+      }
+      const filtered = OPERA_HOUSES.filter(h => 
+        h.name.toLowerCase().includes(query) ||
+        h.city.toLowerCase().includes(query) ||
+        h.venue.toLowerCase().includes(query) ||
+        h.season.toLowerCase().includes(query)
+      );
+      if (filtered.length === 0) {
+        document.getElementById('operas-near-me-results').innerHTML = `
+          <div class="col-span-3 text-center py-6 text-gray-500 text-xs bg-gray-50 rounded-lg border border-gray-200">
+            No exact match for "${query}". Browse our world-class partner opera houses:
+          </div>
+        `;
+        setTimeout(() => renderOperaHouses(OPERA_HOUSES), 2500);
+      } else {
+        renderOperaHouses(filtered);
+      }
+    };
+
+    window.useMyLocationForOperas = function() {
+      const notice = document.getElementById('opera-location-notice');
+      const btn = document.getElementById('location-opera-btn');
+      if (btn) btn.innerHTML = `<span class="material-symbols-outlined text-sm animate-spin">sync</span> Locating...`;
+
+      if (!navigator.geolocation) {
+        if (notice) notice.textContent = "Geolocation is not supported by your browser. You can search any city above!";
+        if (btn) btn.innerHTML = `<span class="material-symbols-outlined text-sm">my_location</span> Use My Location (Optional)`;
+        return;
+      }
+
+      navigator.geolocation.getCurrentPosition(
+        (pos) => {
+          const userLat = pos.coords.latitude;
+          const userLon = pos.coords.longitude;
+          const sorted = OPERA_HOUSES.map(h => ({
+            ...h,
+            distance: calculateDistanceMiles(userLat, userLon, h.lat, h.lon)
+          })).sort((a, b) => a.distance - b.distance);
+
+          renderOperaHouses(sorted);
+          if (notice) notice.innerHTML = `📍 Location detected! Showing closest opera houses sorted by distance from you.`;
+          if (btn) btn.innerHTML = `<span class="material-symbols-outlined text-sm text-emerald-700">check</span> Sorted by Nearest`;
+        },
+        (err) => {
+          if (notice) notice.textContent = "📍 Location access was not shared (no problem!). You can search any city above.";
+          if (btn) btn.innerHTML = `<span class="material-symbols-outlined text-sm">my_location</span> Use My Location (Optional)`;
+          renderOperaHouses(OPERA_HOUSES);
+        },
+        { timeout: 7000 }
+      );
+    };
+
+    // Initialize default opera cards
+    renderOperaHouses(OPERA_HOUSES);
+
+    // ==========================================
+    // AI REVIEW ENGINE FOR SUGGESTED ESSAYS
+    // 3 Strict Qualifications: Factuality, Relevance, Clean Vocabulary
+    // ==========================================
+    const COMPOSERS_DB = [
+      'mozart', 'puccini', 'verdi', 'rossini', 'bellini', 'donizetti', 'wagner', 
+      'debussy', 'handel', 'bach', 'beethoven', 'schubert', 'strauss', 'bizet', 
+      'tchaikovsky', 'brahms', 'chopin', 'liszt', 'mahler', 'ravel', 'monteverdi',
+      'gluck', 'gounod', 'massenet', 'turandot', 'boheme', 'tosca', 'figaro', 
+      'don giovanni', 'magic flute', 'traviata', 'rigoletto', 'aida', 'carmen', 
+      'barbiere', 'lucia', 'norma', 'pavarotti', 'callas', 'caruso', 'tebaldi', 
+      'sutherland', 'domingo', 'freni', 'kaufmann', 'bartoli', 'bjoerling', 'corelli'
+    ];
+
+    const VOCAL_TERMS_DB = [
+      'aria', 'arias', 'opera', 'operatic', 'legato', 'appoggio', 'bel canto',
+      'vibrato', 'timbre', 'resonance', 'passaggio', 'coloratura', 'fach',
+      'recitative', 'soprano', 'tenor', 'baritone', 'mezzo', 'bass', 'chords', 
+      'score', 'cadenza', 'libretto', 'tempo', 'dynamics', 'intonation', 'pitch', 
+      'phrasing', 'fermata', 'diaphragm', 'larynx', 'vocal cord', 'harmonics', 
+      'acoustics', 'staccato', 'vowel', 'consonant', 'diction', 'tessitura', 
+      'squillo', 'chiaroscuro', 'messa di voce', 'portamento', 'breath support'
+    ];
+
+    const RELEVANCE_KEYWORDS = [
+      'sing', 'singing', 'singer', 'singers', 'vocal', 'vocals', 'voice', 'voices',
+      'opera', 'operas', 'music', 'musical', 'musicians', 'classical', 'aria',
+      'arias', 'repertoire', 'orchestra', 'orchestral', 'choir', 'chorus',
+      'performance', 'performer', 'audition', 'stage', 'theatre', 'theater',
+      'conservatory', 'composer', 'composers', 'recital', 'tone', 'sound',
+      'rehearsal', 'maestro', 'conductor', 'sheet music', 'soprano', 'tenor'
+    ];
+
+    const SWEAR_WORDS_REGEX = /\b(fuck|fucking|fucker|shit|bitch|asshole|cunt|dick|pussy|bastard|damn|dammit|crap|slut|whore|piss|douche|wank|cock|nigger|faggot)\b/i;
+
+    function runAiEvaluation(text, title = '') {
+      const combined = (title + ' ' + text).toLowerCase();
+      const words = text.trim() ? text.trim().split(/\s+/).filter(Boolean) : [];
+      const wordCount = words.length;
+      const missingParts = [];
+      
+      // 1. Vocabulary (Strictly zero swear words permitted)
+      const swearMatch = combined.match(SWEAR_WORDS_REGEX);
+      let vocabularyScore = 100;
+      let vocabularyPass = true;
+
+      if (swearMatch) {
+        vocabularyScore = 0;
+        vocabularyPass = false;
+        missingParts.push({
+          badge: 'Prohibited Vocabulary',
+          text: `Inappropriate swear word detected ("${swearMatch[0]}"). Arias Unlocked requires a clean, artistic, courteous vocabulary with zero profanity.`
+        });
+      } else if (wordCount < 25) {
+        vocabularyScore = 40;
+        vocabularyPass = false;
+      } else {
+        const uniqueWords = new Set(words.map(w => w.toLowerCase().replace(/[^a-z]/g, ''))).size;
+        const varietyRatio = wordCount > 0 ? (uniqueWords / wordCount) : 0;
+        vocabularyScore = Math.min(100, Math.round(70 + (varietyRatio * 30)));
+        vocabularyPass = true;
+      }
+
+      // 2. Factuality (Historical composers, operas, vocal mechanics)
+      const foundComposers = COMPOSERS_DB.filter(c => combined.includes(c));
+      const foundTerms = VOCAL_TERMS_DB.filter(t => combined.includes(t));
+
+      let factualityScore = 0;
+      if (foundComposers.length > 0) factualityScore += 45 + Math.min(25, (foundComposers.length - 1) * 10);
+      if (foundTerms.length > 0) factualityScore += Math.min(35, foundTerms.length * 8);
+      factualityScore = Math.min(100, factualityScore);
+      const factualityPass = factualityScore >= 65;
+
+      if (foundComposers.length === 0) {
+        missingParts.push({
+          badge: 'Missing Repertoire Reference',
+          text: 'Cite at least one classical composer (such as Mozart, Puccini, Verdi, Debussy) or specific opera work to anchor your claims in factual repertoire.'
+        });
+      }
+      if (foundTerms.length < 2) {
+        missingParts.push({
+          badge: 'Missing Vocal Terminology',
+          text: 'Incorporate concrete vocal/musical concepts (such as legato, appoggio, vibrato, phrasing, timbre, resonance) to demonstrate technical factuality.'
+        });
+      }
+
+      // 3. Relevance (Centering on classical singing and opera)
+      let relevanceCount = 0;
+      RELEVANCE_KEYWORDS.forEach(kw => {
+        const reg = new RegExp('\\b' + kw + '\\b', 'gi');
+        const matches = combined.match(reg);
+        if (matches) relevanceCount += matches.length;
+      });
+
+      let relevanceScore = 0;
+      if (relevanceCount >= 6) relevanceScore = 100;
+      else if (relevanceCount >= 4) relevanceScore = 80;
+      else if (relevanceCount >= 2) relevanceScore = 60;
+      else if (relevanceCount === 1) relevanceScore = 35;
+      else relevanceScore = 10;
+
+      const relevancePass = relevanceScore >= 65;
+      if (!relevancePass) {
+        missingParts.push({
+          badge: 'Insufficient Vocal Focus',
+          text: 'Your draft needs more direct relevance to classical singing, opera technique, vocal training, or musical interpretation.'
+        });
+      }
+
+      if (wordCount < 50) {
+        missingParts.push({
+          badge: 'Draft Too Brief',
+          text: `Current word count is only ${wordCount} words. High-quality essays need at least 60–100 words to explore concepts in depth.`
+        });
+      }
+
+      let totalScore = Math.round((factualityScore * 0.35) + (relevanceScore * 0.35) + (vocabularyScore * 0.30));
+      if (!vocabularyPass) totalScore = Math.min(30, totalScore);
+
+      const allQualificationsPassed = factualityPass && relevancePass && vocabularyPass && wordCount >= 50;
+
+      return {
+        totalScore,
+        allPassed: allQualificationsPassed,
+        wordCount,
+        factuality: { score: factualityScore, passed: factualityPass, foundComposers, foundTerms },
+        relevance: { score: relevanceScore, passed: relevancePass, matchCount: relevanceCount },
+        vocabulary: { score: vocabularyScore, passed: vocabularyPass, hasProfanity: !!swearMatch, flaggedWord: swearMatch ? swearMatch[0] : null },
+        missingParts
+      };
+    }
+
+    function updateAiReviewBar() {
+      const paper = document.getElementById('gdocs-paper');
+      const title = document.getElementById('gdocs-doc-title');
+      if (!paper) return;
+
+      const evalResult = runAiEvaluation(paper.innerText || '', title ? title.value : '');
+      const scoreLabel = document.getElementById('ai-score-label');
+      const scoreFill = document.getElementById('ai-score-bar-fill');
+      const subtext = document.getElementById('ai-status-subtext');
+      const pillFact = document.getElementById('ai-pill-factuality');
+      const pillRel = document.getElementById('ai-pill-relevance');
+      const pillVoc = document.getElementById('ai-pill-vocabulary');
+
+      if (scoreLabel) {
+        scoreLabel.textContent = `${evalResult.totalScore}%`;
+        scoreLabel.className = evalResult.allPassed ? 'text-emerald-700 font-extrabold' : (evalResult.totalScore < 50 ? 'text-red-700 font-extrabold' : 'text-amber-700 font-extrabold');
+      }
+
+      if (scoreFill) {
+        scoreFill.style.width = `${evalResult.totalScore}%`;
+        scoreFill.className = `h-full transition-all duration-300 rounded-full ${evalResult.allPassed ? 'bg-emerald-500' : (evalResult.totalScore < 50 ? 'bg-red-500' : 'bg-amber-500')}`;
+      }
+
+      if (subtext) {
+        if (evalResult.vocabulary.hasProfanity) {
+          subtext.innerHTML = `<span class="text-red-600 font-semibold">🚫 Swear word detected! Click to view</span>`;
+        } else if (evalResult.allPassed) {
+          subtext.innerHTML = `<span class="text-emerald-700 font-semibold">✅ Passes all 3 qualifications! Click to view</span>`;
+        } else {
+          subtext.innerHTML = `<span class="text-amber-800 font-medium">${evalResult.missingParts.length} parts missing · Click to view</span>`;
+        }
+      }
+
+      if (pillFact) {
+        pillFact.innerHTML = evalResult.factuality.passed
+          ? `<span class="material-symbols-outlined text-[12px] text-emerald-600">check_circle</span> Factuality`
+          : `<span class="material-symbols-outlined text-[12px] text-amber-600">pending</span> Factuality`;
+      }
+      if (pillRel) {
+        pillRel.innerHTML = evalResult.relevance.passed
+          ? `<span class="material-symbols-outlined text-[12px] text-emerald-600">check_circle</span> Relevance`
+          : `<span class="material-symbols-outlined text-[12px] text-amber-600">pending</span> Relevance`;
+      }
+      if (pillVoc) {
+        pillVoc.innerHTML = evalResult.vocabulary.passed
+          ? `<span class="material-symbols-outlined text-[12px] text-emerald-600">check_circle</span> Clean Vocab`
+          : `<span class="material-symbols-outlined text-[12px] text-red-600">cancel</span> Swear Word`;
+      }
+    }
+
+    window.openAiReviewInspector = function() {
+      const paper = document.getElementById('gdocs-paper');
+      const title = document.getElementById('gdocs-doc-title');
+      const evalResult = runAiEvaluation(paper ? paper.innerText : '', title ? title.value : '');
+
+      const modal = document.getElementById('ai-inspector-modal');
+      const summaryScore = document.getElementById('ai-summary-score');
+      const circleScore = document.getElementById('ai-circle-score');
+      const summaryBadge = document.getElementById('ai-summary-badge');
+      const summaryAdvice = document.getElementById('ai-summary-advice');
+      const missingList = document.getElementById('ai-missing-parts-list');
+      const factStatus = document.getElementById('ai-factuality-status');
+      const factTags = document.getElementById('ai-factuality-tags');
+      const relStatus = document.getElementById('ai-relevance-status');
+      const relTags = document.getElementById('ai-relevance-tags');
+      const vocStatus = document.getElementById('ai-vocabulary-status');
+
+      if (summaryScore) summaryScore.textContent = `${evalResult.totalScore}%`;
+      if (circleScore) circleScore.textContent = `${evalResult.totalScore}%`;
+
+      if (summaryBadge) {
+        summaryBadge.textContent = evalResult.allPassed ? "Ready to Pass" : "Needs Work";
+        summaryBadge.className = evalResult.allPassed 
+          ? "px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-emerald-100 text-emerald-900 border border-emerald-300"
+          : "px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-amber-100 text-amber-900 border border-amber-300";
+      }
+
+      if (summaryAdvice) {
+        summaryAdvice.textContent = evalResult.allPassed
+          ? "Excellent work! Your draft satisfies Factuality, Relevance, and clean Vocabulary standards."
+          : "Your essay is missing key elements below. Add them to qualify for publication.";
+      }
+
+      if (missingList) {
+        if (evalResult.missingParts.length === 0) {
+          missingList.innerHTML = `
+            <li class="bg-emerald-50 border border-emerald-200 rounded-lg p-3 flex items-center gap-2 text-emerald-800 font-semibold">
+              <span class="material-symbols-outlined text-emerald-600 text-base">verified</span>
+              <span>All essential parts detected! Ready to pass AI review.</span>
+            </li>
+          `;
+        } else {
+          missingList.innerHTML = evalResult.missingParts.map(item => `
+            <li class="bg-white p-3 rounded-lg border border-red-200 shadow-2xs flex items-start gap-2.5">
+              <span class="material-symbols-outlined text-sm text-red-500 mt-0.5 flex-shrink-0">report</span>
+              <div>
+                <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-red-100 text-red-800">${item.badge}</span>
+                <p class="text-xs text-gray-700 mt-1 leading-relaxed">${item.text}</p>
+              </div>
+            </li>
+          `).join('');
+        }
+      }
+
+      if (factStatus) {
+        factStatus.textContent = evalResult.factuality.passed ? "Passed" : "Needs Facts";
+        factStatus.className = evalResult.factuality.passed
+          ? "text-[10px] font-semibold px-2 py-0.5 rounded bg-emerald-100 text-emerald-800"
+          : "text-[10px] font-semibold px-2 py-0.5 rounded bg-amber-100 text-amber-800";
+      }
+      if (factTags) {
+        const composersHtml = evalResult.factuality.foundComposers.map(c => `<span class="bg-indigo-50 text-indigo-700 border border-indigo-200 px-1.5 py-0.5 rounded uppercase text-[9px] font-bold">${c}</span>`).join(' ');
+        const termsHtml = evalResult.factuality.foundTerms.map(t => `<span class="bg-blue-50 text-blue-700 border border-blue-200 px-1.5 py-0.5 rounded text-[9px]">${t}</span>`).join(' ');
+        factTags.innerHTML = (composersHtml || termsHtml) 
+          ? `<div class="mt-1 flex flex-wrap gap-1">${composersHtml} ${termsHtml}</div>`
+          : `<span class="text-gray-400 italic">No composers or musical terms detected yet</span>`;
+      }
+
+      if (relStatus) {
+        relStatus.textContent = evalResult.relevance.passed ? "Passed" : "Low Focus";
+        relStatus.className = evalResult.relevance.passed
+          ? "text-[10px] font-semibold px-2 py-0.5 rounded bg-emerald-100 text-emerald-800"
+          : "text-[10px] font-semibold px-2 py-0.5 rounded bg-amber-100 text-amber-800";
+      }
+      if (relTags) {
+        relTags.innerHTML = `<span class="text-gray-600">Relevance matches: <strong class="text-gray-900">${evalResult.relevance.matchCount}</strong></span>`;
+      }
+
+      if (vocStatus) {
+        vocStatus.textContent = evalResult.vocabulary.passed ? "Passed (Clean)" : "Flagged (Profanity)";
+        vocStatus.className = evalResult.vocabulary.passed
+          ? "text-[10px] font-semibold px-2 py-0.5 rounded bg-emerald-100 text-emerald-800"
+          : "text-[10px] font-semibold px-2 py-0.5 rounded bg-red-100 text-red-800";
+      }
+
+      if (modal) modal.classList.remove('hidden');
+    };
+
+    window.closeAiReviewInspector = function() {
+      const modal = document.getElementById('ai-inspector-modal');
+      if (modal) modal.classList.add('hidden');
+    };
+
+    // ==========================================
+    // GOOGLE DOCS ESSAY EDITOR LOGIC
+    // ==========================================
+    const gdocsModal = document.getElementById('gdocs-modal');
+    const gdocsTitle = document.getElementById('gdocs-doc-title');
+    const gdocsCategory = document.getElementById('gdocs-category');
+    const gdocsReadtime = document.getElementById('gdocs-readtime');
+    const gdocsSnippet = document.getElementById('gdocs-snippet');
+    const gdocsPaper = document.getElementById('gdocs-paper');
+    const gdocsSlugPreview = document.getElementById('gdocs-slug-preview');
+    const gdocsWordCount = document.getElementById('gdocs-word-count');
+    const gdocsCharCount = document.getElementById('gdocs-char-count');
+    const gdocsSaveStatus = document.getElementById('gdocs-save-status');
+
+    let currentEditingPostId = null;
+    let gdocsFontSize = 11;
+
+    function updateEditorModeUI() {
+      const btnText = document.getElementById('gdocs-publish-btn-text');
+      const badge = document.getElementById('gdocs-author-badge');
+      const badgeText = document.getElementById('gdocs-badge-text');
+
+      if (btnText) {
+        if (isAuthorLoggedIn() && !isContributorMode) {
+          btnText.textContent = "Publish Essay (Author)";
+        } else {
+          btnText.textContent = "Submit for AI Review";
+        }
+      }
+
+      if (badge && badgeText) {
+        if (isAuthorLoggedIn() && !isContributorMode) {
+          badge.className = "hidden md:flex items-center gap-1.5 px-3 py-1 bg-emerald-50 text-emerald-800 border border-emerald-200 rounded-lg text-xs font-medium shadow-2xs";
+          badgeText.textContent = "antonio27181019@gmail.com";
+        } else {
+          badge.className = "hidden md:flex items-center gap-1.5 px-3 py-1 bg-indigo-50 text-indigo-800 border border-indigo-200 rounded-lg text-xs font-medium shadow-2xs";
+          badgeText.textContent = "Community Contributor · AI Review";
+        }
+      }
+    }
+
+    window.openContributorEditor = function() {
+      isContributorMode = true;
+      currentEditingPostId = null;
+      if (gdocsTitle) gdocsTitle.value = 'Untitled Essay';
+      if (gdocsCategory) gdocsCategory.value = 'Interpretation';
+      if (gdocsReadtime) gdocsReadtime.value = '5 min read';
+      if (gdocsSnippet) gdocsSnippet.value = '';
+      if (gdocsPaper) {
+        gdocsPaper.innerHTML = `<h1>Untitled Classical Essay</h1><p>Welcome! Anyone can suggest an essay for Arias Unlocked. As you write, our AI reviews your post in the bottom-right bar against 3 qualifications: <strong>Factuality</strong>, <strong>Relevance</strong>, and <strong>Vocabulary</strong> (zero swear words).</p><p>Click the bottom-right AI bar anytime to see missing parts!</p>`;
+      }
+      updateEditorModeUI();
+      gdocsUpdateSlugPreview();
+      gdocsUpdateWordCount();
+      updateAiReviewBar();
+      if (gdocsModal) gdocsModal.classList.remove('hidden');
+      setTimeout(() => gdocsPaper && gdocsPaper.focus(), 200);
+    };
+
+    window.openGoogleDocsEditor = function(postId = null) {
+      if (!isAuthorLoggedIn()) {
+        openAuthorPortal();
+        return;
+      }
+      isContributorMode = false;
+
+      if (postId) {
+        const posts = JSON.parse(localStorage.getItem('arias_custom_posts') || '[]');
+        const post = posts.find(p => p.id === postId);
+        if (post) {
+          currentEditingPostId = post.id;
+          if (gdocsTitle) gdocsTitle.value = post.title || 'Untitled essay';
+          if (gdocsCategory) gdocsCategory.value = post.category || 'Interpretation';
+          if (gdocsReadtime) gdocsReadtime.value = post.readtime || '5 min read';
+          if (gdocsSnippet) gdocsSnippet.value = post.snippet || '';
+          if (gdocsPaper) {
+            gdocsPaper.innerHTML = post.htmlContent || markdownToHtml(post.content || '');
+          }
+        }
+      } else {
+        currentEditingPostId = null;
+        if (gdocsTitle) gdocsTitle.value = 'Untitled essay';
+        if (gdocsCategory) gdocsCategory.value = 'Interpretation';
+        if (gdocsReadtime) gdocsReadtime.value = '5 min read';
+        if (gdocsSnippet) gdocsSnippet.value = '';
+        if (gdocsPaper) {
+          gdocsPaper.innerHTML = `<h1>Untitled Essay</h1><p>Start writing your new classical essay here just like Google Docs...</p>`;
+        }
+      }
+
+      updateEditorModeUI();
+      gdocsUpdateSlugPreview();
+      gdocsUpdateWordCount();
+      updateAiReviewBar();
+      if (gdocsModal) gdocsModal.classList.remove('hidden');
+      setTimeout(() => gdocsPaper && gdocsPaper.focus(), 200);
+    };
+
+    window.closeGoogleDocsEditor = function() {
+      if (gdocsModal) gdocsModal.classList.add('hidden');
+    };
+
+    window.gdocsUpdateSlugPreview = function() {
+      const title = (gdocsTitle ? gdocsTitle.value : '').trim();
+      const slug = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') || 'untitled-essay';
+      if (gdocsSlugPreview) gdocsSlugPreview.textContent = `${slug}.md`;
+    };
+
+    window.gdocsExec = function(command, value = null) {
+      document.execCommand(command, false, value);
+      gdocsUpdateWordCount();
+      updateAiReviewBar();
+      if (gdocsPaper) gdocsPaper.focus();
+    };
+
+    window.gdocsApplyStyle = function(tag) {
+      if (tag === 'p') document.execCommand('formatBlock', false, '<p>');
+      else if (tag === 'h1') document.execCommand('formatBlock', false, '<h1>');
+      else if (tag === 'h2') document.execCommand('formatBlock', false, '<h2>');
+      else if (tag === 'h3') document.execCommand('formatBlock', false, '<h3>');
+      else if (tag === 'blockquote') document.execCommand('formatBlock', false, '<blockquote>');
+      gdocsUpdateWordCount();
+      updateAiReviewBar();
+      if (gdocsPaper) gdocsPaper.focus();
+    };
+
+    window.gdocsApplyFont = function(font) {
+      document.execCommand('fontName', false, font);
+      if (gdocsPaper) gdocsPaper.focus();
+    };
+
+    window.gdocsChangeFontSize = function(delta) {
+      gdocsFontSize = Math.max(9, Math.min(36, gdocsFontSize + delta));
+      const lbl = document.getElementById('gdocs-font-size-label');
+      if (lbl) lbl.textContent = gdocsFontSize;
+      if (gdocsPaper) {
+        gdocsPaper.style.fontSize = gdocsFontSize + 'px';
+        gdocsPaper.focus();
+      }
+    };
+
+    window.gdocsChangeZoom = function(val) {
+      if (!gdocsPaper) return;
+      gdocsPaper.style.transform = val === '100' ? 'none' : `scale(${val / 100})`;
+      gdocsPaper.style.transformOrigin = 'top center';
+    };
+
+    window.gdocsInsertLink = function() {
+      const url = prompt('Enter web link URL:', 'https://');
+      if (url) document.execCommand('createLink', false, url);
+      if (gdocsPaper) gdocsPaper.focus();
+    };
+
+    window.gdocsInsertImage = function() {
+      const url = prompt('Enter image URL:');
+      if (url) document.execCommand('insertImage', false, url);
+      if (gdocsPaper) gdocsPaper.focus();
+    };
+
+    window.gdocsInsertDivider = function() {
+      document.execCommand('insertHorizontalRule');
+      if (gdocsPaper) gdocsPaper.focus();
+    };
+
+    window.gdocsOnContentInput = function() {
+      gdocsUpdateWordCount();
+      updateAiReviewBar();
+      if (gdocsSaveStatus) {
+        gdocsSaveStatus.innerHTML = `<span class="material-symbols-outlined text-xs text-amber-500 animate-spin">sync</span> <span>Saving draft...</span>`;
+        clearTimeout(window._gdocsDraftTimer);
+        window._gdocsDraftTimer = setTimeout(() => {
+          gdocsSaveStatus.innerHTML = `<span class="material-symbols-outlined text-xs text-gray-500">cloud_done</span> <span>Saved to Drive</span>`;
+        }, 1200);
+      }
+    };
+
+    window.gdocsUpdateWordCount = function() {
+      if (!gdocsPaper) return;
+      const text = gdocsPaper.innerText || '';
+      const words = text.trim() ? text.trim().split(/\s+/).length : 0;
+      const chars = text.length;
+      if (gdocsWordCount) gdocsWordCount.textContent = words;
+      if (gdocsCharCount) gdocsCharCount.textContent = chars;
+    };
+
+    window.gdocsToggleWordCountAlert = function() {
+      const text = (gdocsPaper ? gdocsPaper.innerText : '') || '';
+      const words = text.trim() ? text.trim().split(/\s+/).length : 0;
+      const chars = text.length;
+      alert(`Document Stats:\n• Words: ${words}\n• Characters: ${chars}\n• Target Folder: Google Drive / Arias Unlocked / Blog`);
+    };
+
+    function escapeHtml(text) {
+      return text
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    function htmlToMarkdown(html) {
+      const div = document.createElement('div');
+      div.innerHTML = html;
+
+      function nodeToMd(node) {
+        if (node.nodeType === Node.TEXT_NODE) return node.textContent;
+        if (node.nodeType !== Node.ELEMENT_NODE) return '';
+
+        let children = Array.from(node.childNodes).map(nodeToMd).join('');
+        const tag = node.tagName.toLowerCase();
+
+        switch (tag) {
+          case 'h1': return `\n# ${children.trim()}\n\n`;
+          case 'h2': return `\n## ${children.trim()}\n\n`;
+          case 'h3': return `\n### ${children.trim()}\n\n`;
+          case 'p': return `${children.trim()}\n\n`;
+          case 'strong': case 'b': return `**${children}**`;
+          case 'em': case 'i': return `*${children}*`;
+          case 'u': return `_${children}_`;
+          case 's': case 'del': case 'strike': return `~~${children}~~`;
+          case 'blockquote': return `\n> ${children.trim()}\n\n`;
+          case 'ul': return `\n${children}\n`;
+          case 'ol': return `\n${children}\n`;
+          case 'li': return `- ${children.trim()}\n`;
+          case 'hr': return `\n---\n\n`;
+          case 'br': return `\n`;
+          case 'a': return `[${children}](${node.getAttribute('href') || ''})`;
+          case 'img': return `\n![image](${node.getAttribute('src') || ''})\n`;
+          default: return children;
+        }
+      }
+
+      return Array.from(div.childNodes).map(nodeToMd).join('').replace(/\n{3,}/g, '\n\n').trim();
+    }
+
+    function markdownToHtml(md) {
+      if (!md) return '';
+      return md
+        .split('\n\n')
+        .map(block => {
+          block = block.trim();
+          if (!block) return '';
+          if (block.startsWith('# ')) return `<h1>${escapeHtml(block.slice(2))}</h1>`;
+          if (block.startsWith('## ')) return `<h2>${escapeHtml(block.slice(3))}</h2>`;
+          if (block.startsWith('### ')) return `<h3>${escapeHtml(block.slice(4))}</h3>`;
+          if (block.startsWith('> ')) return `<blockquote>${escapeHtml(block.slice(2))}</blockquote>`;
+          if (block === '---') return '<hr>';
+
+          let formatted = escapeHtml(block)
+            .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+            .replace(/\*(.*?)\*/g, '<em>$1</em>')
+            .replace(/~~(.*?)~~/g, '<del>$1</del>')
+            .replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank">$1</a>');
+          return `<p>${formatted}</p>`;
+        })
+        .join('');
+    }
+
+    async function saveMarkdownFileToDisk(filename, content) {
+      if (window.showSaveFilePicker) {
+        try {
+          const handle = await window.showSaveFilePicker({
+            suggestedName: filename,
+            types: [{ description: 'Markdown File (*.md)', accept: { 'text/markdown': ['.md'] } }]
+          });
+          const writable = await handle.createWritable();
+          await writable.write(content);
+          await writable.close();
+          return { success: true, method: 'picker' };
+        } catch (err) {
+          if (err.name !== 'AbortError') console.warn('Picker notice:', err);
+        }
+      }
+
+      const blob = new Blob([content], { type: 'text/markdown;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+      return { success: true, method: 'download' };
+    }
+
+    window.gdocsSaveToDriveOnly = async function() {
+      const title = (gdocsTitle ? gdocsTitle.value : '').trim() || 'Untitled Essay';
+      const category = gdocsCategory ? gdocsCategory.value : 'Interpretation';
+      const readtime = (gdocsReadtime ? gdocsReadtime.value : '').trim() || '5 min read';
+      const bodyMarkdown = htmlToMarkdown(gdocsPaper ? gdocsPaper.innerHTML : '');
+      const dateStr = new Date().toLocaleDateString('en-US', { month: 'short', day: '2-digit', year: 'numeric' });
+      const slug = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') || 'essay';
+      const filename = `${slug}.md`;
+      const authorName = isAuthorLoggedIn() ? "Antonio" : "Community Contributor";
+
+      const fullMarkdown = `# ${title}\n**Category:** ${category}  \n**Date:** ${dateStr}  \n**Read Time:** ${readtime}  \n**Author:** ${authorName}  \n\n---\n\n${bodyMarkdown}\n`;
+      await saveMarkdownFileToDisk(filename, fullMarkdown);
+
+      if (gdocsSaveStatus) {
+        gdocsSaveStatus.innerHTML = `<span class="material-symbols-outlined text-xs text-emerald-600">check_circle</span> <span class="text-emerald-700 font-semibold">Saved to Drive!</span>`;
+        setTimeout(() => {
+          gdocsSaveStatus.innerHTML = `<span class="material-symbols-outlined text-xs text-gray-500">cloud_done</span> <span>Saved to Drive</span>`;
+        }, 3000);
+      }
+    };
+
+    window.publishGDocsPost = async function() {
+      let title = (gdocsTitle ? gdocsTitle.value : '').trim();
+      if (!title || title.toLowerCase() === 'untitled essay') {
+        const entered = prompt('Please enter a title for your essay:', title === 'Untitled essay' ? '' : title);
+        if (!entered || !entered.trim()) return;
+        title = entered.trim();
+        if (gdocsTitle) gdocsTitle.value = title;
+      }
+
+      const category = gdocsCategory ? gdocsCategory.value : 'Interpretation';
+      const readtime = (gdocsReadtime ? gdocsReadtime.value : '').trim() || '5 min read';
+      const paperText = (gdocsPaper ? gdocsPaper.innerText : '').trim();
+
+      if (!paperText) {
+        alert('Please write some content before publishing.');
+        return;
+      }
+
+      const isAuthor = isAuthorLoggedIn() && !isContributorMode;
+
+      // Contributor submissions must pass all 3 AI qualifications
+      if (!isAuthor) {
+        const evalResult = runAiEvaluation(paperText, title);
+        if (!evalResult.allPassed) {
+          openAiReviewInspector();
+          alert(`⚠️ AI Review Notice:\nYour suggested essay did not pass the 3 required qualifications.\n\n• Factuality: ${evalResult.factuality.passed ? '✅ Pass' : '❌ Needs composers/repertoire'}\n• Relevance: ${evalResult.relevance.passed ? '✅ Pass' : '❌ Needs classical vocal focus'}\n• Vocabulary: ${evalResult.vocabulary.passed ? '✅ Pass' : '❌ Profanity or insufficient quality'}\n\nPlease inspect the missing parts in the AI Review drawer on the right and update your draft!`);
+          return;
+        }
+      }
+
+      // Award XP
+      // Writing = +50 XP, Accepted = Double XP (+100 XP)
+      let writtenCount = parseInt(localStorage.getItem('arias_written_count') || '0', 10) + 1;
+      let acceptedCount = parseInt(localStorage.getItem('arias_accepted_count') || '0', 10) + 1;
+      localStorage.setItem('arias_written_count', writtenCount);
+      localStorage.setItem('arias_accepted_count', acceptedCount);
+
+      if (!isAuthor) {
+        // Community contributor earns +50 for writing + 100 for double XP acceptance!
+        awardXP(150, "Essay Accepted by AI! (+50 Writing XP + 100 Double Bonus!)");
+      } else {
+        awardXP(100, "Published Author Essay to Arias Unlocked");
+      }
+
+      const dateStr = new Date().toLocaleDateString('en-US', { month: 'short', day: '2-digit', year: 'numeric' });
+      let snippet = (gdocsSnippet ? gdocsSnippet.value : '').trim();
+      if (!snippet) {
+        snippet = paperText.length > 200 ? paperText.slice(0, 197) + '...' : paperText;
+      }
+
+      const slug = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') || ('essay-' + Date.now());
+      const filename = `${slug}.md`;
+      const bodyMarkdown = htmlToMarkdown(gdocsPaper.innerHTML);
+      const authorLabel = isAuthor ? "Antonio" : "Community Contributor (AI Verified)";
+
+      const fullFileMarkdown = `# ${title}\n**Category:** ${category}  \n**Date:** ${dateStr}  \n**Read Time:** ${readtime}  \n**Author:** ${authorLabel}  \n\n---\n\n${bodyMarkdown}\n`;
+
+      const posts = JSON.parse(localStorage.getItem('arias_custom_posts') || '[]');
+      const postId = currentEditingPostId || ('post_' + Date.now());
+      const existingIdx = posts.findIndex(p => p.id === postId);
+
+      const newPost = {
+        id: postId,
+        title: title,
+        category: category,
+        date: dateStr,
+        readtime: readtime,
+        level: "Level 2 · Apprentice",
+        snippet: snippet,
+        content: bodyMarkdown,
+        htmlContent: gdocsPaper.innerHTML,
+        filename: filename,
+        isCustom: true,
+        isContributor: !isAuthor,
+        aiApproved: !isAuthor,
+        likes: 1
+      };
+
+      if (existingIdx >= 0) {
+        posts[existingIdx] = newPost;
+      } else {
+        posts.unshift(newPost);
+      }
+      localStorage.setItem('arias_custom_posts', JSON.stringify(posts));
+
+      await saveMarkdownFileToDisk(filename, fullFileMarkdown);
+
+      closeGoogleDocsEditor();
+      renderAllPosts();
+
+      if (isAuthor) {
+        alert(`🎉 Essay published!\nSaved directly to your Google Drive Blog folder as "${filename}".`);
+      } else {
+        alert(`🎉 Congratulations! Your suggested essay passed all 3 AI qualifications (Factuality, Relevance, Clean Vocabulary)!\nIt has been published to Arias Unlocked with DOUBLE XP!`);
+      }
+
+      // Immediately open in the expansive reader view!
+      openArticleReader(postId);
+    };
+
+    // ==========================================
+    // ALL POSTS RENDERING & LIKES & FILTERING
+    // ==========================================
+    window.deleteCustomPost = function(id) {
+      if (!confirm('Are you sure you want to delete this essay from the blog?')) return;
+      const posts = JSON.parse(localStorage.getItem('arias_custom_posts') || '[]');
+      const filtered = posts.filter(p => p.id !== id);
+      localStorage.setItem('arias_custom_posts', JSON.stringify(filtered));
+      renderAllPosts();
+    };
+
+    function getAllPosts() {
+      const customPosts = JSON.parse(localStorage.getItem('arias_custom_posts') || '[]');
+      // Tutorial post is always first
+      return [...DEFAULT_SEED_POSTS, ...customPosts];
+    }
+
+    function getLikedPosts() {
+      return JSON.parse(localStorage.getItem('arias_liked_posts') || '[]');
+    }
+
+    function getPostLikes(postId, defaultCount = 0) {
+      const allLikes = JSON.parse(localStorage.getItem('arias_post_likes') || '{}');
+      return allLikes[postId] !== undefined ? allLikes[postId] : defaultCount;
+    }
+
+    window.toggleLikePost = function(postId) {
+      let liked = getLikedPosts();
+      const allLikes = JSON.parse(localStorage.getItem('arias_post_likes') || '{}');
+      let count = getPostLikes(postId, 0);
+
+      if (liked.includes(postId)) {
+        liked = liked.filter(id => id !== postId);
+        count = Math.max(0, count - 1);
+      } else {
+        liked.push(postId);
+        count += 1;
+        awardXP(5, "Liked an Article");
+      }
+
+      allLikes[postId] = count;
+      localStorage.setItem('arias_liked_posts', JSON.stringify(liked));
+      localStorage.setItem('arias_post_likes', JSON.stringify(allLikes));
+
+      renderAllPosts();
+      if (currentReadingPostId === postId) {
+        updateReaderLikeBtnState(postId);
+      }
+    };
+
+    function renderAllPosts() {
+      const allPosts = getAllPosts();
+      const heroContainer = document.getElementById('hero-post-container');
+      const grid = document.getElementById('blog-grid');
+      const readPosts = getReadPosts();
+      const likedPosts = getLikedPosts();
+      const loggedIn = isAuthorLoggedIn();
+      const isPatron = localStorage.getItem('arias_is_patron') === 'true';
+
+      const counterLabel = document.getElementById('posts-counter-label');
+      if (counterLabel) counterLabel.textContent = `${allPosts.length} articles published`;
+
+      // 1. Render Hero Post (Post #1: The Tutorial)
+      const heroPost = allPosts[0];
+      if (heroContainer && heroPost) {
+        const isRead = readPosts.includes(heroPost.id);
+        const isLiked = likedPosts.includes(heroPost.id);
+        const likes = getPostLikes(heroPost.id, heroPost.likes || 0);
+
+        heroContainer.innerHTML = `
+          <article onclick="openArticleReader('${heroPost.id}')" class="blog-post-card w-full bg-white rounded-lg border border-primary/20 overflow-hidden flex flex-col md:flex-row shadow-sm hover:shadow-md transition-shadow cursor-pointer group relative"
+                   data-category="${heroPost.category}"
+                   data-title="${escapeHtml(heroPost.title)}"
+                   data-snippet="${escapeHtml(heroPost.snippet)}">
+            <div class="md:w-5/12 bg-[#1c1b1b] p-8 md:p-12 flex flex-col justify-between text-white border-r border-primary/10">
+              <div class="flex items-center justify-between">
+                <span class="bg-amber-400 text-black font-bold text-[10px] px-3 py-1 rounded uppercase tracking-widest">
+                  Featured Tutorial
+                </span>
+                <span class="text-xs text-amber-300 font-semibold">${heroPost.level || 'Level 1 · All Readers'}</span>
+              </div>
+              <div class="my-6">
+                <span class="material-symbols-outlined text-5xl text-amber-400 mb-3">school</span>
+                <h3 class="font-display-lg text-2xl md:text-3xl text-white leading-tight">Mastering Arias Unlocked</h3>
+                <p class="text-xs text-gray-300 mt-2">Interactive walkthrough for reading, writing, earning XP, finding operas &amp; unlocking patron masterclasses.</p>
+              </div>
+              <div class="flex items-center justify-between text-xs pt-4 border-t border-white/20">
+                <span class="text-gray-300">${heroPost.readtime}</span>
+                <span class="text-amber-400 font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">Read Guide <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+              </div>
+            </div>
+            <div class="md:w-7/12 p-8 md:p-10 flex flex-col justify-between gap-6">
+              <div>
+                <div class="flex items-center justify-between mb-3">
+                  <span class="text-xs text-gray-500 uppercase tracking-widest">${heroPost.date}</span>
+                  ${isRead ? `
+                    <span class="text-[10px] font-bold text-emerald-800 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded flex items-center gap-1">
+                      <span class="material-symbols-outlined text-xs">check_circle</span> Read
+                    </span>
+                  ` : `
+                    <span class="text-[10px] font-bold text-amber-800 bg-amber-50 border border-amber-200 px-2 py-0.5 rounded flex items-center gap-1">
+                      <span class="material-symbols-outlined text-xs">stars</span> +15 XP Available
+                    </span>
+                  `}
+                </div>
+                <h2 class="font-display-lg text-2xl md:text-3xl text-primary leading-tight group-hover:text-primary/80 transition-colors">${escapeHtml(heroPost.title)}</h2>
+                <p class="font-body-md text-xs md:text-sm text-gray-700 mt-3 leading-relaxed">${escapeHtml(heroPost.snippet)}</p>
+              </div>
+              <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                <button onclick="event.stopPropagation(); toggleLikePost('${heroPost.id}')" class="flex items-center gap-1.5 text-xs font-bold ${isLiked ? 'text-red-600' : 'text-gray-600 hover:text-red-600'} cursor-pointer">
+                  <span class="material-symbols-outlined text-base">${isLiked ? 'favorite' : 'favorite_border'}</span>
+                  <span>${likes} Likes</span>
+                </button>
+                <span class="text-xs font-bold text-black flex items-center gap-1">Read Tutorial <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+              </div>
+            </div>
+          </article>
+        `;
+      }
+
+      // 2. Render Subsequent Articles
+      if (grid) {
+        grid.innerHTML = '';
+        const subsequent = allPosts.slice(1);
+
+        subsequent.forEach(post => {
+          const isRead = readPosts.includes(post.id);
+          const isLiked = likedPosts.includes(post.id);
+          const likes = getPostLikes(post.id, post.likes || 0);
+          const isLocked = post.isPremium && !isPatron;
+
+          const article = document.createElement('article');
+          article.className = "blog-post-card bg-white rounded-lg border border-primary/20 overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-shadow group cursor-pointer relative";
+          article.setAttribute('data-category', post.category);
+          article.setAttribute('data-title', post.title);
+          article.setAttribute('data-snippet', post.snippet);
+          article.onclick = () => openArticleReader(post.id);
+
+          article.innerHTML = `
+            <div class="h-44 w-full bg-[#fdfaf0] border-b border-primary/10 relative overflow-hidden flex items-center justify-center">
+              <span class="material-symbols-outlined text-5xl text-primary/20">
+                ${post.isPremium ? 'workspace_premium' : (post.category === 'Technique' ? 'speed' : 'music_note')}
+              </span>
+              ${post.isCustom && loggedIn ? `
+                <div class="absolute top-3 right-3 flex items-center gap-1.5 z-10">
+                  <button onclick="event.stopPropagation(); openGoogleDocsEditor('${post.id}')" class="w-7 h-7 flex items-center justify-center bg-white hover:bg-blue-50 text-blue-700 rounded-lg shadow-xs border border-blue-200 transition-all cursor-pointer" title="Edit essay">
+                    <span class="material-symbols-outlined text-[13px]">edit</span>
+                  </button>
+                  <button onclick="event.stopPropagation(); deleteCustomPost('${post.id}')" class="w-7 h-7 flex items-center justify-center bg-white hover:bg-red-50 text-red-600 rounded-lg shadow-xs border border-red-200 transition-all cursor-pointer" title="Delete essay">
+                    <span class="material-symbols-outlined text-[13px]">delete</span>
+                  </button>
+                </div>
+              ` : ''}
+              ${isLocked ? `
+                <div class="absolute inset-0 bg-black/40 flex items-center justify-center text-white flex-col gap-1">
+                  <span class="material-symbols-outlined text-2xl">lock</span>
+                  <span class="text-[10px] font-bold uppercase tracking-wider">Patron Pass Required</span>
+                </div>
+              ` : ''}
+            </div>
+            
+            <div class="p-6 flex flex-col flex-grow justify-between gap-4">
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="bg-amber-100 text-amber-900 font-bold text-[10px] px-2.5 py-0.5 rounded uppercase tracking-wider">${post.category}</span>
+                  ${post.isPremium ? `
+                    <span class="text-[10px] font-bold text-amber-900 bg-amber-100 border border-amber-300 px-2 py-0.5 rounded flex items-center gap-1">
+                      ⭐ Patron Only
+                    </span>
+                  ` : (post.aiApproved ? `
+                    <span class="text-[10px] font-bold text-indigo-800 bg-indigo-50 border border-indigo-200 px-2 py-0.5 rounded flex items-center gap-1">
+                      AI Approved
+                    </span>
+                  ` : (isRead ? `
+                    <span class="text-[10px] font-bold text-emerald-800 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded flex items-center gap-1">
+                      ✓ Read
+                    </span>
+                  ` : `
+                    <span class="text-[10px] font-bold text-gray-500 bg-gray-100 px-2 py-0.5 rounded">
+                      Unread
+                    </span>
+                  `))}
+                </div>
+                <h3 class="font-display-lg text-xl text-primary leading-snug group-hover:text-primary/80 transition-colors">${escapeHtml(post.title)}</h3>
+                <p class="font-body-md text-xs text-gray-700 mt-2 line-clamp-3 leading-relaxed">${escapeHtml(post.snippet)}</p>
+              </div>
+
+              <div class="pt-3 border-t border-gray-100 flex items-center justify-between text-xs">
+                <span class="text-gray-500">${post.date} · ${post.readtime}</span>
+                <button onclick="event.stopPropagation(); toggleLikePost('${post.id}')" class="flex items-center gap-1 font-bold ${isLiked ? 'text-red-600' : 'text-gray-500 hover:text-red-600'} cursor-pointer">
+                  <span class="material-symbols-outlined text-sm">${isLiked ? 'favorite' : 'favorite_border'}</span>
+                  <span>${likes}</span>
+                </button>
+              </div>
+            </div>
+          `;
+
+          grid.appendChild(article);
+        });
+      }
+
+      filterArticles();
+    }
+
+    // Filter logic
     const filterBtns = document.querySelectorAll('.blog-filter-btn');
     const searchInput = document.getElementById('blog-search-input');
     const searchClear = document.getElementById('blog-search-clear');
     let activeFilter = 'All';
     let searchQuery = '';
 
-    function stripAccents(str) {
-      if (!str) return '';
-      return str
-        .normalize('NFD')
-        .replace(/[\u0300-\u036f]/g, '')
-        .toLowerCase()
-        .trim();
-    }
-
     function filterArticles() {
       const articles = document.querySelectorAll('.blog-post-card');
       articles.forEach(art => {
         const cat = art.getAttribute('data-category') || '';
-        const title = art.getAttribute('data-title') || '';
-        const snippet = art.getAttribute('data-snippet') || '';
+        const title = (art.getAttribute('data-title') || '').toLowerCase();
+        const snippet = (art.getAttribute('data-snippet') || '').toLowerCase();
 
-        const matchesCat = (activeFilter === 'All' || stripAccents(cat) === stripAccents(activeFilter));
-        const normalizedHaystack = stripAccents(`${title} ${snippet} ${cat}`);
-        const matchesQuery = !searchQuery || normalizedHaystack.includes(searchQuery);
+        const matchesCat = (activeFilter === 'All' || cat.toLowerCase() === activeFilter.toLowerCase());
+        const matchesQuery = !searchQuery || title.includes(searchQuery) || snippet.includes(searchQuery);
 
         if (matchesCat && matchesQuery) {
           art.classList.remove('hidden');
@@ -441,146 +2593,242 @@ True musical tension is not created by sound alone—it is sculpted by the silen
       btn.addEventListener('click', () => {
         activeFilter = btn.getAttribute('data-filter');
         filterBtns.forEach(b => {
-          b.className = "blog-filter-btn px-5 py-2 rounded-full bg-white border border-primary/10 text-on-surface-variant hover:border-primary/30 hover:text-primary font-label-sm text-label-sm tracking-widest uppercase transition-all shadow-sm";
+          b.className = "blog-filter-btn px-4 py-1.5 rounded-lg bg-white border border-primary/10 text-gray-700 hover:border-black font-label-sm text-xs tracking-wider uppercase transition-all shadow-xs";
         });
-        btn.className = "blog-filter-btn px-5 py-2 rounded-full bg-primary text-white font-label-sm text-label-sm tracking-widest uppercase transition-colors";
+        btn.className = "blog-filter-btn px-4 py-1.5 rounded-lg bg-black text-white font-label-sm text-xs tracking-wider uppercase transition-colors";
         filterArticles();
       });
     });
 
-    searchInput.addEventListener('input', (e) => {
-      searchQuery = stripAccents(e.target.value);
-      searchClear.classList.toggle('hidden', !searchQuery);
-      filterArticles();
-    });
-
-    searchClear.addEventListener('click', () => {
-      searchInput.value = '';
-      searchQuery = '';
-      searchClear.classList.add('hidden');
-      filterArticles();
-    });
-
-    // Article Reader Modal
-    const articleModal = document.getElementById('article-modal');
-    const modalCategory = document.getElementById('article-modal-category');
-    const modalDate = document.getElementById('article-modal-date');
-    const modalReadtime = document.getElementById('article-modal-readtime');
-    const modalTitle = document.getElementById('article-modal-title');
-    const modalContent = document.getElementById('article-modal-content');
-
-    function attachArticleClick(card) {
-      card.addEventListener('click', () => {
-        modalCategory.textContent = card.getAttribute('data-category');
-        modalDate.textContent = card.getAttribute('data-date');
-        modalReadtime.textContent = card.getAttribute('data-readtime');
-        modalTitle.textContent = card.getAttribute('data-title');
-        
-        const rawContent = card.getAttribute('data-content') || card.getAttribute('data-snippet') || '';
-        // Convert simple markdown formatting
-        const paragraphs = rawContent.split('\n\n').map(p => `<p>${p.replace(/\*(.*?)\*/g, '<em>$1</em>')}</p>`).join('');
-        modalContent.innerHTML = paragraphs;
-        
-        articleModal.classList.remove('hidden');
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        searchQuery = (e.target.value || '').toLowerCase().trim();
+        if (searchClear) searchClear.classList.toggle('hidden', !searchQuery);
+        filterArticles();
       });
     }
 
-    document.querySelectorAll('.blog-post-card').forEach(attachArticleClick);
+    if (searchClear) {
+      searchClear.addEventListener('click', () => {
+        if (searchInput) searchInput.value = '';
+        searchQuery = '';
+        searchClear.classList.add('hidden');
+        filterArticles();
+      });
+    }
 
-    window.closeArticleModal = function() {
-      articleModal.classList.add('hidden');
+    // ==========================================
+    // EXPANSIVE READER VIEW & COMMENTS
+    // ==========================================
+    let currentReadingPostId = null;
+
+    window.openArticleReader = function(postId) {
+      const allPosts = getAllPosts();
+      const post = allPosts.find(p => p.id === postId);
+      if (!post) return;
+
+      currentReadingPostId = postId;
+      const reader = document.getElementById('article-reader-view');
+      const topTitle = document.getElementById('reader-top-progress-title');
+      const cat = document.getElementById('reader-category');
+      const lvl = document.getElementById('reader-level-badge');
+      const time = document.getElementById('reader-readtime');
+      const date = document.getElementById('reader-date');
+      const title = document.getElementById('reader-title');
+      const author = document.getElementById('reader-author-name');
+      const authorSub = document.getElementById('reader-author-subtitle');
+      const content = document.getElementById('reader-body-content');
+      const paywallBox = document.getElementById('reader-paywall-box');
+      const readBadge = document.getElementById('reader-read-badge');
+
+      if (topTitle) topTitle.textContent = post.title;
+      if (cat) cat.textContent = post.category;
+      if (lvl) lvl.textContent = post.level || "Level 1 · All Readers";
+      if (time) time.textContent = post.readtime;
+      if (date) date.textContent = post.date;
+      if (title) title.textContent = post.title;
+
+      if (author) {
+        author.textContent = post.isContributor ? "Community Contributor" : "Antonio";
+      }
+      if (authorSub) {
+        authorSub.textContent = post.isContributor 
+          ? "AI Verified Submission · Saved to Google Drive / Blog" 
+          : "Arias Unlocked Founder · Google Drive / Arias Unlocked / Blog";
+      }
+
+      // Patron Lock Check
+      const isPatron = localStorage.getItem('arias_is_patron') === 'true';
+      const isLocked = post.isPremium && !isPatron;
+
+      if (isLocked) {
+        const previewText = post.content.split('\n\n').slice(0, 2).join('\n\n');
+        if (content) content.innerHTML = markdownToHtml(previewText);
+        if (paywallBox) paywallBox.classList.remove('hidden');
+      } else {
+        if (content) content.innerHTML = post.htmlContent || markdownToHtml(post.content);
+        if (paywallBox) paywallBox.classList.add('hidden');
+      }
+
+      // Mark as read & award XP
+      markPostAsRead(postId);
+      const isRead = getReadPosts().includes(postId);
+      if (readBadge) readBadge.classList.toggle('hidden', !isRead);
+
+      updateReaderLikeBtnState(postId);
+      renderCommentsForPost(postId);
+
+      if (reader) {
+        reader.classList.remove('hidden');
+        reader.scrollTo({ top: 0, behavior: 'smooth' });
+      }
     };
 
-    // Load More Articles
-    const loadMoreBtn = document.getElementById('load-more-blog-btn');
-    const blogGrid = document.getElementById('blog-grid');
-    const extraArticles = [
-      {
-        category: "Vocalization",
-        title: "Bel Canto Phrasing for Young Singers",
-        date: "Sep 15, 2024",
-        readtime: "5 min read",
-        snippet: "How seamless legato connection, appoggio breath management, and vowel purity unlock Italian vocal repertoire.",
-        content: "Bel canto literally translates to 'beautiful singing', but to young vocalists it often feels elusive. The secret lies in vowel alignment. By cultivating an unwavering continuity of sound—what the old Italian masters called 'legato'—the vocal chords vibrate with optimal efficiency without squeezing. Every phrase becomes an arching ribbon of light."
-      },
-      {
-        category: "Interpretation",
-        title: "Acting with Your Voice: Beyond the Words",
-        date: "Sep 08, 2024",
-        readtime: "4 min read",
-        snippet: "Exploring how tone color and emotional inflection convey nuance that acting alone cannot deliver.",
-        content: "On the operatic stage, subtle facial expressions cannot always be seen from the amphitheater. The voice must do the heavy lifting. In Mozart's comic arias, notice how the slightest darkening of the timbre or crisp staccato immediately signals mischief to the listener."
-      },
-      {
-        category: "Technique",
-        title: "The Science of Natural Vibrato",
-        date: "Sep 01, 2024",
-        readtime: "6 min read",
-        snippet: "Dispelling common myths about oscillation speed, breath pressure, and laryngeal freedom.",
-        content: "Vibrato is not an intentional shaking of the jaw or diaphragm; it is the physiological byproduct of a balanced, resonant phonation where antagonistic muscle groups exist in dynamic equilibrium. Understanding the acoustic mechanics helps young students sing freely without artificial tension."
+    window.closeArticleReader = function() {
+      const reader = document.getElementById('article-reader-view');
+      if (reader) reader.classList.add('hidden');
+      currentReadingPostId = null;
+    };
+
+    function updateReaderLikeBtnState(postId) {
+      const isLiked = getLikedPosts().includes(postId);
+      const likes = getPostLikes(postId, 0);
+
+      const topIcon = document.getElementById('reader-like-icon');
+      const topText = document.getElementById('reader-like-count-text');
+      const btmIcon = document.getElementById('reader-bottom-like-icon');
+      const btmText = document.getElementById('reader-bottom-like-text');
+
+      if (topIcon) topIcon.textContent = isLiked ? 'favorite' : 'favorite_border';
+      if (topText) topText.textContent = `Like (${likes})`;
+      if (btmIcon) btmIcon.textContent = isLiked ? 'favorite' : 'favorite_border';
+      if (btmText) btmText.textContent = isLiked ? `Liked (${likes})` : `Like this Essay (${likes})`;
+    }
+
+    window.toggleLikeCurrentReaderPost = function() {
+      if (!currentReadingPostId) return;
+      toggleLikePost(currentReadingPostId);
+    };
+
+    // Comments System
+    const DEFAULT_COMMENTS = {
+      "tutorial-how-to-navigate-arias-unlocked": [
+        {
+          id: "c_1",
+          author: "Maria Callas Fan",
+          text: "This tutorial is so clear! Love that anyone can submit an essay and get evaluated in real-time by AI.",
+          date: "2 hours ago",
+          isAuthor: false
+        },
+        {
+          id: "c_2",
+          author: "Luciano P.",
+          text: "The opera locator helped me find upcoming season tickets for The Met. Bravo Antonio!",
+          date: "5 hours ago",
+          isAuthor: false
+        }
+      ]
+    };
+
+    function getCommentsForPost(postId) {
+      const allComments = JSON.parse(localStorage.getItem('arias_post_comments') || '{}');
+      if (!allComments[postId] && DEFAULT_COMMENTS[postId]) {
+        return DEFAULT_COMMENTS[postId];
       }
-    ];
+      return allComments[postId] || [];
+    }
 
-    let extraLoaded = false;
-    loadMoreBtn.addEventListener('click', () => {
-      if (!extraLoaded) {
-        extraArticles.forEach(item => {
-          const article = document.createElement('article');
-          article.className = "blog-post-card bg-white rounded-2xl border border-primary/10 overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-shadow duration-300 group cursor-pointer";
-          article.setAttribute('data-category', item.category);
-          article.setAttribute('data-title', item.title);
-          article.setAttribute('data-date', item.date);
-          article.setAttribute('data-readtime', item.readtime);
-          article.setAttribute('data-snippet', item.snippet);
-          article.setAttribute('data-content', item.content);
+    function renderCommentsForPost(postId) {
+      const comments = getCommentsForPost(postId);
+      const list = document.getElementById('comments-list');
+      const count = document.getElementById('comments-count');
+      const activeForm = document.getElementById('comment-active-form-box');
+      const signInGate = document.getElementById('comment-sign-in-gate');
 
-          article.innerHTML = `
-            <div class="h-56 w-full bg-surface-container-high relative overflow-hidden flex items-center justify-center bg-[#f4f2ec]">
-              <span class="material-symbols-outlined text-[64px] text-primary/20">menu_book</span>
-            </div>
-            <div class="p-8 flex flex-col flex-grow gap-5">
-              <span class="bg-surface text-on-surface-variant font-label-sm text-[10px] px-3 py-1 rounded-sm uppercase tracking-widest w-fit">${item.category}</span>
-              <h3 class="font-headline-md text-headline-md text-primary tracking-tight leading-snug group-hover:text-primary/80 transition-colors">${item.title}</h3>
-              <p class="font-body-md text-body-md text-on-surface-variant/80 line-clamp-3">${item.snippet}</p>
-              <div class="mt-auto pt-4 flex items-center justify-between">
-                <span class="font-label-sm text-xs text-on-surface-variant/60 tracking-widest uppercase">${item.date}</span>
-                <span class="font-label-sm text-xs text-primary font-semibold flex items-center gap-1">Read <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+      if (count) count.textContent = comments.length;
+
+      if (list) {
+        if (comments.length === 0) {
+          list.innerHTML = `<p class="text-xs text-gray-500 italic py-2">No comments yet. Be the first classical vocal lover to leave a thought!</p>`;
+        } else {
+          list.innerHTML = comments.map(c => `
+            <div class="bg-gray-50 p-4 rounded-lg border border-gray-200 flex flex-col gap-1.5">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <div class="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center font-bold text-[10px]">
+                    ${c.author.charAt(0).toUpperCase()}
+                  </div>
+                  <span class="text-xs font-bold text-gray-900">${escapeHtml(c.author)}</span>
+                  ${c.isAuthor ? `<span class="text-[9px] font-bold text-emerald-800 bg-emerald-100 px-1.5 py-0.2 rounded">Author</span>` : ''}
+                </div>
+                <span class="text-[10px] text-gray-400">${c.date}</span>
               </div>
+              <p class="text-xs text-gray-700 leading-relaxed pl-8">${escapeHtml(c.text)}</p>
             </div>
-          `;
-          blogGrid.appendChild(article);
-          attachArticleClick(article);
-        });
-        extraLoaded = true;
-        loadMoreBtn.textContent = "All Articles Loaded";
-        loadMoreBtn.classList.add('opacity-50', 'pointer-events-none');
+          `).join('');
+        }
       }
-    });
 
-    // Newsletter Submission
-    window.handleNewsletterSubmit = function(e) {
-      e.preventDefault();
-      const email = document.getElementById('newsletter-email').value;
-      const subscribers = JSON.parse(localStorage.getItem('arias_newsletter') || '[]');
-      subscribers.push({ email, date: new Date().toISOString() });
-      localStorage.setItem('arias_newsletter', JSON.stringify(subscribers));
+      // Check sign-in status for comment form vs guidance gate
+      const signedIn = isUserSignedIn() || isAuthorLoggedIn();
+      if (activeForm) activeForm.classList.toggle('hidden', !signedIn);
+      if (signInGate) signInGate.classList.toggle('hidden', signedIn);
+    }
 
-      document.getElementById('newsletter-form').reset();
-      document.getElementById('newsletter-success').classList.remove('hidden');
+    window.submitNewComment = function() {
+      if (!currentReadingPostId) return;
+      const input = document.getElementById('comment-input-text');
+      const text = (input?.value || '').trim();
+      if (!text) {
+        alert("Please enter a comment before posting.");
+        return;
+      }
+
+      const isAntonio = isAuthorLoggedIn();
+      const userObj = JSON.parse(localStorage.getItem('arias_user') || '{}');
+      const authorName = isAntonio ? "Antonio" : (userObj.name || "Opera Enthusiast");
+
+      const allComments = JSON.parse(localStorage.getItem('arias_post_comments') || '{}');
+      if (!allComments[currentReadingPostId]) {
+        allComments[currentReadingPostId] = [...getCommentsForPost(currentReadingPostId)];
+      }
+
+      allComments[currentReadingPostId].push({
+        id: 'c_' + Date.now(),
+        author: authorName,
+        text: text,
+        date: "Just now",
+        isAuthor: isAntonio
+      });
+
+      localStorage.setItem('arias_post_comments', JSON.stringify(allComments));
+      input.value = '';
+      awardXP(10, "Left a Comment in Community Discussion");
+      renderCommentsForPost(currentReadingPostId);
     };
 
-    // Join Modal Logic
+    // ==========================================
+    // NEWSLETTER & JOIN MODALS
+    // ==========================================
     const joinModal = document.getElementById('join-modal');
     const joinBtn = document.getElementById('join-btn');
     const joinTriggers = document.querySelectorAll('.join-trigger');
 
-    window.openJoinModal = function() { joinModal.classList.remove('hidden'); };
-    window.closeJoinModal = function() {
-      joinModal.classList.add('hidden');
-      document.getElementById('join-form').reset();
-      document.getElementById('join-form').classList.remove('hidden');
-      document.getElementById('join-success').classList.add('hidden');
+    window.openJoinModal = function() {
+      if (joinModal) {
+        joinModal.classList.remove('hidden');
+        document.getElementById('join-form').classList.remove('hidden');
+        document.getElementById('join-success').classList.add('hidden');
+      }
     };
+
+    window.closeJoinModal = function() {
+      if (joinModal) {
+        joinModal.classList.add('hidden');
+        document.getElementById('join-form').reset();
+      }
+    };
+
     if (joinBtn) joinBtn.addEventListener('click', openJoinModal);
     joinTriggers.forEach(t => t.addEventListener('click', openJoinModal));
 
@@ -589,14 +2837,64 @@ True musical tension is not created by sound alone—it is sculpted by the silen
       const name = document.getElementById('join-name').value;
       const email = document.getElementById('join-email').value;
       localStorage.setItem('arias_user', JSON.stringify({ name, email }));
+
+      const monthlySubs = JSON.parse(localStorage.getItem('arias_monthly_paper_subscribers') || '[]');
+      if (!monthlySubs.find(s => s.email === email)) {
+        monthlySubs.push({ name, email, date: new Date().toISOString() });
+        localStorage.setItem('arias_monthly_paper_subscribers', JSON.stringify(monthlySubs));
+      }
+
+      awardXP(20, "Subscribed to Monthly Singing Paper");
+
+      const subject = encodeURIComponent(`Subscribe to Monthly Singing Paper: ${name}`);
+      const body = encodeURIComponent(`Hi Antonio,\n\nPlease add my email to the Arias Unlocked Monthly Singing Paper group on Gmail:\nName: ${name}\nEmail: ${email}\n\nNote: For classical singing paper emails only from antonio27181019@gmail.com (no Google Chat).`);
+      const mailtoUrl = `mailto:antonio27181019@gmail.com?subject=${subject}&body=${body}`;
+
+      window.location.href = mailtoUrl;
+
+      const fallbackLink = document.getElementById('join-fallback-link');
+      if (fallbackLink) fallbackLink.href = mailtoUrl;
+
       document.getElementById('join-form').classList.add('hidden');
       document.getElementById('join-success').classList.remove('hidden');
+      updateUserStatsUI();
+    };
+
+    window.handleNewsletterSubmit = function(e) {
+      e.preventDefault();
+      const email = document.getElementById('newsletter-email').value;
+      const existing = JSON.parse(localStorage.getItem('arias_newsletter') || '[]');
+      if (!existing.includes(email)) {
+        existing.push(email);
+        localStorage.setItem('arias_newsletter', JSON.stringify(existing));
+      }
+
+      awardXP(20, "Subscribed to Monthly Singing Paper");
+
+      const subject = encodeURIComponent(`Monthly Singing Paper Subscription: ${email}`);
+      const body = encodeURIComponent(`Hi Antonio,\n\nPlease subscribe me to the Arias Unlocked Monthly Singing Paper group on Gmail:\nEmail: ${email}\n\nNote: For singing emails only from antonio27181019@gmail.com.`);
+      window.location.href = `mailto:antonio27181019@gmail.com?subject=${subject}&body=${body}`;
+
+      document.getElementById('newsletter-form').reset();
+      document.getElementById('newsletter-success').classList.remove('hidden');
+      setTimeout(() => {
+        document.getElementById('newsletter-success').classList.add('hidden');
+      }, 5000);
+      updateUserStatsUI();
     };
 
     window.addEventListener('click', (e) => {
-      if (e.target === articleModal) closeArticleModal();
       if (e.target === joinModal) closeJoinModal();
+      if (e.target === authModal) closeAuthorAuthModal();
+      if (e.target === document.getElementById('profile-drawer-modal')) toggleProfileDrawer();
     });
+
+    // Auto-recognize Antonio if he logged in with Google or joined with his email
+    checkGoogleAutoRecognition();
+
+    // Initialize Author Mode, User Stats & All Posts on load
+    updateAuthorUI();
+    updateUserStatsUI();
   });
 </script>
 </body>

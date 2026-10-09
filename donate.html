@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Donate - Support World-Class Operas | Arias Unlocked</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Times+New+Roman:wght@400;700&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                "colors": {
+                    "secondary": "#645f42",
+                    "surface": "#f2dc87",
+                    "primary": "#000000",
+                    "on-surface-variant": "#444748",
+                    "surface-variant": "#ecd46e",
+                    "background": "#f2dc87"
+                },
+                "borderRadius": {
+                    "none": "0px",
+                    "sm": "2px",
+                    "DEFAULT": "6px",
+                    "md": "8px",
+                    "lg": "10px",
+                    "xl": "12px",
+                    "full": "9999px"
+                },
+                "fontFamily": {
+                    "display-lg": ["Times New Roman", "serif"],
+                    "label-md": ["Montserrat", "sans-serif"],
+                    "label-sm": ["Montserrat", "sans-serif"],
+                    "headline-lg": ["Times New Roman", "serif"],
+                    "body-md": ["Montserrat", "sans-serif"],
+                    "body-lg": ["Montserrat", "sans-serif"],
+                    "headline-md": ["Times New Roman", "serif"]
+                }
+            }
+        }
+    }
+</script>
+<style>
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 1;
+  }
+</style>
+</head>
+<body class="bg-[#f2dc87] text-primary min-h-screen flex flex-col font-body-md" style="background-color: #f2dc87;">
+
+<!-- TopNavBar -->
+<header class="w-full top-0 sticky bg-[#f2dc87] text-primary z-50 border-b border-primary/10">
+  <div class="flex justify-between items-center px-6 md:px-12 py-5 max-w-6xl mx-auto">
+    <!-- Brand Logo -->
+    <a class="font-display-lg text-2xl text-primary tracking-tight flex items-center gap-2" href="index.html">
+      <img alt="Arias Unlocked Logo" class="h-9 w-9 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdKVTjZIq1S0DBO4UoJSfbwTglYCiIRWt_6-hmiYbOZRRLPJ9zTsnTkorQAzRoBk0w16OB4ZO-wtqnq5EKo-eQBvKcQ3z2rqcNGrrdD_BI6FFgFha1W0RUBW8VIjdqydhmmLtHhIxcDCByxMvLXsEScmqyGH7eyK18vEykEmq1JcDhlwNz8Hf3czH8Rlmh31x-lFcURrIw6g1S6dJVdhm0RMwWK0Z5CoidP7YPUHhbSOEt8b6I7Yyc8tbRpueumI7Zl3WH7uUGTtoDWA">
+      <span>Arias Unlocked</span>
+    </a>
+    
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex gap-8 items-center">
+      <a class="text-on-surface-variant font-label-md hover:text-primary transition-colors uppercase tracking-widest text-xs" href="songs.html">Songs</a>
+      <a class="text-on-surface-variant font-label-md hover:text-primary transition-colors uppercase tracking-widest text-xs" href="blog.html">Blog</a>
+      <a class="text-primary font-bold border-b-2 border-primary pb-1 uppercase tracking-widest text-xs" href="donate.html">Donate</a>
+      <a class="text-on-surface-variant font-label-md hover:text-primary transition-colors uppercase tracking-widest text-xs" href="about.html">About Me</a>
+    </nav>
+    
+    <!-- Actions -->
+    <div class="flex items-center gap-3">
+      <a href="blog.html" class="inline-flex items-center gap-1.5 px-4 py-2 bg-primary text-white rounded-lg font-label-md text-xs uppercase tracking-wider hover:bg-neutral-800 transition-colors">
+        <span class="material-symbols-outlined text-sm">menu_book</span>
+        <span>The Green Room</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- Main Container -->
+<main class="flex-grow max-w-5xl mx-auto w-full px-6 md:px-12 py-12 flex flex-col gap-12">
+  
+  <!-- Hero Section -->
+  <section class="bg-white border border-primary/10 rounded-lg p-8 md:p-12 shadow-sm text-center flex flex-col items-center gap-4">
+    <div class="w-14 h-14 rounded-lg bg-amber-100 text-amber-800 flex items-center justify-center font-bold text-2xl mb-1">
+      <span class="material-symbols-outlined text-3xl">volunteer_activism</span>
+    </div>
+    <span class="text-xs uppercase tracking-widest font-bold text-amber-900 bg-amber-50 px-3 py-1 rounded border border-amber-200">Arias Unlocked Patron Initiative</span>
+    <h1 class="font-display-lg text-3xl md:text-5xl text-primary tracking-tight max-w-2xl">
+      Support the Immortal Art of Opera
+    </h1>
+    <p class="font-body-md text-base text-gray-700 max-w-2xl leading-relaxed">
+      Arias Unlocked dedicates 100% of community contributions to supporting the <strong>Metropolitan Opera (The Met)</strong>, <strong>LA Opera</strong>, <strong>San Francisco Opera</strong>, <strong>Lyric Opera of Chicago</strong>, and preserving world-class classical vocal heritage.
+    </p>
+  </section>
+
+  <!-- Partner Opera Houses Cards -->
+  <section class="flex flex-col gap-6">
+    <div class="flex items-center justify-between border-b border-primary/10 pb-3">
+      <h2 class="font-display-lg text-2xl text-primary">Operas Supported by Arias Unlocked</h2>
+      <span class="text-xs text-gray-600 font-medium">5 Historic Opera Companies</span>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- The Met -->
+      <div class="bg-white border border-primary/10 rounded-lg p-6 shadow-sm flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-bold uppercase tracking-wider text-amber-900 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">New York</span>
+            <span class="material-symbols-outlined text-amber-700 text-lg">theater_comedy</span>
+          </div>
+          <h3 class="font-display-lg text-xl text-primary mb-2">The Metropolitan Opera</h3>
+          <p class="text-xs text-gray-600 leading-relaxed mb-4">
+            Lincoln Center Plaza, NYC. Funding supports high-definition live archival recordings and the Lindemann Young Artist Development Program for emerging opera stars.
+          </p>
+        </div>
+        <div class="pt-3 border-t border-gray-100 flex items-center justify-between text-xs">
+          <span class="font-semibold text-gray-800">Founded 1883</span>
+          <a href="https://www.metopera.org" target="_blank" class="text-primary hover:underline font-semibold flex items-center gap-1">
+            Official Site <span class="material-symbols-outlined text-xs">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- LA Opera -->
+      <div class="bg-white border border-primary/10 rounded-lg p-6 shadow-sm flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-bold uppercase tracking-wider text-amber-900 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">Los Angeles</span>
+            <span class="material-symbols-outlined text-amber-700 text-lg">music_note</span>
+          </div>
+          <h3 class="font-display-lg text-xl text-primary mb-2">LA Opera</h3>
+          <p class="text-xs text-gray-600 leading-relaxed mb-4">
+            Dorothy Chandler Pavilion, Los Angeles. Contributions assist the Domingo-Colburn-Stein Young Artist program and youth classical vocal outreach in Southern California.
+          </p>
+        </div>
+        <div class="pt-3 border-t border-gray-100 flex items-center justify-between text-xs">
+          <span class="font-semibold text-gray-800">Founded 1986</span>
+          <a href="https://www.laopera.org" target="_blank" class="text-primary hover:underline font-semibold flex items-center gap-1">
+            Official Site <span class="material-symbols-outlined text-xs">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- SF Opera -->
+      <div class="bg-white border border-primary/10 rounded-lg p-6 shadow-sm flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-bold uppercase tracking-wider text-amber-900 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">San Francisco</span>
+            <span class="material-symbols-outlined text-amber-700 text-lg">auto_stories</span>
+          </div>
+          <h3 class="font-display-lg text-xl text-primary mb-2">San Francisco Opera</h3>
+          <p class="text-xs text-gray-600 leading-relaxed mb-4">
+            War Memorial Opera House. Supports historic orchestral preservation, acoustic preservation, and educational community masterclasses for aspiring vocalists.
+          </p>
+        </div>
+        <div class="pt-3 border-t border-gray-100 flex items-center justify-between text-xs">
+          <span class="font-semibold text-gray-800">Founded 1923</span>
+          <a href="https://sfopera.com" target="_blank" class="text-primary hover:underline font-semibold flex items-center gap-1">
+            Official Site <span class="material-symbols-outlined text-xs">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Lyric Opera of Chicago -->
+      <div class="bg-white border border-primary/10 rounded-lg p-6 shadow-sm flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-bold uppercase tracking-wider text-amber-900 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">Chicago</span>
+            <span class="material-symbols-outlined text-amber-700 text-lg">stadium</span>
+          </div>
+          <h3 class="font-display-lg text-xl text-primary mb-2">Lyric Opera of Chicago</h3>
+          <p class="text-xs text-gray-600 leading-relaxed mb-4">
+            Civic Opera Building, Chicago. Supporting The Ryan Opera Center, an internationally recognized artist training center for the next generation of classical performers.
+          </p>
+        </div>
+        <div class="pt-3 border-t border-gray-100 flex items-center justify-between text-xs">
+          <span class="font-semibold text-gray-800">Founded 1954</span>
+          <a href="https://www.lyricopera.org" target="_blank" class="text-primary hover:underline font-semibold flex items-center gap-1">
+            Official Site <span class="material-symbols-outlined text-xs">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Royal Opera House -->
+      <div class="bg-white border border-primary/10 rounded-lg p-6 shadow-sm flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-bold uppercase tracking-wider text-amber-900 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">London, UK</span>
+            <span class="material-symbols-outlined text-amber-700 text-lg">castle</span>
+          </div>
+          <h3 class="font-display-lg text-xl text-primary mb-2">Royal Opera House</h3>
+          <p class="text-xs text-gray-600 leading-relaxed mb-4">
+            Covent Garden, London. Providing international vocal apprenticeships and score restoration for timeless classical bel canto masterworks.
+          </p>
+        </div>
+        <div class="pt-3 border-t border-gray-100 flex items-center justify-between text-xs">
+          <span class="font-semibold text-gray-800">Founded 1732</span>
+          <a href="https://www.roh.org.uk" target="_blank" class="text-primary hover:underline font-semibold flex items-center gap-1">
+            Official Site <span class="material-symbols-outlined text-xs">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- General Operatic Heritage Fund -->
+      <div class="bg-white border border-primary/10 rounded-lg p-6 shadow-sm flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-bold uppercase tracking-wider text-emerald-900 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">Global Heritage</span>
+            <span class="material-symbols-outlined text-emerald-700 text-lg">verified</span>
+          </div>
+          <h3 class="font-display-lg text-xl text-primary mb-2">Young Vocalist Grants</h3>
+          <p class="text-xs text-gray-600 leading-relaxed mb-4">
+            Direct score stipends, masterclass bursaries, and vocal audition travel subsidies for talented singers studying Italian, French, and German opera repertoire.
+          </p>
+        </div>
+        <div class="pt-3 border-t border-gray-100 flex items-center justify-between text-xs">
+          <span class="font-semibold text-emerald-700">100% Impact Ratio</span>
+          <span class="text-gray-500 font-medium">Arias Unlocked Fund</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Donation Form -->
+  <section class="bg-white border border-primary/10 rounded-lg p-8 md:p-10 shadow-sm max-w-3xl mx-auto w-full">
+    <div class="text-center mb-8">
+      <h2 class="font-display-lg text-2xl md:text-3xl text-primary">Make a Tax-Deductible Contribution</h2>
+      <p class="text-xs text-gray-600 mt-1">Select a contribution tier to support opera preservation and earn +100 Patron XP</p>
+    </div>
+
+    <form id="donation-form" onsubmit="handleDonationSubmit(event)" class="flex flex-col gap-6">
+      <!-- Preset Amounts -->
+      <div>
+        <label class="block text-xs uppercase tracking-wider font-bold text-gray-700 mb-2">Select Donation Amount</label>
+        <div class="grid grid-cols-3 sm:grid-cols-5 gap-3" id="amount-presets">
+          <button type="button" onclick="selectDonationAmount(10)" class="donation-btn py-3 border border-gray-300 rounded-lg text-sm font-bold text-gray-800 hover:border-black transition-colors" data-amount="10">$10</button>
+          <button type="button" onclick="selectDonationAmount(25)" class="donation-btn py-3 border-2 border-black bg-black text-white rounded-lg text-sm font-bold transition-colors" data-amount="25">$25</button>
+          <button type="button" onclick="selectDonationAmount(50)" class="donation-btn py-3 border border-gray-300 rounded-lg text-sm font-bold text-gray-800 hover:border-black transition-colors" data-amount="50">$50</button>
+          <button type="button" onclick="selectDonationAmount(100)" class="donation-btn py-3 border border-gray-300 rounded-lg text-sm font-bold text-gray-800 hover:border-black transition-colors" data-amount="100">$100</button>
+          <button type="button" onclick="selectDonationAmount(250)" class="donation-btn py-3 border border-gray-300 rounded-lg text-sm font-bold text-gray-800 hover:border-black transition-colors" data-amount="250">$250</button>
+        </div>
+      </div>
+
+      <!-- Custom Amount & Designation -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-xs uppercase tracking-wider font-bold text-gray-700 mb-1">Custom Amount ($ USD)</label>
+          <div class="relative">
+            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 font-bold text-sm">$</span>
+            <input type="number" id="custom-donation-amount" min="5" placeholder="Other amount" class="w-full pl-8 pr-4 py-2.5 rounded-lg border border-gray-300 focus:outline-none focus:border-black text-sm font-medium">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs uppercase tracking-wider font-bold text-gray-700 mb-1">Designate Support To</label>
+          <select id="donation-target" class="w-full px-3 py-2.5 rounded-lg border border-gray-300 focus:outline-none focus:border-black text-sm bg-white text-gray-800">
+            <option value="met_and_la">The Met &amp; LA Opera (Balanced Fund)</option>
+            <option value="met">The Metropolitan Opera (New York)</option>
+            <option value="la_opera">LA Opera (Los Angeles)</option>
+            <option value="all_partners">All 5 Partner Opera Houses Equally</option>
+            <option value="young_artists">Young Artist Fellowships &amp; Scores</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Donor Info -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-xs uppercase tracking-wider font-bold text-gray-700 mb-1">Your Full Name</label>
+          <input required type="text" id="donor-name" placeholder="Antonio" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:outline-none focus:border-black text-sm">
+        </div>
+        <div>
+          <label class="block text-xs uppercase tracking-wider font-bold text-gray-700 mb-1">Email Address</label>
+          <input required type="email" id="donor-email" placeholder="antonio27181019@gmail.com" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:outline-none focus:border-black text-sm">
+        </div>
+      </div>
+
+      <!-- Payment Method Simulation -->
+      <div>
+        <label class="block text-xs uppercase tracking-wider font-bold text-gray-700 mb-2">Simulated Secure Payment Method</label>
+        <div class="grid grid-cols-3 gap-3">
+          <label class="border border-gray-300 rounded-lg p-3 flex items-center gap-2 cursor-pointer hover:border-black">
+            <input type="radio" name="payment_method" value="card" checked class="text-black focus:ring-black">
+            <span class="text-xs font-semibold text-gray-800">Credit / Debit</span>
+          </label>
+          <label class="border border-gray-300 rounded-lg p-3 flex items-center gap-2 cursor-pointer hover:border-black">
+            <input type="radio" name="payment_method" value="googlepay" class="text-black focus:ring-black">
+            <span class="text-xs font-semibold text-gray-800">Google Pay</span>
+          </label>
+          <label class="border border-gray-300 rounded-lg p-3 flex items-center gap-2 cursor-pointer hover:border-black">
+            <input type="radio" name="payment_method" value="paypal" class="text-black focus:ring-black">
+            <span class="text-xs font-semibold text-gray-800">PayPal</span>
+          </label>
+        </div>
+      </div>
+
+      <button type="submit" class="w-full py-3.5 bg-primary text-white rounded-lg font-label-md text-xs uppercase tracking-widest hover:bg-neutral-800 transition-colors cursor-pointer shadow-sm mt-2 flex items-center justify-center gap-2">
+        <span class="material-symbols-outlined text-base">favorite</span>
+        <span id="donate-submit-btn-text">Complete $25 Contribution to The Met &amp; LA Opera</span>
+      </button>
+
+      <p class="text-[11px] text-gray-500 text-center">
+        🔒 Simulated patron transaction. Thank you for championing live opera! Contact: <a href="mailto:antonio27181019@gmail.com" class="underline">antonio27181019@gmail.com</a>
+      </p>
+    </form>
+
+    <!-- Success Confirmation Modal -->
+    <div id="donation-success-modal" class="hidden fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4">
+      <div class="bg-white border border-primary/20 rounded-lg max-w-md w-full p-8 text-center flex flex-col gap-4 shadow-xl">
+        <div class="w-16 h-16 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center mx-auto text-3xl">
+          <span class="material-symbols-outlined text-4xl">verified</span>
+        </div>
+        <h3 class="font-display-lg text-2xl text-primary">Bravo! Thank You for Your Support</h3>
+        <p id="donation-receipt-text" class="text-xs text-gray-700 leading-relaxed">
+          Your contribution has been received. You have been awarded the <strong>Patron of the Opera</strong> badge and <strong>+100 XP</strong> on Arias Unlocked!
+        </p>
+        <div class="p-3 bg-amber-50 rounded-lg border border-amber-200 text-xs text-amber-900 font-medium">
+          A receipt has been recorded for <span id="donation-confirm-email" class="font-bold"></span>.
+        </div>
+        <div class="flex gap-3 justify-center mt-2">
+          <a href="blog.html" class="px-5 py-2.5 bg-primary text-white rounded-lg text-xs font-bold uppercase tracking-wider hover:bg-neutral-800 transition-colors">
+            Return to The Green Room
+          </a>
+          <button onclick="document.getElementById('donation-success-modal').classList.add('hidden')" class="px-5 py-2.5 border border-gray-300 rounded-lg text-xs font-semibold hover:bg-gray-50">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-[#f2dc87] border-t border-primary/10 py-10 w-full mt-auto">
+  <div class="max-w-6xl mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center gap-6">
+    <div class="text-center md:text-left">
+      <span class="font-display-lg text-xl text-primary">Arias Unlocked</span>
+      <p class="font-body-md text-xs text-gray-700 mt-1">Dedicated to classical singing, opera preservation, and young artists.</p>
+    </div>
+    <div class="flex gap-6 items-center text-xs">
+      <a class="text-gray-700 hover:text-primary transition-colors" href="index.html">Home</a>
+      <a class="text-gray-700 hover:text-primary transition-colors" href="songs.html">Songs</a>
+      <a class="text-gray-700 hover:text-primary transition-colors" href="blog.html">Blog</a>
+      <a class="text-primary font-bold transition-colors" href="donate.html">Donate</a>
+      <a class="text-gray-700 hover:text-primary transition-colors" href="about.html">About Me</a>
+      <a class="text-gray-700 hover:text-primary transition-colors" href="mailto:antonio27181019@gmail.com">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  let selectedAmount = 25;
+
+  function selectDonationAmount(amt) {
+    selectedAmount = amt;
+    const customInput = document.getElementById('custom-donation-amount');
+    if (customInput) customInput.value = '';
+
+    document.querySelectorAll('.donation-btn').forEach(btn => {
+      const bAmt = parseInt(btn.getAttribute('data-amount'), 10);
+      if (bAmt === amt) {
+        btn.className = "donation-btn py-3 border-2 border-black bg-black text-white rounded-lg text-sm font-bold transition-colors";
+      } else {
+        btn.className = "donation-btn py-3 border border-gray-300 rounded-lg text-sm font-bold text-gray-800 hover:border-black transition-colors";
+      }
+    });
+
+    updateSubmitBtnText();
+  }
+
+  const customInput = document.getElementById('custom-donation-amount');
+  if (customInput) {
+    customInput.addEventListener('input', (e) => {
+      const val = parseFloat(e.target.value);
+      if (!isNaN(val) && val > 0) {
+        selectedAmount = val;
+        document.querySelectorAll('.donation-btn').forEach(btn => {
+          btn.className = "donation-btn py-3 border border-gray-300 rounded-lg text-sm font-bold text-gray-800 hover:border-black transition-colors";
+        });
+        updateSubmitBtnText();
+      }
+    });
+  }
+
+  const targetSelect = document.getElementById('donation-target');
+  if (targetSelect) {
+    targetSelect.addEventListener('change', updateSubmitBtnText);
+  }
+
+  function updateSubmitBtnText() {
+    const btnText = document.getElementById('donate-submit-btn-text');
+    const targetText = targetSelect ? targetSelect.options[targetSelect.selectedIndex].text : 'The Met & LA Opera';
+    if (btnText) {
+      btnText.textContent = `Complete $${selectedAmount} Contribution to ${targetText}`;
+    }
+  }
+
+  function handleDonationSubmit(e) {
+    e.preventDefault();
+    const name = document.getElementById('donor-name').value;
+    const email = document.getElementById('donor-email').value;
+    const target = targetSelect.value;
+
+    // Award +100 XP
+    let currentXP = parseInt(localStorage.getItem('arias_user_xp') || '0', 10);
+    currentXP += 100;
+    localStorage.setItem('arias_user_xp', currentXP);
+
+    // Record donation
+    const donations = JSON.parse(localStorage.getItem('arias_donations') || '[]');
+    donations.push({ name, email, amount: selectedAmount, target, date: new Date().toISOString() });
+    localStorage.setItem('arias_donations', JSON.stringify(donations));
+    localStorage.setItem('arias_is_patron', 'true');
+
+    // Show modal
+    document.getElementById('donation-confirm-email').textContent = email;
+    document.getElementById('donation-receipt-text').innerHTML = `Thank you, <strong>${name}</strong>! Your contribution of <strong>$${selectedAmount}</strong> has been allocated. You have earned <strong>+100 Patron XP</strong> and your Patron status has been activated!`;
+    document.getElementById('donation-success-modal').classList.remove('hidden');
+  }
+
+  // Pre-fill email if stored
+  document.addEventListener('DOMContentLoaded', () => {
+    const user = JSON.parse(localStorage.getItem('arias_user') || '{}');
+    const googleUser = localStorage.getItem('arias_google_user');
+    if (googleUser && document.getElementById('donor-email')) {
+      document.getElementById('donor-email').value = googleUser;
+      if (googleUser === 'antonio27181019@gmail.com') {
+        document.getElementById('donor-name').value = 'Antonio';
+      }
+    } else if (user.email && document.getElementById('donor-email')) {
+      document.getElementById('donor-email').value = user.email;
+      if (user.name) document.getElementById('donor-name').value = user.name;
+    }
+  });
+</script>
+</body>
+</html>

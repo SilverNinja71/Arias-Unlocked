@@ -114,6 +114,7 @@
     <nav class="hidden md:flex space-x-8 items-center">
       <a class="text-on-surface-variant font-label-md hover:text-primary transition-colors duration-200 uppercase tracking-widest text-sm" href="songs.html">Songs</a>
       <a class="text-on-surface-variant font-label-md hover:text-primary transition-colors duration-200 uppercase tracking-widest text-sm" href="blog.html">Blog</a>
+      <a class="text-on-surface-variant font-label-md hover:text-primary transition-colors duration-200 uppercase tracking-widest text-sm" href="donate.html">Donate</a>
       <a class="text-primary font-bold border-b-2 border-primary pb-1 uppercase tracking-widest text-sm" href="about.html">About Me</a>
     </nav>
     
@@ -130,6 +131,7 @@
   <div id="mobile-menu" class="hidden md:hidden px-6 pb-6 pt-2 bg-background border-b border-secondary/20 flex flex-col gap-3">
     <a class="text-primary font-semibold py-2 border-b border-secondary/10" href="songs.html">Songs</a>
     <a class="text-primary font-semibold py-2 border-b border-secondary/10" href="blog.html">Blog</a>
+    <a class="text-primary font-semibold py-2 border-b border-secondary/10" href="donate.html">Donate</a>
     <a class="text-primary font-bold py-2 border-b border-secondary/10" href="about.html">About Me</a>
     <button class="join-trigger w-full bg-primary text-white py-2.5 rounded-full font-label-md uppercase tracking-wider text-sm mt-2">
       Join Now
@@ -190,30 +192,35 @@
     <div class="text-center mb-8">
       <h2 class="font-headline-lg text-2xl md:text-3xl text-primary">Suggest an Aria or Say Hello</h2>
       <p class="text-sm text-gray-600 mt-2">Have a favorite piece you'd like unlocked with lyrics and analysis?</p>
+      <p class="text-xs text-gray-500 mt-2">
+        Or reach out directly at <a href="mailto:antonio27181019@gmail.com" class="text-primary font-semibold underline">antonio27181019@gmail.com</a>
+      </p>
     </div>
     <form id="suggest-form" onsubmit="handleSuggestSubmit(event)" class="flex flex-col gap-4">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
           <label class="block text-xs uppercase tracking-wider font-semibold text-gray-600 mb-1">Your Name</label>
-          <input required type="text" class="w-full px-4 py-3 rounded-xl border border-secondary/30 focus:outline-none focus:border-primary text-sm" placeholder="Antonio">
+          <input required id="suggest-name" type="text" class="w-full px-5 py-3.5 rounded-xl border border-secondary/30 focus:outline-none focus:border-primary text-sm tracking-wide placeholder:tracking-wide" placeholder="Antonio">
         </div>
         <div>
           <label class="block text-xs uppercase tracking-wider font-semibold text-gray-600 mb-1">Your Email</label>
-          <input required type="email" class="w-full px-4 py-3 rounded-xl border border-secondary/30 focus:outline-none focus:border-primary text-sm" placeholder="you@example.com">
+          <input required id="suggest-email" type="email" class="w-full px-5 py-3.5 rounded-xl border border-secondary/30 focus:outline-none focus:border-primary text-sm tracking-wide placeholder:tracking-wide" placeholder="you@example.com">
         </div>
       </div>
       <div>
         <label class="block text-xs uppercase tracking-wider font-semibold text-gray-600 mb-1">Song / Composer Suggestion or Message</label>
-        <textarea required rows="4" class="w-full px-4 py-3 rounded-xl border border-secondary/30 focus:outline-none focus:border-primary text-sm" placeholder="Tell us what you'd like to hear or learn about..."></textarea>
+        <textarea required id="suggest-message" rows="4" class="w-full px-5 py-3.5 rounded-xl border border-secondary/30 focus:outline-none focus:border-primary text-sm tracking-wider placeholder:tracking-wider leading-relaxed" placeholder="Tell us what you'd like to hear or learn about..."></textarea>
       </div>
       <button type="submit" class="w-full py-3.5 bg-primary text-white rounded-full font-label-md uppercase tracking-wider hover:bg-neutral-800 transition-colors cursor-pointer text-xs">
-        Submit Suggestion
+        Send via Email
       </button>
     </form>
     <div id="suggest-success" class="hidden text-center py-6">
-      <span class="material-symbols-outlined text-4xl text-emerald-600 mb-2">check_circle</span>
-      <h4 class="font-bold text-lg text-primary">Thank you for your note!</h4>
-      <p class="text-sm text-gray-600 mt-1">We'll review your suggested aria and feature it soon.</p>
+      <span class="material-symbols-outlined text-4xl text-emerald-600 mb-2">mark_email_read</span>
+      <h4 class="font-bold text-lg text-primary">Opening your email app!</h4>
+      <p class="text-sm text-gray-600 mt-1">Your suggestion was prepared to send to <span class="font-semibold text-primary">antonio27181019@gmail.com</span>.</p>
+      <p class="text-xs text-gray-500 mt-2">Didn't open automatically? <a id="suggest-fallback-link" href="mailto:antonio27181019@gmail.com" class="text-primary underline font-medium">Click here to send directly</a></p>
+      <button onclick="resetSuggestForm()" class="mt-4 px-6 py-2 bg-primary text-white rounded-full text-xs uppercase tracking-wider cursor-pointer">Send Another</button>
     </div>
   </section>
 </main>
@@ -229,6 +236,7 @@
       <a class="text-on-surface-variant hover:text-primary font-label-md text-sm transition-colors" href="index.html">Home</a>
       <a class="text-on-surface-variant hover:text-primary font-label-md text-sm transition-colors" href="songs.html">Songs</a>
       <a class="text-on-surface-variant hover:text-primary font-label-md text-sm transition-colors" href="blog.html">Blog</a>
+      <a class="text-on-surface-variant hover:text-primary font-label-md text-sm transition-colors" href="mailto:antonio27181019@gmail.com">Contact</a>
       <button class="join-trigger text-on-surface-variant hover:text-primary font-label-md text-sm transition-colors">Join</button>
     </div>
   </div>
@@ -241,30 +249,32 @@
       <span class="material-symbols-outlined">close</span>
     </button>
     <div class="text-center mb-6">
-      <span class="material-symbols-outlined text-4xl text-primary mb-2">music_note</span>
-      <h3 class="font-display-lg text-2xl text-primary">Join Arias Unlocked</h3>
+      <span class="material-symbols-outlined text-4xl text-primary mb-2">mark_email_unread</span>
+      <h3 class="font-display-lg text-2xl text-primary">Monthly Singing Paper</h3>
       <p class="font-body-md text-sm text-on-surface-variant mt-2">
-        Become part of our youth community decoding opera and classical music.
+        Join our Gmail group to receive our monthly paper for singing directly from <span class="font-semibold text-primary">antonio27181019@gmail.com</span>. Strictly singing emails—no Google Chat, no spam.
       </p>
     </div>
     <form id="join-form" onsubmit="handleJoinSubmit(event)" class="flex flex-col gap-4">
       <div>
         <label class="block text-xs uppercase tracking-wider font-semibold text-gray-600 mb-1">Your Name</label>
-        <input required type="text" id="join-name" placeholder="e.g. Antonio" class="w-full px-4 py-3 rounded-xl border border-secondary/30 focus:outline-none focus:border-primary">
+        <input required type="text" id="join-name" placeholder="Antonio" class="w-full px-4 py-3 rounded-xl border border-secondary/30 focus:outline-none focus:border-primary">
       </div>
       <div>
         <label class="block text-xs uppercase tracking-wider font-semibold text-gray-600 mb-1">Email Address</label>
         <input required type="email" id="join-email" placeholder="you@example.com" class="w-full px-4 py-3 rounded-xl border border-secondary/30 focus:outline-none focus:border-primary">
       </div>
-      <button type="submit" class="w-full py-3.5 bg-primary text-white rounded-full font-label-md uppercase tracking-wider hover:bg-neutral-800 transition-colors mt-2">
-        Join Free Today
+      <button type="submit" class="w-full py-3.5 bg-primary text-white rounded-full font-label-md uppercase tracking-wider hover:bg-neutral-800 transition-colors mt-2 cursor-pointer">
+        Join Monthly Singing Paper Group
       </button>
+      <p class="text-[11px] text-gray-500 text-center">Managed by Antonio · <a href="mailto:antonio27181019@gmail.com" class="text-primary underline font-medium">antonio27181019@gmail.com</a></p>
     </form>
     <div id="join-success" class="hidden text-center py-6">
-      <span class="material-symbols-outlined text-5xl text-emerald-600 mb-2">check_circle</span>
-      <h4 class="font-bold text-lg text-primary">Welcome to the family!</h4>
-      <p class="text-sm text-gray-600 mt-1">Check your inbox for your beginner's classical repertoire pack.</p>
-      <button onclick="closeJoinModal()" class="mt-4 px-6 py-2 bg-primary text-white rounded-full text-xs uppercase tracking-wider">Close</button>
+      <span class="material-symbols-outlined text-5xl text-emerald-600 mb-2">mark_email_read</span>
+      <h4 class="font-bold text-lg text-primary">You're on the list!</h4>
+      <p class="text-sm text-gray-600 mt-1">Preparing your subscription for the monthly singing paper from <span class="font-semibold text-primary">antonio27181019@gmail.com</span>.</p>
+      <p class="text-xs text-gray-500 mt-2">Didn't open? <a id="join-fallback-link" href="mailto:antonio27181019@gmail.com" class="text-primary underline font-medium">Click here to send subscription email</a></p>
+      <button onclick="closeJoinModal()" class="mt-4 px-6 py-2 bg-primary text-white rounded-full text-xs uppercase tracking-wider cursor-pointer">Close</button>
     </div>
   </div>
 </div>
@@ -282,8 +292,31 @@
   // Suggest Form
   function handleSuggestSubmit(e) {
     e.preventDefault();
+    const name = document.getElementById('suggest-name').value;
+    const email = document.getElementById('suggest-email').value;
+    const message = document.getElementById('suggest-message').value;
+
+    const subject = encodeURIComponent(`Arias Unlocked Suggestion from ${name}`);
+    const body = encodeURIComponent(`From: ${name} (${email})\n\nSuggestion / Message:\n${message}`);
+    const mailtoUrl = `mailto:antonio27181019@gmail.com?subject=${subject}&body=${body}`;
+
+    window.location.href = mailtoUrl;
+
+    const fallbackLink = document.getElementById('suggest-fallback-link');
+    if (fallbackLink) fallbackLink.href = mailtoUrl;
+
     document.getElementById('suggest-form').classList.add('hidden');
     document.getElementById('suggest-success').classList.remove('hidden');
+  }
+
+  function resetSuggestForm() {
+    const form = document.getElementById('suggest-form');
+    if (form) {
+      form.reset();
+      form.classList.remove('hidden');
+    }
+    const success = document.getElementById('suggest-success');
+    if (success) success.classList.add('hidden');
   }
 
   // Join Modal
@@ -306,6 +339,22 @@
     const name = document.getElementById('join-name').value;
     const email = document.getElementById('join-email').value;
     localStorage.setItem('arias_user', JSON.stringify({ name, email }));
+
+    const subscribers = JSON.parse(localStorage.getItem('arias_monthly_paper_subscribers') || '[]');
+    if (!subscribers.find(s => s.email === email)) {
+      subscribers.push({ name, email, date: new Date().toISOString() });
+      localStorage.setItem('arias_monthly_paper_subscribers', JSON.stringify(subscribers));
+    }
+
+    const subject = encodeURIComponent(`Subscribe to Monthly Singing Paper: ${name}`);
+    const body = encodeURIComponent(`Hi Antonio,\n\nPlease add my email to the Arias Unlocked Monthly Singing Paper group on Gmail:\nName: ${name}\nEmail: ${email}\n\nNote: For classical singing paper emails only from antonio27181019@gmail.com (no Google Chat).`);
+    const mailtoUrl = `mailto:antonio27181019@gmail.com?subject=${subject}&body=${body}`;
+
+    window.location.href = mailtoUrl;
+
+    const fallbackLink = document.getElementById('join-fallback-link');
+    if (fallbackLink) fallbackLink.href = mailtoUrl;
+
     document.getElementById('join-form').classList.add('hidden');
     document.getElementById('join-success').classList.remove('hidden');
   };
