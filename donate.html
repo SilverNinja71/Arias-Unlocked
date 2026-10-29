@@ -69,11 +69,22 @@
     
     <!-- Actions -->
     <div class="flex items-center gap-3">
-      <a href="blog.html" class="inline-flex items-center gap-1.5 px-4 py-2 bg-primary text-white rounded-lg font-label-md text-xs uppercase tracking-wider hover:bg-neutral-800 transition-colors">
+      <a href="blog.html" class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 bg-primary text-white rounded-lg font-label-md text-xs uppercase tracking-wider hover:bg-neutral-800 transition-colors">
         <span class="material-symbols-outlined text-sm">menu_book</span>
         <span>The Green Room</span>
       </a>
+      <button id="mobile-menu-btn" class="md:hidden text-primary p-2" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
     </div>
+  </div>
+
+  <!-- Mobile Dropdown -->
+  <div id="mobile-menu" class="hidden md:hidden px-6 pb-6 pt-2 border-b border-primary/10 flex flex-col gap-3">
+    <a class="text-primary font-semibold py-2 border-b border-primary/10" href="songs.html">Songs</a>
+    <a class="text-primary font-semibold py-2 border-b border-primary/10" href="blog.html">Blog</a>
+    <a class="text-primary font-bold py-2 border-b border-primary/10" href="donate.html">Donate</a>
+    <a class="text-primary font-semibold py-2 border-b border-primary/10" href="about.html">About Me</a>
   </div>
 </header>
 
@@ -90,7 +101,7 @@
       Support the Immortal Art of Opera
     </h1>
     <p class="font-body-md text-base text-gray-700 max-w-2xl leading-relaxed">
-      Arias Unlocked dedicates 100% of community contributions to supporting the <strong>Metropolitan Opera (The Met)</strong>, <strong>LA Opera</strong>, <strong>San Francisco Opera</strong>, <strong>Lyric Opera of Chicago</strong>, and preserving world-class classical vocal heritage.
+      Arias Unlocked dedicates 100% of community contributions to supporting the <strong>Metropolitan Opera (The Met)</strong>, <strong>LA Opera</strong>, <strong>San Francisco Opera</strong>, <strong>Lyric Opera of Chicago</strong>, the <strong>Royal Opera House</strong>, and preserving world-class classical vocal heritage.
     </p>
   </section>
 
@@ -116,7 +127,7 @@
         </div>
         <div class="pt-3 border-t border-gray-100 flex items-center justify-between text-xs">
           <span class="font-semibold text-gray-800">Founded 1883</span>
-          <a href="https://www.metopera.org" target="_blank" class="text-primary hover:underline font-semibold flex items-center gap-1">
+          <a href="https://www.metopera.org" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline font-semibold flex items-center gap-1">
             Official Site <span class="material-symbols-outlined text-xs">arrow_forward</span>
           </a>
         </div>
@@ -136,7 +147,7 @@
         </div>
         <div class="pt-3 border-t border-gray-100 flex items-center justify-between text-xs">
           <span class="font-semibold text-gray-800">Founded 1986</span>
-          <a href="https://www.laopera.org" target="_blank" class="text-primary hover:underline font-semibold flex items-center gap-1">
+          <a href="https://www.laopera.org" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline font-semibold flex items-center gap-1">
             Official Site <span class="material-symbols-outlined text-xs">arrow_forward</span>
           </a>
         </div>
@@ -156,7 +167,7 @@
         </div>
         <div class="pt-3 border-t border-gray-100 flex items-center justify-between text-xs">
           <span class="font-semibold text-gray-800">Founded 1923</span>
-          <a href="https://sfopera.com" target="_blank" class="text-primary hover:underline font-semibold flex items-center gap-1">
+          <a href="https://sfopera.com" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline font-semibold flex items-center gap-1">
             Official Site <span class="material-symbols-outlined text-xs">arrow_forward</span>
           </a>
         </div>
@@ -176,7 +187,7 @@
         </div>
         <div class="pt-3 border-t border-gray-100 flex items-center justify-between text-xs">
           <span class="font-semibold text-gray-800">Founded 1954</span>
-          <a href="https://www.lyricopera.org" target="_blank" class="text-primary hover:underline font-semibold flex items-center gap-1">
+          <a href="https://www.lyricopera.org" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline font-semibold flex items-center gap-1">
             Official Site <span class="material-symbols-outlined text-xs">arrow_forward</span>
           </a>
         </div>
@@ -196,7 +207,7 @@
         </div>
         <div class="pt-3 border-t border-gray-100 flex items-center justify-between text-xs">
           <span class="font-semibold text-gray-800">Founded 1732</span>
-          <a href="https://www.roh.org.uk" target="_blank" class="text-primary hover:underline font-semibold flex items-center gap-1">
+          <a href="https://www.roh.org.uk" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline font-semibold flex items-center gap-1">
             Official Site <span class="material-symbols-outlined text-xs">arrow_forward</span>
           </a>
         </div>
@@ -225,14 +236,14 @@
   <!-- Interactive Donation Form -->
   <section class="bg-white border border-primary/10 rounded-lg p-8 md:p-10 shadow-sm max-w-3xl mx-auto w-full">
     <div class="text-center mb-8">
-      <h2 class="font-display-lg text-2xl md:text-3xl text-primary">Make a Tax-Deductible Contribution</h2>
-      <p class="text-xs text-gray-600 mt-1">Select a contribution tier to support opera preservation and earn +100 Patron XP</p>
+      <h2 class="font-display-lg text-2xl md:text-3xl text-primary">Pledge Your Support</h2>
+      <p class="text-xs text-gray-600 mt-1">Choose an amount and an opera house. You'll finish your gift on that company's official donation page; no payment is taken on Arias Unlocked.</p>
     </div>
 
     <form id="donation-form" onsubmit="handleDonationSubmit(event)" class="flex flex-col gap-6">
       <!-- Preset Amounts -->
       <div>
-        <label class="block text-xs uppercase tracking-wider font-bold text-gray-700 mb-2">Select Donation Amount</label>
+        <label class="block text-xs uppercase tracking-wider font-bold text-gray-700 mb-2">Select Pledge Amount</label>
         <div class="grid grid-cols-3 sm:grid-cols-5 gap-3" id="amount-presets">
           <button type="button" onclick="selectDonationAmount(10)" class="donation-btn py-3 border border-gray-300 rounded-lg text-sm font-bold text-gray-800 hover:border-black transition-colors" data-amount="10">$10</button>
           <button type="button" onclick="selectDonationAmount(25)" class="donation-btn py-3 border-2 border-black bg-black text-white rounded-lg text-sm font-bold transition-colors" data-amount="25">$25</button>
@@ -276,53 +287,34 @@
         </div>
       </div>
 
-      <!-- Payment Method Simulation -->
-      <div>
-        <label class="block text-xs uppercase tracking-wider font-bold text-gray-700 mb-2">Simulated Secure Payment Method</label>
-        <div class="grid grid-cols-3 gap-3">
-          <label class="border border-gray-300 rounded-lg p-3 flex items-center gap-2 cursor-pointer hover:border-black">
-            <input type="radio" name="payment_method" value="card" checked class="text-black focus:ring-black">
-            <span class="text-xs font-semibold text-gray-800">Credit / Debit</span>
-          </label>
-          <label class="border border-gray-300 rounded-lg p-3 flex items-center gap-2 cursor-pointer hover:border-black">
-            <input type="radio" name="payment_method" value="googlepay" class="text-black focus:ring-black">
-            <span class="text-xs font-semibold text-gray-800">Google Pay</span>
-          </label>
-          <label class="border border-gray-300 rounded-lg p-3 flex items-center gap-2 cursor-pointer hover:border-black">
-            <input type="radio" name="payment_method" value="paypal" class="text-black focus:ring-black">
-            <span class="text-xs font-semibold text-gray-800">PayPal</span>
-          </label>
-        </div>
-      </div>
-
       <button type="submit" class="w-full py-3.5 bg-primary text-white rounded-lg font-label-md text-xs uppercase tracking-widest hover:bg-neutral-800 transition-colors cursor-pointer shadow-sm mt-2 flex items-center justify-center gap-2">
         <span class="material-symbols-outlined text-base">favorite</span>
-        <span id="donate-submit-btn-text">Complete $25 Contribution to The Met &amp; LA Opera</span>
+        <span id="donate-submit-btn-text">Pledge $25 to The Met &amp; LA Opera</span>
       </button>
 
       <p class="text-[11px] text-gray-500 text-center">
-        🔒 Simulated patron transaction. Thank you for championing live opera! Contact: <a href="mailto:antonio27181019@gmail.com" class="underline">antonio27181019@gmail.com</a>
+        Arias Unlocked doesn't process payments. Your pledge is saved on this device and you'll be sent to the opera house to give. Questions: <a href="mailto:antonio27181019@gmail.com" class="underline">antonio27181019@gmail.com</a>
       </p>
     </form>
 
     <!-- Success Confirmation Modal -->
-    <div id="donation-success-modal" class="hidden fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4">
+    <div id="donation-success-modal" role="dialog" aria-modal="true" aria-labelledby="donation-modal-title" class="hidden fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4">
       <div class="bg-white border border-primary/20 rounded-lg max-w-md w-full p-8 text-center flex flex-col gap-4 shadow-xl">
         <div class="w-16 h-16 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center mx-auto text-3xl">
           <span class="material-symbols-outlined text-4xl">verified</span>
         </div>
-        <h3 class="font-display-lg text-2xl text-primary">Bravo! Thank You for Your Support</h3>
+        <h3 id="donation-modal-title" class="font-display-lg text-2xl text-primary">Bravo! Thank You for Your Support</h3>
         <p id="donation-receipt-text" class="text-xs text-gray-700 leading-relaxed">
-          Your contribution has been received. You have been awarded the <strong>Patron of the Opera</strong> badge and <strong>+100 XP</strong> on Arias Unlocked!
+          Your pledge is saved. No payment has been taken yet.
         </p>
         <div class="p-3 bg-amber-50 rounded-lg border border-amber-200 text-xs text-amber-900 font-medium">
-          A receipt has been recorded for <span id="donation-confirm-email" class="font-bold"></span>.
+          To complete your gift, donate on the official site: <span id="donation-confirm-links" class="font-bold"></span>
         </div>
         <div class="flex gap-3 justify-center mt-2">
           <a href="blog.html" class="px-5 py-2.5 bg-primary text-white rounded-lg text-xs font-bold uppercase tracking-wider hover:bg-neutral-800 transition-colors">
             Return to The Green Room
           </a>
-          <button onclick="document.getElementById('donation-success-modal').classList.add('hidden')" class="px-5 py-2.5 border border-gray-300 rounded-lg text-xs font-semibold hover:bg-gray-50">
+          <button type="button" id="donation-close-btn" onclick="closeDonationModal()" class="px-5 py-2.5 border border-gray-300 rounded-lg text-xs font-semibold hover:bg-gray-50">
             Close
           </button>
         </div>
@@ -374,7 +366,8 @@
   if (customInput) {
     customInput.addEventListener('input', (e) => {
       const val = parseFloat(e.target.value);
-      if (!isNaN(val) && val > 0) {
+      if (isNaN(val) || val <= 0) { selectDonationAmount(25); return; }
+      {
         selectedAmount = val;
         document.querySelectorAll('.donation-btn').forEach(btn => {
           btn.className = "donation-btn py-3 border border-gray-300 rounded-lg text-sm font-bold text-gray-800 hover:border-black transition-colors";
@@ -393,20 +386,44 @@
     const btnText = document.getElementById('donate-submit-btn-text');
     const targetText = targetSelect ? targetSelect.options[targetSelect.selectedIndex].text : 'The Met & LA Opera';
     if (btnText) {
-      btnText.textContent = `Complete $${selectedAmount} Contribution to ${targetText}`;
+      btnText.textContent = `Pledge $${selectedAmount} to ${targetText}`;
     }
+  }
+
+  const DONATE_LINKS = {
+    met: [['The Met', 'https://www.metopera.org/support/']],
+    la_opera: [['LA Opera', 'https://www.laopera.org/support/']],
+    met_and_la: [['The Met', 'https://www.metopera.org/support/'], ['LA Opera', 'https://www.laopera.org/support/']],
+    all_partners: [['The Met', 'https://www.metopera.org/support/'], ['LA Opera', 'https://www.laopera.org/support/'], ['SF Opera', 'https://www.sfopera.com/support/'], ['Lyric Opera', 'https://www.lyricopera.org/support/'], ['Royal Opera House', 'https://www.roh.org.uk/support-us']],
+    young_artists: [['The Met (Lindemann Young Artists)', 'https://www.metopera.org/support/']],
+  };
+
+  function closeDonationModal() {
+    document.getElementById('donation-success-modal').classList.add('hidden');
+  }
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeDonationModal(); });
+  const mobileBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  if (mobileBtn && mobileMenu) {
+    mobileBtn.addEventListener('click', () => {
+      const open = mobileMenu.classList.toggle('hidden') === false;
+      mobileBtn.setAttribute('aria-expanded', String(open));
+    });
   }
 
   function handleDonationSubmit(e) {
     e.preventDefault();
-    const name = document.getElementById('donor-name').value;
-    const email = document.getElementById('donor-email').value;
+    if (!(selectedAmount >= 5)) { alert('Please pledge at least $5.'); return; }
+    const name = document.getElementById('donor-name').value.trim();
+    const email = document.getElementById('donor-email').value.trim();
     const target = targetSelect.value;
 
-    // Award +100 XP
-    let currentXP = parseInt(localStorage.getItem('arias_user_xp') || '0', 10);
-    currentXP += 100;
-    localStorage.setItem('arias_user_xp', currentXP);
+    // Award Patron XP once per browser, not on every resubmit
+    if (localStorage.getItem('arias_is_patron') !== 'true') {
+      let currentXP = parseInt(localStorage.getItem('arias_user_xp') || '0', 10);
+      currentXP += 100;
+      localStorage.setItem('arias_user_xp', currentXP);
+    }
 
     // Record donation
     const donations = JSON.parse(localStorage.getItem('arias_donations') || '[]');
@@ -414,10 +431,21 @@
     localStorage.setItem('arias_donations', JSON.stringify(donations));
     localStorage.setItem('arias_is_patron', 'true');
 
-    // Show modal
-    document.getElementById('donation-confirm-email').textContent = email;
-    document.getElementById('donation-receipt-text').innerHTML = `Thank you, <strong>${name}</strong>! Your contribution of <strong>$${selectedAmount}</strong> has been allocated. You have earned <strong>+100 Patron XP</strong> and your Patron status has been activated!`;
+    // Show modal (built with textContent so names can't inject HTML)
+    const receipt = document.getElementById('donation-receipt-text');
+    receipt.textContent = '';
+    const strong = (t) => { const b = document.createElement('strong'); b.textContent = t; return b; };
+    receipt.append('Thank you, ', strong(name || 'friend'), '! Your pledge of ', strong('$' + selectedAmount), ' is saved and your Patron badge is active. No payment has been taken yet.');
+    const links = document.getElementById('donation-confirm-links');
+    links.textContent = '';
+    (DONATE_LINKS[target] || DONATE_LINKS.met).forEach(([label, url], i) => {
+      if (i) links.append(', ');
+      const a = document.createElement('a');
+      a.href = url; a.target = '_blank'; a.rel = 'noopener noreferrer'; a.className = 'underline'; a.textContent = label;
+      links.append(a);
+    });
     document.getElementById('donation-success-modal').classList.remove('hidden');
+    document.getElementById('donation-close-btn').focus();
   }
 
   // Pre-fill email if stored
