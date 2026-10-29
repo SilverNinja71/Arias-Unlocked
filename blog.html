@@ -81,6 +81,18 @@
   #gdocs-paper img { max-width: 100%; border-radius: 6px; margin: 14px 0; }
   #gdocs-paper:empty:before { content: "Start writing your essay here just like Google Docs..."; color: #9ca3af; }
 
+  /* Article reader typography (Tailwind preflight resets these) */
+  #reader-body-content h1 { font-size: 30px; line-height: 1.25; font-weight: 700; color: #111827; }
+  #reader-body-content h2 { font-size: 24px; line-height: 1.3; font-weight: 700; color: #1f2937; }
+  #reader-body-content h3 { font-size: 20px; line-height: 1.35; font-weight: 600; color: #1f2937; }
+  #reader-body-content ul { list-style-type: disc; margin-left: 24px; }
+  #reader-body-content ol { list-style-type: decimal; margin-left: 24px; }
+  #reader-body-content li { margin-bottom: 6px; }
+  #reader-body-content blockquote { border-left: 4px solid #d97706; padding-left: 16px; font-style: italic; color: #4b5563; }
+  #reader-body-content a { color: #1a73e8; text-decoration: underline; }
+  #reader-body-content hr { border: 0; border-top: 1px solid #e5e7eb; }
+  #reader-body-content img { max-width: 100%; border-radius: 6px; }
+
   /* Toast Notification */
   #xp-toast {
     transition: transform 0.3s ease, opacity 0.3s ease;
@@ -260,6 +272,7 @@
         <button class="blog-filter-btn px-4 py-1.5 rounded-lg bg-white border border-primary/10 text-gray-700 hover:border-black font-label-sm text-xs tracking-wider uppercase transition-all shadow-xs" data-filter="Interpretation">Interpretation</button>
         <button class="blog-filter-btn px-4 py-1.5 rounded-lg bg-white border border-primary/10 text-gray-700 hover:border-black font-label-sm text-xs tracking-wider uppercase transition-all shadow-xs" data-filter="Vocalization">Vocalization</button>
         <button class="blog-filter-btn px-4 py-1.5 rounded-lg bg-white border border-primary/10 text-gray-700 hover:border-black font-label-sm text-xs tracking-wider uppercase transition-all shadow-xs" data-filter="Repertoire">Repertoire</button>
+        <button class="blog-filter-btn px-4 py-1.5 rounded-lg bg-white border border-primary/10 text-gray-700 hover:border-black font-label-sm text-xs tracking-wider uppercase transition-all shadow-xs" data-filter="Tips">Tips</button>
       </div>
     </div>
   </header>
@@ -364,7 +377,7 @@
       <span class="font-display-lg text-xl text-primary">Arias Unlocked</span>
       <p class="font-body-md text-xs text-gray-700 mt-1">The Green Room essays &amp; classical music perspectives.</p>
     </div>
-    <div class="flex gap-6 items-center text-xs">
+    <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 items-center text-xs">
       <a class="text-gray-700 hover:text-primary transition-colors" href="index.html">Home</a>
       <a class="text-gray-700 hover:text-primary transition-colors" href="songs.html">Songs</a>
       <a class="text-primary font-bold transition-colors" href="blog.html">Blog</a>
@@ -399,7 +412,7 @@
         <span class="material-symbols-outlined text-sm text-red-500" id="reader-like-icon">favorite_border</span>
         <span id="reader-like-count-text">Like (0)</span>
       </button>
-      <button onclick="closeArticleReader()" class="p-1.5 hover:bg-black/10 rounded-lg text-gray-700 cursor-pointer">
+      <button onclick="closeArticleReader()" data-overlay-close aria-label="Close article" class="p-1.5 hover:bg-black/10 rounded-lg text-gray-700 cursor-pointer">
         <span class="material-symbols-outlined text-xl">close</span>
       </button>
     </div>
@@ -541,7 +554,7 @@
      ========================================== -->
 <div id="profile-drawer-modal" class="fixed inset-0 bg-black/60 z-[125] hidden flex items-center justify-center p-4">
   <div class="bg-white rounded-lg max-w-md w-full p-6 relative shadow-2xl border border-primary/20 max-h-[90vh] overflow-y-auto flex flex-col gap-5">
-    <button onclick="toggleProfileDrawer()" class="absolute top-4 right-4 text-gray-400 hover:text-black cursor-pointer">
+    <button onclick="toggleProfileDrawer()" data-overlay-close aria-label="Close profile" class="absolute top-4 right-4 text-gray-400 hover:text-black cursor-pointer">
       <span class="material-symbols-outlined">close</span>
     </button>
 
@@ -630,7 +643,7 @@
 <!-- Author Auth Modal (PIN-Protected for Antonio Only) -->
 <div id="author-auth-modal" class="fixed inset-0 bg-black/60 z-[115] hidden flex items-center justify-center p-4">
   <div class="bg-white rounded-lg max-w-sm w-full p-8 relative shadow-2xl border border-secondary/20">
-    <button onclick="closeAuthorAuthModal()" class="absolute top-5 right-5 text-gray-400 hover:text-black cursor-pointer">
+    <button onclick="closeAuthorAuthModal()" data-overlay-close aria-label="Close" class="absolute top-5 right-5 text-gray-400 hover:text-black cursor-pointer">
       <span class="material-symbols-outlined">close</span>
     </button>
     <div class="text-center mb-5">
@@ -916,29 +929,29 @@
   </div>
 
   <!-- Floating AI Review Bar (Bottom Right, Crisp Corners, Solid Colors) -->
-  <div id="ai-review-floating-bar" onclick="openAiReviewInspector()" class="fixed bottom-12 right-6 z-[130] bg-white border border-gray-300 shadow-lg rounded-lg p-3 cursor-pointer hover:border-black transition-all select-none group flex flex-col gap-1.5 w-72">
-    <div class="flex items-center justify-between">
-      <div class="flex items-center gap-2">
+  <button type="button" id="ai-review-floating-bar" onclick="openAiReviewInspector()" class="text-left fixed bottom-12 right-6 z-[130] bg-white border border-gray-300 shadow-lg rounded-lg p-3 cursor-pointer hover:border-black transition-all select-none group flex flex-col gap-1.5 w-72">
+    <span class="flex items-center justify-between">
+      <span class="flex items-center gap-2">
         <span class="w-6 h-6 rounded bg-indigo-100 text-indigo-700 flex items-center justify-center font-bold text-xs">
           <span class="material-symbols-outlined text-sm">auto_awesome</span>
         </span>
-        <div>
+        <span class="block">
           <span class="text-xs font-bold text-gray-900 tracking-tight flex items-center gap-1">
             AI Score: <span id="ai-score-label" class="text-amber-700 font-bold">42%</span>
           </span>
           <span id="ai-status-subtext" class="text-[10px] text-gray-600 block leading-tight">Click to view missing parts</span>
-        </div>
-      </div>
+        </span>
+      </span>
       <span class="material-symbols-outlined text-gray-400 group-hover:text-black transition-colors text-base">expand_less</span>
-    </div>
+    </span>
     
     <!-- Score Progress Bar -->
-    <div class="w-full bg-gray-100 h-2 rounded-full overflow-hidden border border-gray-200">
-      <div id="ai-score-bar-fill" class="h-full bg-amber-500 transition-all duration-300" style="width: 42%;"></div>
-    </div>
+    <span class="block w-full bg-gray-100 h-2 rounded-full overflow-hidden border border-gray-200">
+      <span id="ai-score-bar-fill" class="block h-full bg-amber-500 transition-all duration-300" style="width: 42%;"></span>
+    </span>
 
     <!-- 3 Qualifications Mini Status Pills -->
-    <div class="flex items-center justify-between text-[10px] text-gray-600 pt-1 border-t border-gray-100">
+    <span class="flex items-center justify-between text-[10px] text-gray-600 pt-1 border-t border-gray-100">
       <span id="ai-pill-factuality" class="flex items-center gap-1">
         <span class="material-symbols-outlined text-[12px] text-amber-600">pending</span> Factuality
       </span>
@@ -948,8 +961,8 @@
       <span id="ai-pill-vocabulary" class="flex items-center gap-1">
         <span class="material-symbols-outlined text-[12px] text-emerald-600">check_circle</span> Clean Vocab
       </span>
-    </div>
-  </div>
+    </span>
+  </button>
 
   <!-- AI Review Inspector Modal (Shows Missing Parts, Crisp Borders) -->
   <div id="ai-inspector-modal" class="fixed inset-0 bg-black/40 z-[135] hidden flex items-center justify-center md:justify-end p-4 md:p-6">
@@ -964,7 +977,7 @@
             <p class="text-[11px] text-gray-500">Factuality · Relevance · Vocabulary</p>
           </div>
         </div>
-        <button onclick="closeAiReviewInspector()" class="p-1 hover:bg-gray-100 text-gray-400 hover:text-black rounded cursor-pointer">
+        <button onclick="closeAiReviewInspector()" data-overlay-close aria-label="Close AI inspection" class="p-1 hover:bg-gray-100 text-gray-400 hover:text-black rounded cursor-pointer">
           <span class="material-symbols-outlined text-lg">close</span>
         </button>
       </div>
@@ -1057,7 +1070,7 @@
 <!-- Join Modal -->
 <div id="join-modal" class="fixed inset-0 bg-black/60 z-[110] hidden flex items-center justify-center p-4">
   <div class="bg-white rounded-lg max-w-md w-full p-8 relative shadow-2xl border border-secondary/20">
-    <button onclick="closeJoinModal()" class="absolute top-5 right-5 text-gray-500 hover:text-black cursor-pointer">
+    <button onclick="closeJoinModal()" data-overlay-close aria-label="Close" class="absolute top-5 right-5 text-gray-500 hover:text-black cursor-pointer">
       <span class="material-symbols-outlined">close</span>
     </button>
     <div class="text-center mb-6">
@@ -1083,7 +1096,7 @@
     </form>
     <div id="join-success" class="hidden text-center py-6">
       <span class="material-symbols-outlined text-5xl text-emerald-600 mb-2">mark_email_read</span>
-      <h4 class="font-bold text-lg text-primary">You're on the list!</h4>
+      <h4 class="font-bold text-lg text-primary">Almost done!</h4>
       <p class="text-xs text-gray-600 mt-1">Preparing your subscription for the monthly singing paper from <span class="font-semibold text-primary">antonio27181019@gmail.com</span>.</p>
       <p class="text-xs text-gray-500 mt-2">Didn't open? <a id="join-fallback-link" href="mailto:antonio27181019@gmail.com" class="text-primary underline font-medium">Click here to send subscription email</a></p>
       <button onclick="closeJoinModal()" class="mt-4 px-6 py-2 bg-primary text-white rounded-lg text-xs uppercase tracking-wider cursor-pointer">Close</button>
@@ -1150,6 +1163,32 @@
       }
     ];
 
+    // Safe localStorage JSON reader: corrupted or wrong-typed values fall back instead of throwing
+    function safeParse(key, fallback) {
+      try {
+        const raw = localStorage.getItem(key);
+        if (raw === null || raw === '') return fallback;
+        const val = JSON.parse(raw);
+        if (Array.isArray(fallback)) return Array.isArray(val) ? val : fallback;
+        if (fallback && typeof fallback === 'object') return (val && typeof val === 'object' && !Array.isArray(val)) ? val : fallback;
+        return val;
+      } catch (err) {
+        return fallback;
+      }
+    }
+
+    // Award a one-time XP reward per (bucket, id); returns true if it had not been awarded before
+    function awardXPOnce(bucket, id, points, reason) {
+      const key = 'arias_xp_once_' + bucket;
+      const awarded = safeParse(key, []);
+      const norm = String(id).toLowerCase();
+      if (awarded.includes(norm)) return false;
+      awarded.push(norm);
+      localStorage.setItem(key, JSON.stringify(awarded));
+      awardXP(points, reason);
+      return true;
+    }
+
     // ==========================================
     // XP & READING LEVEL SYSTEM
     // ==========================================
@@ -1199,7 +1238,7 @@
     }
 
     function getReadPosts() {
-      return JSON.parse(localStorage.getItem('arias_read_posts') || '[]');
+      return safeParse('arias_read_posts', []);
     }
 
     function markPostAsRead(postId) {
@@ -1251,7 +1290,7 @@
 
       // Drawer user identity
       const isGoogleAntonio = isAuthorLoggedIn();
-      const regularUser = JSON.parse(localStorage.getItem('arias_user') || '{}');
+      const regularUser = safeParse('arias_user', {});
       const drawerName = document.getElementById('drawer-name');
       const drawerEmail = document.getElementById('drawer-email');
       const drawerAvatar = document.getElementById('drawer-avatar');
@@ -1312,7 +1351,7 @@
         alert("Your Patron Pass has been paused. You can reactivate anytime!");
       } else {
         localStorage.setItem('arias_is_patron', 'true');
-        awardXP(50, "Subscribed as an Arias Unlocked Patron");
+        awardXPOnce('patron', 'patron', 50, "Subscribed as an Arias Unlocked Patron");
         alert("🎉 Bravo! You are now an active Arias Unlocked Patron! All exclusive masterclasses and harmonic analyses are now unlocked.");
       }
       updateUserStatsUI();
@@ -1331,6 +1370,7 @@
       localStorage.removeItem('arias_is_patron');
       localStorage.removeItem('arias_written_count');
       localStorage.removeItem('arias_accepted_count');
+      ['like', 'patron', 'signin', 'subscribe'].forEach(b => localStorage.removeItem('arias_xp_once_' + b));
       updateUserStatsUI();
       renderAllPosts();
       alert("Progress reset to zero.");
@@ -1361,23 +1401,15 @@
 
     function isUserSignedIn() {
       const googleUser = localStorage.getItem('arias_google_user');
-      const regularUser = JSON.parse(localStorage.getItem('arias_user') || '{}');
+      const regularUser = safeParse('arias_user', {});
       return !!(googleUser || regularUser.email);
     }
 
     function checkGoogleAutoRecognition() {
-      const params = new URLSearchParams(window.location.search);
-      const queryEmail = params.get('email') || params.get('user') || params.get('google');
-      if (queryEmail && queryEmail.toLowerCase() === ANTONIO_GOOGLE_EMAIL.toLowerCase()) {
-        localStorage.setItem('arias_google_user', ANTONIO_GOOGLE_EMAIL);
-        localStorage.setItem('arias_author_session', 'true');
-      }
-
+      // Only an explicit Google sign-in is recognized (no URL params, no join-form email)
       const googleUser = (localStorage.getItem('arias_google_user') || '').toLowerCase();
-      const regularUser = JSON.parse(localStorage.getItem('arias_user') || '{}');
-      const regularEmail = (regularUser.email || '').toLowerCase();
 
-      if (googleUser === ANTONIO_GOOGLE_EMAIL.toLowerCase() || regularEmail === ANTONIO_GOOGLE_EMAIL.toLowerCase()) {
+      if (googleUser === ANTONIO_GOOGLE_EMAIL.toLowerCase()) {
         localStorage.setItem('arias_google_user', ANTONIO_GOOGLE_EMAIL);
         localStorage.setItem('arias_author_session', 'true');
       }
@@ -1390,7 +1422,7 @@
         closeAuthorAuthModal();
         updateAuthorUI();
         updateUserStatsUI();
-        awardXP(25, "Signed in with Google");
+        awardXPOnce('signin', email, 25, "Signed in with Google");
         alert(`Welcome back, Antonio! Recognized as ${email}. You now have full Author permissions without entering a PIN.`);
       }
     };
@@ -1436,9 +1468,29 @@
       }
     };
 
+    window.promptChangePin = function() {
+      const storedPin = localStorage.getItem('arias_author_pin') || DEFAULT_PIN;
+      const current = prompt('Enter your current Author PIN:');
+      if (current === null) return;
+      if (current.trim() !== storedPin) {
+        alert('Incorrect current PIN. Your PIN was not changed.');
+        return;
+      }
+      const next = prompt('Enter a new Author PIN (at least 4 digits):');
+      if (next === null) return;
+      const newPin = next.trim();
+      if (!/^\d{4,}$/.test(newPin)) {
+        alert('The new PIN must be at least 4 digits (numbers only). Your PIN was not changed.');
+        return;
+      }
+      localStorage.setItem('arias_author_pin', newPin);
+      alert('Author PIN updated.');
+    };
+
     window.logoutAuthor = function() {
       localStorage.removeItem('arias_author_session');
       localStorage.removeItem('arias_google_user');
+      localStorage.removeItem('arias_user');
       updateAuthorUI();
       updateUserStatsUI();
       closeGoogleDocsEditor();
@@ -1471,11 +1523,20 @@
     // ==========================================
     // PROFILE DRAWER & GUIDANCE
     // ==========================================
+    function focusOverlayClose(overlay) {
+      if (!overlay) return;
+      setTimeout(() => {
+        const btn = overlay.querySelector('[data-overlay-close]');
+        if (btn) btn.focus();
+      }, 60);
+    }
+
     window.toggleProfileDrawer = function() {
       const drawer = document.getElementById('profile-drawer-modal');
       if (drawer) {
         drawer.classList.toggle('hidden');
         updateUserStatsUI();
+        if (!drawer.classList.contains('hidden')) focusOverlayClose(drawer);
       }
     };
 
@@ -1618,6 +1679,7 @@
     }
 
     window.searchOperasNearMe = function() {
+      clearTimeout(window._operaResetTimer);
       const query = (document.getElementById('opera-near-me-input')?.value || '').toLowerCase().trim();
       if (!query) {
         renderOperaHouses(OPERA_HOUSES);
@@ -1632,16 +1694,17 @@
       if (filtered.length === 0) {
         document.getElementById('operas-near-me-results').innerHTML = `
           <div class="col-span-3 text-center py-6 text-gray-500 text-xs bg-gray-50 rounded-lg border border-gray-200">
-            No exact match for "${query}". Browse our world-class partner opera houses:
+            No exact match for "${escapeHtml(query)}". Browse our world-class partner opera houses:
           </div>
         `;
-        setTimeout(() => renderOperaHouses(OPERA_HOUSES), 2500);
+        window._operaResetTimer = setTimeout(() => renderOperaHouses(OPERA_HOUSES), 2500);
       } else {
         renderOperaHouses(filtered);
       }
     };
 
     window.useMyLocationForOperas = function() {
+      clearTimeout(window._operaResetTimer);
       const notice = document.getElementById('opera-location-notice');
       const btn = document.getElementById('location-opera-btn');
       if (btn) btn.innerHTML = `<span class="material-symbols-outlined text-sm animate-spin">sync</span> Locating...`;
@@ -1673,6 +1736,16 @@
         { timeout: 7000 }
       );
     };
+
+    const operaInput = document.getElementById('opera-near-me-input');
+    if (operaInput) {
+      operaInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          searchOperasNearMe();
+        }
+      });
+    }
 
     // Initialize default opera cards
     renderOperaHouses(OPERA_HOUSES);
@@ -1741,8 +1814,10 @@
       }
 
       // 2. Factuality (Historical composers, operas, vocal mechanics)
-      const foundComposers = COMPOSERS_DB.filter(c => combined.includes(c));
-      const foundTerms = VOCAL_TERMS_DB.filter(t => combined.includes(t));
+      // Whole-word matching (optional plural) so e.g. "normal" does not count as "norma"
+      const hasWord = (w) => new RegExp('\\b' + w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '(?:s|es)?\\b').test(combined);
+      const foundComposers = COMPOSERS_DB.filter(hasWord);
+      const foundTerms = VOCAL_TERMS_DB.filter(hasWord);
 
       let factualityScore = 0;
       if (foundComposers.length > 0) factualityScore += 45 + Math.min(25, (foundComposers.length - 1) * 10);
@@ -1829,7 +1904,7 @@
 
       if (scoreFill) {
         scoreFill.style.width = `${evalResult.totalScore}%`;
-        scoreFill.className = `h-full transition-all duration-300 rounded-full ${evalResult.allPassed ? 'bg-emerald-500' : (evalResult.totalScore < 50 ? 'bg-red-500' : 'bg-amber-500')}`;
+        scoreFill.className = `block h-full transition-all duration-300 rounded-full ${evalResult.allPassed ? 'bg-emerald-500' : (evalResult.totalScore < 50 ? 'bg-red-500' : 'bg-amber-500')}`;
       }
 
       if (subtext) {
@@ -1853,9 +1928,11 @@
           : `<span class="material-symbols-outlined text-[12px] text-amber-600">pending</span> Relevance`;
       }
       if (pillVoc) {
-        pillVoc.innerHTML = evalResult.vocabulary.passed
-          ? `<span class="material-symbols-outlined text-[12px] text-emerald-600">check_circle</span> Clean Vocab`
-          : `<span class="material-symbols-outlined text-[12px] text-red-600">cancel</span> Swear Word`;
+        pillVoc.innerHTML = evalResult.vocabulary.hasProfanity
+          ? `<span class="material-symbols-outlined text-[12px] text-red-600">cancel</span> Swear Word`
+          : (evalResult.vocabulary.passed
+            ? `<span class="material-symbols-outlined text-[12px] text-emerald-600">check_circle</span> Clean Vocab`
+            : `<span class="material-symbols-outlined text-[12px] text-amber-600">pending</span> Vocab`);
       }
     }
 
@@ -1938,13 +2015,20 @@
       }
 
       if (vocStatus) {
-        vocStatus.textContent = evalResult.vocabulary.passed ? "Passed (Clean)" : "Flagged (Profanity)";
-        vocStatus.className = evalResult.vocabulary.passed
-          ? "text-[10px] font-semibold px-2 py-0.5 rounded bg-emerald-100 text-emerald-800"
-          : "text-[10px] font-semibold px-2 py-0.5 rounded bg-red-100 text-red-800";
+        vocStatus.textContent = evalResult.vocabulary.hasProfanity
+          ? "Flagged (Profanity)"
+          : (evalResult.vocabulary.passed ? "Passed (Clean)" : "Too Short");
+        vocStatus.className = evalResult.vocabulary.hasProfanity
+          ? "text-[10px] font-semibold px-2 py-0.5 rounded bg-red-100 text-red-800"
+          : (evalResult.vocabulary.passed
+            ? "text-[10px] font-semibold px-2 py-0.5 rounded bg-emerald-100 text-emerald-800"
+            : "text-[10px] font-semibold px-2 py-0.5 rounded bg-amber-100 text-amber-800");
       }
 
-      if (modal) modal.classList.remove('hidden');
+      if (modal) {
+        modal.classList.remove('hidden');
+        focusOverlayClose(modal);
+      }
     };
 
     window.closeAiReviewInspector = function() {
@@ -2007,6 +2091,7 @@
       gdocsUpdateSlugPreview();
       gdocsUpdateWordCount();
       updateAiReviewBar();
+      try { document.execCommand('defaultParagraphSeparator', false, 'p'); } catch (err) {}
       if (gdocsModal) gdocsModal.classList.remove('hidden');
       setTimeout(() => gdocsPaper && gdocsPaper.focus(), 200);
     };
@@ -2019,7 +2104,7 @@
       isContributorMode = false;
 
       if (postId) {
-        const posts = JSON.parse(localStorage.getItem('arias_custom_posts') || '[]');
+        const posts = safeParse('arias_custom_posts', []);
         const post = posts.find(p => p.id === postId);
         if (post) {
           currentEditingPostId = post.id;
@@ -2028,7 +2113,7 @@
           if (gdocsReadtime) gdocsReadtime.value = post.readtime || '5 min read';
           if (gdocsSnippet) gdocsSnippet.value = post.snippet || '';
           if (gdocsPaper) {
-            gdocsPaper.innerHTML = post.htmlContent || markdownToHtml(post.content || '');
+            gdocsPaper.innerHTML = post.htmlContent ? sanitizeHtml(post.htmlContent) : markdownToHtml(post.content || '');
           }
         }
       } else {
@@ -2046,8 +2131,16 @@
       gdocsUpdateSlugPreview();
       gdocsUpdateWordCount();
       updateAiReviewBar();
+      try { document.execCommand('defaultParagraphSeparator', false, 'p'); } catch (err) {}
       if (gdocsModal) gdocsModal.classList.remove('hidden');
       setTimeout(() => gdocsPaper && gdocsPaper.focus(), 200);
+    };
+
+    window.gdocsMenuAction = function(action) {
+      if (action === 'new') {
+        if (isContributorMode) openContributorEditor();
+        else openGoogleDocsEditor();
+      }
     };
 
     window.closeGoogleDocsEditor = function() {
@@ -2176,7 +2269,15 @@
           case 'blockquote': return `\n> ${children.trim()}\n\n`;
           case 'ul': return `\n${children}\n`;
           case 'ol': return `\n${children}\n`;
-          case 'li': return `- ${children.trim()}\n`;
+          case 'li': {
+            const parent = node.parentElement;
+            if (parent && parent.tagName === 'OL') {
+              const idx = Array.from(parent.children).filter(c => c.tagName === 'LI').indexOf(node) + 1;
+              return `${idx}. ${children.trim()}\n`;
+            }
+            return `- ${children.trim()}\n`;
+          }
+          case 'div': return `${children.trim()}\n\n`;
           case 'hr': return `\n---\n\n`;
           case 'br': return `\n`;
           case 'a': return `[${children}](${node.getAttribute('href') || ''})`;
@@ -2188,27 +2289,107 @@
       return Array.from(div.childNodes).map(nodeToMd).join('').replace(/\n{3,}/g, '\n\n').trim();
     }
 
+    // Only allow http(s) and mailto links in rendered markdown
+    function safeHref(url) {
+      const u = String(url || '').trim();
+      return /^(https?:|mailto:)/i.test(u) ? u : '';
+    }
+
+    function renderInlineMd(text) {
+      return escapeHtml(text)
+        .replace(/!\[([^\]]*?)\]\(([^)\s]*?)\)/g, (m, alt, src) => {
+          const href = safeHref(src);
+          return href && !/^mailto:/i.test(href) ? `<img src="${href}" alt="${alt}">` : alt;
+        })
+        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+        .replace(/\*(.*?)\*/g, '<em>$1</em>')
+        .replace(/~~(.*?)~~/g, '<del>$1</del>')
+        .replace(/\[([^\]]*?)\]\(([^)\s]*?)\)/g, (m, label, url) => {
+          const href = safeHref(url);
+          return href ? `<a href="${href}" target="_blank" rel="noopener noreferrer">${label}</a>` : label;
+        });
+    }
+
     function markdownToHtml(md) {
       if (!md) return '';
-      return md
-        .split('\n\n')
-        .map(block => {
-          block = block.trim();
-          if (!block) return '';
-          if (block.startsWith('# ')) return `<h1>${escapeHtml(block.slice(2))}</h1>`;
-          if (block.startsWith('## ')) return `<h2>${escapeHtml(block.slice(3))}</h2>`;
-          if (block.startsWith('### ')) return `<h3>${escapeHtml(block.slice(4))}</h3>`;
-          if (block.startsWith('> ')) return `<blockquote>${escapeHtml(block.slice(2))}</blockquote>`;
-          if (block === '---') return '<hr>';
+      const lines = String(md).replace(/\r\n?/g, '\n').split('\n');
+      const out = [];
+      let para = [];
+      let list = null;
 
-          let formatted = escapeHtml(block)
-            .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-            .replace(/\*(.*?)\*/g, '<em>$1</em>')
-            .replace(/~~(.*?)~~/g, '<del>$1</del>')
-            .replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank">$1</a>');
-          return `<p>${formatted}</p>`;
-        })
-        .join('');
+      const flushPara = () => {
+        if (para.length) {
+          out.push(`<p>${renderInlineMd(para.join(' '))}</p>`);
+          para = [];
+        }
+      };
+      const flushList = () => {
+        if (list) {
+          out.push(`<${list.type}>${list.items.map(item => `<li>${renderInlineMd(item)}</li>`).join('')}</${list.type}>`);
+          list = null;
+        }
+      };
+      const pushListItem = (type, text) => {
+        flushPara();
+        if (!list || list.type !== type) {
+          flushList();
+          list = { type, items: [] };
+        }
+        list.items.push(text);
+      };
+
+      lines.forEach(raw => {
+        const line = raw.trim();
+        let m;
+        if (!line) {
+          flushPara();
+          flushList();
+        } else if ((m = line.match(/^(#{1,3})\s+(.*)$/))) {
+          flushPara();
+          flushList();
+          const level = m[1].length;
+          out.push(`<h${level}>${renderInlineMd(m[2])}</h${level}>`);
+        } else if (/^(-{3,}|\*{3,})$/.test(line)) {
+          flushPara();
+          flushList();
+          out.push('<hr>');
+        } else if ((m = line.match(/^>\s?(.*)$/))) {
+          flushPara();
+          flushList();
+          out.push(`<blockquote>${renderInlineMd(m[1])}</blockquote>`);
+        } else if ((m = line.match(/^[-*]\s+(.*)$/))) {
+          pushListItem('ul', m[1]);
+        } else if ((m = line.match(/^\d+[.)]\s+(.*)$/))) {
+          pushListItem('ol', m[1]);
+        } else {
+          flushList();
+          para.push(line);
+        }
+      });
+      flushPara();
+      flushList();
+      return out.join('');
+    }
+
+    // Strip scripts, inline event handlers and javascript: URLs from stored essay HTML
+    function sanitizeHtml(html) {
+      const tpl = document.createElement('template');
+      tpl.innerHTML = String(html || '');
+      tpl.content.querySelectorAll('script, iframe, object, embed, base, meta, link').forEach(el => el.remove());
+      tpl.content.querySelectorAll('*').forEach(el => {
+        Array.from(el.attributes).forEach(attr => {
+          const name = attr.name.toLowerCase();
+          if (name.startsWith('on') || name === 'srcdoc') {
+            el.removeAttribute(attr.name);
+          } else if (['href', 'src', 'xlink:href', 'action', 'formaction'].includes(name)) {
+            const v = attr.value.replace(/[\s\u0000-\u001f]/g, '').toLowerCase();
+            if (v.startsWith('javascript:') || v.startsWith('vbscript:') || (v.startsWith('data:') && !v.startsWith('data:image/'))) {
+              el.removeAttribute(attr.name);
+            }
+          }
+        });
+      });
+      return tpl.innerHTML;
     }
 
     async function saveMarkdownFileToDisk(filename, content) {
@@ -2223,7 +2404,8 @@
           await writable.close();
           return { success: true, method: 'picker' };
         } catch (err) {
-          if (err.name !== 'AbortError') console.warn('Picker notice:', err);
+          if (err.name === 'AbortError') return { success: false, method: 'cancelled' };
+          console.warn('Picker notice:', err);
         }
       }
 
@@ -2250,7 +2432,8 @@
       const authorName = isAuthorLoggedIn() ? "Antonio" : "Community Contributor";
 
       const fullMarkdown = `# ${title}\n**Category:** ${category}  \n**Date:** ${dateStr}  \n**Read Time:** ${readtime}  \n**Author:** ${authorName}  \n\n---\n\n${bodyMarkdown}\n`;
-      await saveMarkdownFileToDisk(filename, fullMarkdown);
+      const saveResult = await saveMarkdownFileToDisk(filename, fullMarkdown);
+      if (!saveResult.success) return;
 
       if (gdocsSaveStatus) {
         gdocsSaveStatus.innerHTML = `<span class="material-symbols-outlined text-xs text-emerald-600">check_circle</span> <span class="text-emerald-700 font-semibold">Saved to Drive!</span>`;
@@ -2263,8 +2446,8 @@
     window.publishGDocsPost = async function() {
       let title = (gdocsTitle ? gdocsTitle.value : '').trim();
       if (!title || title.toLowerCase() === 'untitled essay') {
-        const entered = prompt('Please enter a title for your essay:', title === 'Untitled essay' ? '' : title);
-        if (!entered || !entered.trim()) return;
+        const entered = prompt('Please enter a title for your essay:', title.toLowerCase() === 'untitled essay' ? '' : title);
+        if (!entered || !entered.trim() || entered.trim().toLowerCase() === 'untitled essay') return;
         title = entered.trim();
         if (gdocsTitle) gdocsTitle.value = title;
       }
@@ -2290,20 +2473,6 @@
         }
       }
 
-      // Award XP
-      // Writing = +50 XP, Accepted = Double XP (+100 XP)
-      let writtenCount = parseInt(localStorage.getItem('arias_written_count') || '0', 10) + 1;
-      let acceptedCount = parseInt(localStorage.getItem('arias_accepted_count') || '0', 10) + 1;
-      localStorage.setItem('arias_written_count', writtenCount);
-      localStorage.setItem('arias_accepted_count', acceptedCount);
-
-      if (!isAuthor) {
-        // Community contributor earns +50 for writing + 100 for double XP acceptance!
-        awardXP(150, "Essay Accepted by AI! (+50 Writing XP + 100 Double Bonus!)");
-      } else {
-        awardXP(100, "Published Author Essay to Arias Unlocked");
-      }
-
       const dateStr = new Date().toLocaleDateString('en-US', { month: 'short', day: '2-digit', year: 'numeric' });
       let snippet = (gdocsSnippet ? gdocsSnippet.value : '').trim();
       if (!snippet) {
@@ -2317,9 +2486,10 @@
 
       const fullFileMarkdown = `# ${title}\n**Category:** ${category}  \n**Date:** ${dateStr}  \n**Read Time:** ${readtime}  \n**Author:** ${authorLabel}  \n\n---\n\n${bodyMarkdown}\n`;
 
-      const posts = JSON.parse(localStorage.getItem('arias_custom_posts') || '[]');
+      const posts = safeParse('arias_custom_posts', []);
       const postId = currentEditingPostId || ('post_' + Date.now());
       const existingIdx = posts.findIndex(p => p.id === postId);
+      const isNewPost = existingIdx < 0;
 
       const newPost = {
         id: postId,
@@ -2339,18 +2509,42 @@
       };
 
       if (existingIdx >= 0) {
+        newPost.likes = posts[existingIdx].likes || 1;
         posts[existingIdx] = newPost;
       } else {
         posts.unshift(newPost);
       }
-      localStorage.setItem('arias_custom_posts', JSON.stringify(posts));
+      try {
+        localStorage.setItem('arias_custom_posts', JSON.stringify(posts));
+      } catch (err) {
+        alert('⚠️ Could not save this essay: browser storage is full (large pasted images are a common cause). Remove some images and try again.');
+        return;
+      }
 
-      await saveMarkdownFileToDisk(filename, fullFileMarkdown);
+      // Award XP only once per new essay, after it has been saved
+      // Writing = +50 XP, Accepted = Double XP (+100 XP)
+      if (isNewPost) {
+        const writtenCount = parseInt(localStorage.getItem('arias_written_count') || '0', 10) + 1;
+        const acceptedCount = parseInt(localStorage.getItem('arias_accepted_count') || '0', 10) + 1;
+        localStorage.setItem('arias_written_count', writtenCount);
+        localStorage.setItem('arias_accepted_count', acceptedCount);
+
+        if (!isAuthor) {
+          // Community contributor earns +50 for writing + 100 for double XP acceptance!
+          awardXP(150, "Essay Accepted by AI! (+50 Writing XP + 100 Double Bonus!)");
+        } else {
+          awardXP(100, "Published Author Essay to Arias Unlocked");
+        }
+      }
+
+      const saveResult = await saveMarkdownFileToDisk(filename, fullFileMarkdown);
 
       closeGoogleDocsEditor();
       renderAllPosts();
 
-      if (isAuthor) {
+      if (!saveResult.success) {
+        alert(`Essay published on the blog. The .md file was not saved because the save dialog was cancelled.`);
+      } else if (isAuthor) {
         alert(`🎉 Essay published!\nSaved directly to your Google Drive Blog folder as "${filename}".`);
       } else {
         alert(`🎉 Congratulations! Your suggested essay passed all 3 AI qualifications (Factuality, Relevance, Clean Vocabulary)!\nIt has been published to Arias Unlocked with DOUBLE XP!`);
@@ -2365,31 +2559,59 @@
     // ==========================================
     window.deleteCustomPost = function(id) {
       if (!confirm('Are you sure you want to delete this essay from the blog?')) return;
-      const posts = JSON.parse(localStorage.getItem('arias_custom_posts') || '[]');
+      const posts = safeParse('arias_custom_posts', []);
       const filtered = posts.filter(p => p.id !== id);
       localStorage.setItem('arias_custom_posts', JSON.stringify(filtered));
       renderAllPosts();
     };
 
+    // Posts synced from Blog/*.md by sync_blog.py (loaded asynchronously; empty on file:// or fetch failure)
+    let syncedPosts = [];
+
     function getAllPosts() {
-      const customPosts = JSON.parse(localStorage.getItem('arias_custom_posts') || '[]');
-      // Tutorial post is always first
-      return [...DEFAULT_SEED_POSTS, ...customPosts];
+      const customPosts = safeParse('arias_custom_posts', []);
+      // Tutorial post is always first; merge by id without duplicates (seeds win, then synced, then custom)
+      const seen = new Set();
+      const merged = [];
+      [...DEFAULT_SEED_POSTS, ...syncedPosts, ...customPosts].forEach(p => {
+        if (p && p.id && !seen.has(p.id)) {
+          seen.add(p.id);
+          merged.push(p);
+        }
+      });
+      return merged;
+    }
+
+    function loadSyncedPosts() {
+      if (!window.fetch) return;
+      fetch('Blog/posts.json', { cache: 'no-cache' })
+        .then(res => (res.ok ? res.json() : []))
+        .then(data => {
+          if (!Array.isArray(data)) return;
+          syncedPosts = data.filter(p => p && typeof p.id === 'string' && p.id && typeof p.title === 'string')
+            .map(p => ({ snippet: '', content: '', likes: 0, ...p }));
+          if (syncedPosts.length) renderAllPosts();
+        })
+        .catch(() => { /* e.g. file:// — silently keep seed posts */ });
     }
 
     function getLikedPosts() {
-      return JSON.parse(localStorage.getItem('arias_liked_posts') || '[]');
+      return safeParse('arias_liked_posts', []);
     }
 
-    function getPostLikes(postId, defaultCount = 0) {
-      const allLikes = JSON.parse(localStorage.getItem('arias_post_likes') || '{}');
+    function getPostLikes(postId, defaultCount) {
+      if (defaultCount === undefined) {
+        const post = getAllPosts().find(p => p.id === postId);
+        defaultCount = (post && post.likes) || 0;
+      }
+      const allLikes = safeParse('arias_post_likes', {});
       return allLikes[postId] !== undefined ? allLikes[postId] : defaultCount;
     }
 
     window.toggleLikePost = function(postId) {
       let liked = getLikedPosts();
-      const allLikes = JSON.parse(localStorage.getItem('arias_post_likes') || '{}');
-      let count = getPostLikes(postId, 0);
+      const allLikes = safeParse('arias_post_likes', {});
+      let count = getPostLikes(postId);
 
       if (liked.includes(postId)) {
         liked = liked.filter(id => id !== postId);
@@ -2397,7 +2619,7 @@
       } else {
         liked.push(postId);
         count += 1;
-        awardXP(5, "Liked an Article");
+        awardXPOnce('like', postId, 5, "Liked an Article");
       }
 
       allLikes[postId] = count;
@@ -2430,16 +2652,16 @@
         const likes = getPostLikes(heroPost.id, heroPost.likes || 0);
 
         heroContainer.innerHTML = `
-          <article onclick="openArticleReader('${heroPost.id}')" class="blog-post-card w-full bg-white rounded-lg border border-primary/20 overflow-hidden flex flex-col md:flex-row shadow-sm hover:shadow-md transition-shadow cursor-pointer group relative"
-                   data-category="${heroPost.category}"
+          <article onclick="openArticleReader('${heroPost.id}')" tabindex="0" role="button" aria-label="Open essay: ${escapeHtml(heroPost.title)}" class="blog-post-card w-full bg-white rounded-lg border border-primary/20 overflow-hidden flex flex-col md:flex-row shadow-sm hover:shadow-md transition-shadow cursor-pointer group relative"
+                   data-category="${escapeHtml(heroPost.category || '')}"
                    data-title="${escapeHtml(heroPost.title)}"
-                   data-snippet="${escapeHtml(heroPost.snippet)}">
+                   data-snippet="${escapeHtml(heroPost.snippet || '')}">
             <div class="md:w-5/12 bg-[#1c1b1b] p-8 md:p-12 flex flex-col justify-between text-white border-r border-primary/10">
               <div class="flex items-center justify-between">
                 <span class="bg-amber-400 text-black font-bold text-[10px] px-3 py-1 rounded uppercase tracking-widest">
                   Featured Tutorial
                 </span>
-                <span class="text-xs text-amber-300 font-semibold">${heroPost.level || 'Level 1 · All Readers'}</span>
+                <span class="text-xs text-amber-300 font-semibold">${escapeHtml(heroPost.level || 'Level 1 · All Readers')}</span>
               </div>
               <div class="my-6">
                 <span class="material-symbols-outlined text-5xl text-amber-400 mb-3">school</span>
@@ -2447,14 +2669,14 @@
                 <p class="text-xs text-gray-300 mt-2">Interactive walkthrough for reading, writing, earning XP, finding operas &amp; unlocking patron masterclasses.</p>
               </div>
               <div class="flex items-center justify-between text-xs pt-4 border-t border-white/20">
-                <span class="text-gray-300">${heroPost.readtime}</span>
+                <span class="text-gray-300">${escapeHtml(heroPost.readtime || '')}</span>
                 <span class="text-amber-400 font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">Read Guide <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
               </div>
             </div>
             <div class="md:w-7/12 p-8 md:p-10 flex flex-col justify-between gap-6">
               <div>
                 <div class="flex items-center justify-between mb-3">
-                  <span class="text-xs text-gray-500 uppercase tracking-widest">${heroPost.date}</span>
+                  <span class="text-xs text-gray-500 uppercase tracking-widest">${escapeHtml(heroPost.date || '')}</span>
                   ${isRead ? `
                     <span class="text-[10px] font-bold text-emerald-800 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded flex items-center gap-1">
                       <span class="material-symbols-outlined text-xs">check_circle</span> Read
@@ -2466,7 +2688,7 @@
                   `}
                 </div>
                 <h2 class="font-display-lg text-2xl md:text-3xl text-primary leading-tight group-hover:text-primary/80 transition-colors">${escapeHtml(heroPost.title)}</h2>
-                <p class="font-body-md text-xs md:text-sm text-gray-700 mt-3 leading-relaxed">${escapeHtml(heroPost.snippet)}</p>
+                <p class="font-body-md text-xs md:text-sm text-gray-700 mt-3 leading-relaxed">${escapeHtml(heroPost.snippet || '')}</p>
               </div>
               <div class="flex items-center justify-between pt-4 border-t border-gray-100">
                 <button onclick="event.stopPropagation(); toggleLikePost('${heroPost.id}')" class="flex items-center gap-1.5 text-xs font-bold ${isLiked ? 'text-red-600' : 'text-gray-600 hover:text-red-600'} cursor-pointer">
@@ -2495,7 +2717,10 @@
           article.className = "blog-post-card bg-white rounded-lg border border-primary/20 overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-shadow group cursor-pointer relative";
           article.setAttribute('data-category', post.category);
           article.setAttribute('data-title', post.title);
-          article.setAttribute('data-snippet', post.snippet);
+          article.setAttribute('data-snippet', post.snippet || '');
+          article.setAttribute('tabindex', '0');
+          article.setAttribute('role', 'button');
+          article.setAttribute('aria-label', 'Open essay: ' + post.title);
           article.onclick = () => openArticleReader(post.id);
 
           article.innerHTML = `
@@ -2524,7 +2749,7 @@
             <div class="p-6 flex flex-col flex-grow justify-between gap-4">
               <div>
                 <div class="flex items-center justify-between mb-2">
-                  <span class="bg-amber-100 text-amber-900 font-bold text-[10px] px-2.5 py-0.5 rounded uppercase tracking-wider">${post.category}</span>
+                  <span class="bg-amber-100 text-amber-900 font-bold text-[10px] px-2.5 py-0.5 rounded uppercase tracking-wider">${escapeHtml(post.category || '')}</span>
                   ${post.isPremium ? `
                     <span class="text-[10px] font-bold text-amber-900 bg-amber-100 border border-amber-300 px-2 py-0.5 rounded flex items-center gap-1">
                       ⭐ Patron Only
@@ -2544,11 +2769,11 @@
                   `))}
                 </div>
                 <h3 class="font-display-lg text-xl text-primary leading-snug group-hover:text-primary/80 transition-colors">${escapeHtml(post.title)}</h3>
-                <p class="font-body-md text-xs text-gray-700 mt-2 line-clamp-3 leading-relaxed">${escapeHtml(post.snippet)}</p>
+                <p class="font-body-md text-xs text-gray-700 mt-2 line-clamp-3 leading-relaxed">${escapeHtml(post.snippet || '')}</p>
               </div>
 
               <div class="pt-3 border-t border-gray-100 flex items-center justify-between text-xs">
-                <span class="text-gray-500">${post.date} · ${post.readtime}</span>
+                <span class="text-gray-500">${escapeHtml(post.date || '')} · ${escapeHtml(post.readtime || '')}</span>
                 <button onclick="event.stopPropagation(); toggleLikePost('${post.id}')" class="flex items-center gap-1 font-bold ${isLiked ? 'text-red-600' : 'text-gray-500 hover:text-red-600'} cursor-pointer">
                   <span class="material-symbols-outlined text-sm">${isLiked ? 'favorite' : 'favorite_border'}</span>
                   <span>${likes}</span>
@@ -2563,6 +2788,15 @@
 
       filterArticles();
     }
+
+    // Keyboard activation for post cards (Enter / Space)
+    document.addEventListener('keydown', (e) => {
+      const card = e.target && e.target.classList && e.target.classList.contains('blog-post-card') ? e.target : null;
+      if (card && (e.key === 'Enter' || e.key === ' ')) {
+        e.preventDefault();
+        card.click();
+      }
+    });
 
     // Filter logic
     const filterBtns = document.querySelectorAll('.blog-filter-btn');
@@ -2662,16 +2896,16 @@
       const isLocked = post.isPremium && !isPatron;
 
       if (isLocked) {
-        const previewText = post.content.split('\n\n').slice(0, 2).join('\n\n');
+        const previewText = (post.content || '').split('\n\n').slice(0, 2).join('\n\n');
         if (content) content.innerHTML = markdownToHtml(previewText);
         if (paywallBox) paywallBox.classList.remove('hidden');
       } else {
-        if (content) content.innerHTML = post.htmlContent || markdownToHtml(post.content);
+        if (content) content.innerHTML = post.htmlContent ? sanitizeHtml(post.htmlContent) : markdownToHtml(post.content || '');
         if (paywallBox) paywallBox.classList.add('hidden');
       }
 
-      // Mark as read & award XP
-      markPostAsRead(postId);
+      // Mark as read & award XP (locked Patron previews do not count as read)
+      if (!isLocked) markPostAsRead(postId);
       const isRead = getReadPosts().includes(postId);
       if (readBadge) readBadge.classList.toggle('hidden', !isRead);
 
@@ -2679,8 +2913,10 @@
       renderCommentsForPost(postId);
 
       if (reader) {
+        const wasHidden = reader.classList.contains('hidden');
         reader.classList.remove('hidden');
         reader.scrollTo({ top: 0, behavior: 'smooth' });
+        if (wasHidden) focusOverlayClose(reader);
       }
     };
 
@@ -2692,7 +2928,7 @@
 
     function updateReaderLikeBtnState(postId) {
       const isLiked = getLikedPosts().includes(postId);
-      const likes = getPostLikes(postId, 0);
+      const likes = getPostLikes(postId);
 
       const topIcon = document.getElementById('reader-like-icon');
       const topText = document.getElementById('reader-like-count-text');
@@ -2731,7 +2967,7 @@
     };
 
     function getCommentsForPost(postId) {
-      const allComments = JSON.parse(localStorage.getItem('arias_post_comments') || '{}');
+      const allComments = safeParse('arias_post_comments', {});
       if (!allComments[postId] && DEFAULT_COMMENTS[postId]) {
         return DEFAULT_COMMENTS[postId];
       }
@@ -2756,12 +2992,12 @@
               <div class="flex items-center justify-between">
                 <div class="flex items-center gap-2">
                   <div class="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center font-bold text-[10px]">
-                    ${c.author.charAt(0).toUpperCase()}
+                    ${escapeHtml(String(c.author || '?').charAt(0).toUpperCase())}
                   </div>
                   <span class="text-xs font-bold text-gray-900">${escapeHtml(c.author)}</span>
                   ${c.isAuthor ? `<span class="text-[9px] font-bold text-emerald-800 bg-emerald-100 px-1.5 py-0.2 rounded">Author</span>` : ''}
                 </div>
-                <span class="text-[10px] text-gray-400">${c.date}</span>
+                <span class="text-[10px] text-gray-400">${escapeHtml(c.date || '')}</span>
               </div>
               <p class="text-xs text-gray-700 leading-relaxed pl-8">${escapeHtml(c.text)}</p>
             </div>
@@ -2785,10 +3021,10 @@
       }
 
       const isAntonio = isAuthorLoggedIn();
-      const userObj = JSON.parse(localStorage.getItem('arias_user') || '{}');
+      const userObj = safeParse('arias_user', {});
       const authorName = isAntonio ? "Antonio" : (userObj.name || "Opera Enthusiast");
 
-      const allComments = JSON.parse(localStorage.getItem('arias_post_comments') || '{}');
+      const allComments = safeParse('arias_post_comments', {});
       if (!allComments[currentReadingPostId]) {
         allComments[currentReadingPostId] = [...getCommentsForPost(currentReadingPostId)];
       }
@@ -2819,6 +3055,7 @@
         joinModal.classList.remove('hidden');
         document.getElementById('join-form').classList.remove('hidden');
         document.getElementById('join-success').classList.add('hidden');
+        focusOverlayClose(joinModal);
       }
     };
 
@@ -2838,13 +3075,13 @@
       const email = document.getElementById('join-email').value;
       localStorage.setItem('arias_user', JSON.stringify({ name, email }));
 
-      const monthlySubs = JSON.parse(localStorage.getItem('arias_monthly_paper_subscribers') || '[]');
+      const monthlySubs = safeParse('arias_monthly_paper_subscribers', []);
       if (!monthlySubs.find(s => s.email === email)) {
         monthlySubs.push({ name, email, date: new Date().toISOString() });
         localStorage.setItem('arias_monthly_paper_subscribers', JSON.stringify(monthlySubs));
       }
 
-      awardXP(20, "Subscribed to Monthly Singing Paper");
+      awardXPOnce('subscribe', email, 20, "Subscribed to Monthly Singing Paper");
 
       const subject = encodeURIComponent(`Subscribe to Monthly Singing Paper: ${name}`);
       const body = encodeURIComponent(`Hi Antonio,\n\nPlease add my email to the Arias Unlocked Monthly Singing Paper group on Gmail:\nName: ${name}\nEmail: ${email}\n\nNote: For classical singing paper emails only from antonio27181019@gmail.com (no Google Chat).`);
@@ -2863,13 +3100,13 @@
     window.handleNewsletterSubmit = function(e) {
       e.preventDefault();
       const email = document.getElementById('newsletter-email').value;
-      const existing = JSON.parse(localStorage.getItem('arias_newsletter') || '[]');
+      const existing = safeParse('arias_newsletter', []);
       if (!existing.includes(email)) {
         existing.push(email);
         localStorage.setItem('arias_newsletter', JSON.stringify(existing));
       }
 
-      awardXP(20, "Subscribed to Monthly Singing Paper");
+      awardXPOnce('subscribe', email, 20, "Subscribed to Monthly Singing Paper");
 
       const subject = encodeURIComponent(`Monthly Singing Paper Subscription: ${email}`);
       const body = encodeURIComponent(`Hi Antonio,\n\nPlease subscribe me to the Arias Unlocked Monthly Singing Paper group on Gmail:\nEmail: ${email}\n\nNote: For singing emails only from antonio27181019@gmail.com.`);
@@ -2889,12 +3126,32 @@
       if (e.target === document.getElementById('profile-drawer-modal')) toggleProfileDrawer();
     });
 
-    // Auto-recognize Antonio if he logged in with Google or joined with his email
+    // Escape closes the topmost open overlay (ordered by z-index, highest first)
+    document.addEventListener('keydown', (e) => {
+      if (e.key !== 'Escape') return;
+      const isOpen = (id) => {
+        const el = document.getElementById(id);
+        return el && !el.classList.contains('hidden');
+      };
+      if (isOpen('ai-inspector-modal') && isOpen('gdocs-modal')) closeAiReviewInspector();
+      else if (isOpen('profile-drawer-modal')) toggleProfileDrawer();
+      else if (isOpen('gdocs-modal')) {
+        if (confirm('Close the editor? Unsaved changes in this draft will be lost.')) closeGoogleDocsEditor();
+      }
+      else if (isOpen('author-auth-modal')) closeAuthorAuthModal();
+      else if (isOpen('join-modal')) closeJoinModal();
+      else if (isOpen('article-reader-view')) closeArticleReader();
+      else return;
+      e.preventDefault();
+    });
+
+    // Auto-recognize Antonio only if he signed in with Google
     checkGoogleAutoRecognition();
 
     // Initialize Author Mode, User Stats & All Posts on load
     updateAuthorUI();
     updateUserStatsUI();
+    loadSyncedPosts();
   });
 </script>
 </body>

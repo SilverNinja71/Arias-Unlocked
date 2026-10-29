@@ -29,26 +29,37 @@ def parse_markdown_post(filepath):
     read_match = re.search(r"\*\*Read Time:\*\*\s*(.+)", content)
     readtime = read_match.group(1).strip() if read_match else "5 min read"
 
-    # Split past header dividers
+    # Split past the metadata header: only a line that is exactly "---"
+    # and that follows the "**Key:** value" header lines counts as the divider.
     body = content
-    if "---" in content:
-        parts = content.split("---", 1)
-        body = parts[1].strip()
+    header_split = re.split(r"^---[ \t]*$", content, maxsplit=1, flags=re.MULTILINE)
+    if len(header_split) == 2 and re.search(r"^\*\*[A-Za-z ]+:\*\*", header_split[0], re.MULTILINE):
+        body = header_split[1].strip()
 
-    # Create short snippet
+    # Create short plain-text snippet (markdown markers stripped)
     clean_paragraphs = [p.strip() for p in body.split("\n\n") if p.strip() and not p.strip().startswith("#")]
-    snippet = clean_paragraphs[0] if clean_paragraphs else body[:180] + "..."
+    snippet = clean_paragraphs[0] if clean_paragraphs else body[:180]
+    snippet = re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", snippet)
+    snippet = re.sub(r"[*_`#>~]", "", snippet)
+    snippet = re.sub(r"\s+", " ", snippet).strip()
     if len(snippet) > 220:
         snippet = snippet[:220] + "..."
 
+    post_id = filename[:-3] if filename.endswith(".md") else filename
+
     return {
+        "id": post_id,
         "filename": filename,
         "title": title,
         "category": category,
         "date": date,
         "readtime": readtime,
+        "level": "Level 1 · All Readers",
         "snippet": snippet,
-        "content": body
+        "content": body,
+        "likes": 0,
+        "isCustom": False,
+        "isPremium": False
     }
 
 def sync():
